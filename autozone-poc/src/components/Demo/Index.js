@@ -1,7 +1,8 @@
 import React, { Component,Fragment } from "react";
 import ReactDOM from "react-dom";
-import Welcome from './Welcome';
+import Welcome from '../Welcome';
 
+//Component structure 
 const Demo = () => {
   return (
     <Fragment>
