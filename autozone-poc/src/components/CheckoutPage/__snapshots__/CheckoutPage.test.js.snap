@@ -78,6 +78,7 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="first_name"
+<<<<<<< HEAD
                   onBlur={[Function]}
                   required={true}
                   type="text"
@@ -85,6 +86,11 @@ Array [
                 <p
                   className="formErrorMsg"
                 />
+=======
+                  required={true}
+                  type="text"
+                />
+>>>>>>> 47b56f52... fixed test snapshots
               </div>
               <div
                 className="col-md-6 mb-3"
@@ -102,6 +108,7 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="last_name"
+<<<<<<< HEAD
                   onBlur={[Function]}
                   required={true}
                   type="text"
@@ -109,6 +116,11 @@ Array [
                 <p
                   className="formErrorMsg"
                 />
+=======
+                  required={true}
+                  type="text"
+                />
+>>>>>>> 47b56f52... fixed test snapshots
               </div>
               <div
                 className="col-12 mb-3"
@@ -123,6 +135,7 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="company"
+<<<<<<< HEAD
                   onBlur={[Function]}
                   required={false}
                   type="text"
@@ -130,6 +143,11 @@ Array [
                 <p
                   className="formErrorMsg"
                 />
+=======
+                  required={false}
+                  type="text"
+                />
+>>>>>>> 47b56f52... fixed test snapshots
               </div>
               <div
                 className="col-12 mb-3"
@@ -204,6 +222,7 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="street_address"
+<<<<<<< HEAD
                   onBlur={[Function]}
                   required={true}
                   type="text"
@@ -211,6 +230,11 @@ Array [
                 <p
                   className="formErrorMsg"
                 />
+=======
+                  required={true}
+                  type="text"
+                />
+>>>>>>> 47b56f52... fixed test snapshots
                 <input
                   className="form-control mt-3"
                   id="street_address2"
@@ -233,6 +257,7 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="postcode"
+<<<<<<< HEAD
                   onBlur={[Function]}
                   required={true}
                   type="text"
@@ -240,6 +265,11 @@ Array [
                 <p
                   className="formErrorMsg"
                 />
+=======
+                  required={true}
+                  type="text"
+                />
+>>>>>>> 47b56f52... fixed test snapshots
               </div>
               <div
                 className="col-12 mb-3"
@@ -257,6 +287,7 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="city"
+<<<<<<< HEAD
                   onBlur={[Function]}
                   required={true}
                   type="text"
@@ -264,6 +295,11 @@ Array [
                 <p
                   className="formErrorMsg"
                 />
+=======
+                  required={true}
+                  type="text"
+                />
+>>>>>>> 47b56f52... fixed test snapshots
               </div>
               <div
                 className="col-12 mb-3"
@@ -281,6 +317,7 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="state"
+<<<<<<< HEAD
                   onBlur={[Function]}
                   required={true}
                   type="text"
@@ -288,6 +325,11 @@ Array [
                 <p
                   className="formErrorMsg"
                 />
+=======
+                  required={true}
+                  type="text"
+                />
+>>>>>>> 47b56f52... fixed test snapshots
               </div>
               <div
                 className="col-12 mb-3"
@@ -306,6 +348,7 @@ Array [
                   defaultValue=""
                   id="phone_number"
                   min="0"
+<<<<<<< HEAD
                   onBlur={[Function]}
                   required={true}
                   type="text"
@@ -313,6 +356,11 @@ Array [
                 <p
                   className="formErrorMsg"
                 />
+=======
+                  required={true}
+                  type="text"
+                />
+>>>>>>> 47b56f52... fixed test snapshots
               </div>
               <div
                 className="col-12 mb-4"
@@ -330,6 +378,7 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="email_address"
+<<<<<<< HEAD
                   onBlur={[Function]}
                   required={true}
                   type="email"
@@ -337,6 +386,11 @@ Array [
                 <p
                   className="formErrorMsg"
                 />
+=======
+                  required={true}
+                  type="email"
+                />
+>>>>>>> 47b56f52... fixed test snapshots
               </div>
               <div
                 className="col-12"
