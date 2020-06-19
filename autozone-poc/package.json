@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "jest --config ./jest.config.js",
+    "test:watch": "npm run test -- --watch"
   },
   "keywords": [],
   "author": "",
@@ -20,8 +22,12 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^7.2.0",
     "eslint-plugin-react": "^7.20.0",
+    "jest": "^26.0.1",
+    "react-test-renderer": "^16.13.1",
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
     "webpack": "^4.43.0",
