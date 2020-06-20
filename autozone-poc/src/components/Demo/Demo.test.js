@@ -13,7 +13,6 @@ beforeEach(() => {
 });
 
 describe("renders component", () => {
-
   it("renders without crashing", () => {
     shallow(<Demo />);
   });
