@@ -1,0 +1,58 @@
+1. Always use prop-types to define all the props in your components
+prop-types is runtime type checking for React props and similar objects.
+
+prop-types will help you check if the desired type of prop is getting passed into your component or not.
+
+If the proper type of a specific prop is not passed into your component, then the package will throw a warning in the console of your browser.
+
+
+2. Use a linter to make your code easier to review
+If you care about your sanity, then you should use a linter on your codebase.
+
+Linters will help you make your code similar to other fellow developers in your company. By follow a strict set of rules, you can be certain that the whole code base will be consistent.
+
+For instance, you can force other developers to use semicolons at the end of a line. If they don’t, then the linter will throw an error or a warning based on your settings.
+
+The linter which I follow mostly is ESLint but you can choose anyone that suits your needs
+
+
+3. Review your own code before creating a pull request
+Whether you are fixing a bug or developing a new feature, chances are that you’ll push your changes and create a pull request quickly when you’re in a hurry.
+
+The problem with that is you don’t even get to review your own changes. As a result, you might miss some places which you can refactor and make it better.
+
+
+4. Your first draft is not always the best one
+One way to fix this could be doing a Test Driven Development (TDD), which is a great practice but is seldom followed. If you follow a TDD approach, you first iteration can be the best one. But you should look for a better approach.
+
+
+5. Split your code into multiple smaller functions  
+Splitting your bigger functions into multiple smaller functions will make the smaller functions more reusable. They will also become much easier to test.
+
+
+6. Create multiple files instead of writing a big file
+Reviewing one big file is always harder than reviewing multiple smaller files.
+
+If you split your code into multiple smaller files and each file contains only one logic, then it becomes very easy for the reviewer to review that file.
+
+
+7. Be very careful while naming your files
+Another thing you should remember here is that if you name your files according to the job that they perform, it will also help you in the future as well as other developers to understand what the file actually does.
+After looking at the name of the file, other developers should understand what the file is supposed to do.
+
+
+8. Always write tests for your code
+After developing a feature, you might feel that it works and it does work. But there can be (and most probably will) edge cases where it might not work. Tests will help you identify those cases.
+It’s obvious that writing test cases will increase the time that you need to write your code. But, it will always help you eliminate potential bugs that might crop up in the future.
+
+
+9. Put CSS in JavaScript
+When you start working on a project, it is a common practice to keep all the CSS styles in a single SCSS file. The use of a global prefix prevents any potential name collisions. However, when your project scales up, this solution may not be feasible.
+
+
+10. Comment only where necessary
+Attach comments to code only where necessary.
+
+
+11. Use capitals for component names
+12. Use snippet libraries

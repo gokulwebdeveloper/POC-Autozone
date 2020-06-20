@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
+import './Demo/Demo.css';
 
 const Welcome = (props) => {
   return (
