@@ -8,11 +8,14 @@ import "../utlis/style/css/core-style.css";
 import "../utlis/style/style.css";
 import Blog from "./Blog/Blog";
 import Shops from "./Shops/Shops";
+<<<<<<< HEAD
 import Welcome from './Welcome';
 import Checkout from './CheckoutPage/CheckoutPage';
 import RegularPage from "./RegularPage/RegularPage";
 import Home from "./HomePage/Home";
 import ProductDetails from './ProductDetails/ProductDetails';
+=======
+>>>>>>> bda80329... Completed Page Screen.
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 
@@ -39,9 +42,12 @@ const App = () => {
         <Route path="/regularPage">
           <RegularPage />
         </Route>
+<<<<<<< HEAD
         <Route path="/single-product-details">
           <ProductDetails />
         </Route>
+=======
+>>>>>>> bda80329... Completed Page Screen.
         <Route path="/shops">
             <Shops />
         </Route>
