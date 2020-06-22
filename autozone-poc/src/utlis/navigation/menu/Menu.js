@@ -12,66 +12,35 @@ const Menu = () => {
             <span className="bottom"></span>
           </div>
         </div>
-
         <div className="classynav">
           <ul>
             <li className="megamenu-item">
-              <a href="#">Shop</a>
+              <NavLink  to="/shops">Shop</NavLink >
               <div className="megamenu">
-                <ul className="single-mega cn-col-4">
-                  <li className="title">Women's Collection</li>
-                  <li>
-                    <a href="shop.html">Dresses</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">Blouses &amp; Shirts</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">T-shirts</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">Rompers</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">Bras &amp; Panties</a>
-                  </li>
-                </ul>
-                <ul className="single-mega cn-col-4">
-                  <li className="title">Men's Collection</li>
-                  <li>
-                    <a href="shop.html">T-Shirts</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">Polo</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">Shirts</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">Jackets</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">Trench</a>
-                  </li>
-                </ul>
-                <ul className="single-mega cn-col-4">
-                  <li className="title">Kid's Collection</li>
-                  <li>
-                    <a href="shop.html">Dresses</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">Shirts</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">T-shirts</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">Jackets</a>
-                  </li>
-                  <li>
-                    <a href="shop.html">Trench</a>
-                  </li>
-                </ul>
+              <ul className="single-mega cn-col-4">
+                  <li><NavLink  to="/shops">Women's Collection</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">Dresses</NavLink ></li>
+                  <li><NavLink  to="/shops">Blouses</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">T-shirts</NavLink ></li>
+                  <li><NavLink  to="/shops">Rompers</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">Bras &amp; Panties</NavLink ></li>
+              </ul>
+              <ul className="single-mega cn-col-4">
+                  <li><NavLink  to="/shops">Men's Collection</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">T-Shirts</NavLink ></li>
+                  <li><NavLink  to="/shops">Polo</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">Shirts</NavLink ></li>
+                  <li><NavLink  to="/shops">Jackets</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">Trench</NavLink ></li>
+              </ul>
+              <ul className="single-mega cn-col-4">
+                  <li><NavLink  to="/shops">Kid's Collection</NavLink ></li>
+                  <li><NavLink  to="/shops">Dresses</NavLink ></li>
+                  <li><NavLink  to="/shops">Shirts</NavLink ></li>
+                  <li><NavLink  to="/shops">T-shirts</NavLink ></li>
+                  <li><NavLink  to="/shops">Jackets</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">Trench</NavLink ></li>
+              </ul>
                 <div className="single-mega cn-col-4">
                   <img src={Bgsix} alt="" />
                 </div>
@@ -86,7 +55,7 @@ const Menu = () => {
                   <NavLink to="/">Home</NavLink>
                 </li>
                 <li>
-                  <a href="shop.html">Shop</a>
+                  <NavLink to="/shops">Shop</NavLink>
                 </li>
                 <li>
                   <a href="single-product-details.html">Product Details</a>
