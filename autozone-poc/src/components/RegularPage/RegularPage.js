@@ -6,11 +6,11 @@ export default function RegularPage() {
   return (
     <Fragment>
       {/* <div className="container-fluid">Aman</div> */}
-      {/* <div className="container-fluid main-container">
-        <div className="row header-row"> */}
+      <div className="container-fluid main-container">
+        <div className="row header-row">
           {/* <div className="col-md-12 px-0 header-image"></div> */}
           <img class="img-fluid header-image" src={HeaderImage} />
-        {/* </div> */}
+        </div>
         {/* <img src={"../../assets/img/bg-img/bg-8.jpg"} /> */}
         <div className="row mt-5 justify-content-center content-row">
           <div className="container content-container">
@@ -46,7 +46,7 @@ export default function RegularPage() {
               conubia nostra, per inceptos himenaeos.
             </p>
           </div>
-        {/* </div> */}
+        </div>
       </div>
     </Fragment>
   );
