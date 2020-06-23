@@ -1,5 +1,6 @@
 import React, {Fragment} from "react";
 import Bgsix from '../../img/bg-img/bg-6.jpg';
+import {BrowserRouter as Router, NavLink } from 'react-router-dom';
 
 const Menu = () => {
   return (
@@ -45,10 +46,10 @@ const Menu = () => {
                             <span className="dd-trigger"></span><span className="dd-arrow"></span></li>
                             <li className="cn-dropdown-item has-down pr12"><a href="#">Pages</a>
                                 <ul className="dropdown">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><NavLink  to="/">Home</NavLink ></li>
                                     <li><a href="shop.html">Shop</a></li>
                                     <li><a href="single-product-details.html">Product Details</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><NavLink  to="/checkout">Checkout</NavLink ></li>
                                     <li><a href="blog.html">Blog</a></li>
                                     <li><a href="single-blog.html">Single Blog</a></li>
                                     <li><a href="regular-page.html">Regular Page</a></li>

@@ -41,6 +41,9 @@ module.exports = {
       { test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/, use: ['url-loader?limit=100000'] }
     ]
   },
+  devServer: {
+    historyApiFallback: true
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
