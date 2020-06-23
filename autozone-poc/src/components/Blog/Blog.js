@@ -10,7 +10,7 @@ import InnerBgImg from "../../utlis/img/bg-img/breadcumb2.jpg";
 const Blog = props => {
     return (
     <div>
-      <div
+      <div data-testid="background"
         className="breadcumb_area breadcumb-style-two bg-img"
         style={{ backgroundImage: "url(" + InnerBgImg + ")" }}
       >
