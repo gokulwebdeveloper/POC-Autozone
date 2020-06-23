@@ -5,20 +5,17 @@ import HeaderImage from "../../assets/img/bg-img/bg-8.jpg";
 export default function RegularPage() {
   return (
     <Fragment>
-      {/* <div className="container-fluid">Aman</div> */}
       <div className="container-fluid main-container">
         <div className="row header-row">
-          {/* <div className="col-md-12 px-0 header-image"></div> */}
-          <img class="img-fluid header-image" src={HeaderImage} />
+          <img class="img-fluid w-100 header-image" src={HeaderImage} />
         </div>
-        {/* <img src={"../../assets/img/bg-img/bg-8.jpg"} /> */}
-        <div className="row mt-5 justify-content-center content-row">
-          <div className="container content-container">
-            <h1 className="mb-5">
+        <div className="container justify-content-center my-5 content-container">
+          <div className="row content-row">
+            <h2 className="mb-5">
               Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et
               malesuada
-            </h1>
-            <p className="mt-5 mb-5">
+            </h2>
+            <p className="mb-5">
               Mauris viverra cursus ante laoreet eleifend. Donec vel fringilla
               ante. Aenean finibus velit id urna vehicula, nec maximus est
               sollicitudin. Praesent at tempus lectus, eleifend blandit felis.
@@ -29,16 +26,19 @@ export default function RegularPage() {
               venenatis. Integer non diam sit amet magna luctus mollis ac eu
               nisi. In accumsan tellus ut dapibus blandit.
             </p>
-            <blockquote className="mt-5 mb-5 quote-blockquote">
-              <h6 className="quote-header">
-                <i className="fa fa-quote-left mr-4 quote-icon" aria-hidden="true"></i>
+            <blockquote className="mb-5 quote-blockquote">
+              <h6 className="d-flex quote-header">
+                <i
+                  className="fa fa-quote-left mr-4 quote-icon"
+                  aria-hidden="true"
+                ></i>
                 Quisque sagittis non ex eget vestibulum. Sed nec ultrices dui.
                 Cras et sagittis erat. Maecenas pulvinar, turpis in dictum
                 tincidunt, dolor nibh lacinia lacus.
               </h6>
               <span className="ml-5">Liam Neeson</span>
             </blockquote>
-            <p className="mt-5">
+            <p>
               Praesent ac magna sed massa euismod congue vitae vitae risus.
               Nulla lorem augue, mollis non est et, eleifend elementum ante.
               Nunc id pharetra magna. Praesent vel orci ornare, blandit mi sed,
