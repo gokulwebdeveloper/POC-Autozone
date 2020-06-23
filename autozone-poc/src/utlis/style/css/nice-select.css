@@ -11,11 +11,11 @@
     font-family: inherit;
     font-size: 14px;
     font-weight: normal;
-    height: 42px;
+    height: 50px;
     line-height: 40px;
     outline: none;
     padding-left: 18px;
-    padding-right: 30px;
+    padding-right: 0px !important;
     position: relative;
     text-align: left !important;
     -webkit-transition: all 0.2s ease-in-out;
@@ -26,6 +26,7 @@
     user-select: none;
     white-space: nowrap;
     width: auto;
+    color: #787878;
 }
 
 .nice-select:hover {
@@ -182,4 +183,39 @@
 
 .no-csspointerevents .nice-select.open .list {
     display: block;
+}
+
+.nice-select option:hover{
+    background-color: transparent;
+    border: transparent 0px;
+    outline: none;
+}
+
+.nice-select option {
+    color: #787878;
+    font-size: 14px;
+  border: 0.5px solid #787878;
+  outline: none;
+  outline-color: transparent;
+  line-height: 20px;
+  cursor: pointer;
+    font-weight: 400;
+    line-height: 40px;
+    list-style: none;
+    min-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 29px;
+    text-align: left;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+
+}
+
+option:checked {
+    background-color: transparent;
+    font-weight: bold;
+    color: #0315ff;
+    outline: none;
+    outline-color: transparent;
 }

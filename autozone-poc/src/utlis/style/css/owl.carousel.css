@@ -174,7 +174,7 @@
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url("owl.video.play.png") no-repeat;
+  /* background: url("owl.video.play.png") no-repeat; */
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
@@ -213,4 +213,50 @@
 .owl-carousel .owl-video-frame {
   position: relative;
   z-index: 1;
+}
+
+.owl-prev {
+  position: absolute;
+  left: 0;
+  left: 30px;
+  height: 30px;
+  text-align: center;
+  transform: translateY(-50%);
+  top: 50%;
+  background: url(../../img/core-img/long-arrow-left.svg) no-repeat !important;
+  width: 30px;
+  opacity: 0.4;
+  border: none !important;
+}
+
+.owl-nav span {
+  visibility: hidden;
+}
+
+button.owl-prev:focus {
+  border:transparent 0px
+}
+
+.owl-next {
+  position: absolute;
+  right: 0;
+  right: 30px;
+  height: 30px;
+  text-align: center;
+  transform: translateY(-50%);
+  top: 50%;
+  background: url(../../img/core-img/long-arrow-right.svg) no-repeat !important;
+  width: 30px;
+  opacity: 0.4;
+}
+
+button.owl-prev:hover,
+button.owl-next:hover {
+  outline: none;
+  background-color: #000;
+}
+
+button.owl-prev:focus, 
+button.owl-next:focus {
+  outline: none;
 }
