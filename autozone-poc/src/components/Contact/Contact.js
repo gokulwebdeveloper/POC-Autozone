@@ -20,8 +20,14 @@ export default function Contact(props) {
               sollicitudin.
             </p>
             <div className="address">
-              <p><span className="font-weight-bold">Address:</span> 10 Suffolk st Soha, London, UK</p>
-              <p><span className="font-weight-bold">Telephone:</span> +12 34 567 890</p>
+              <p>
+                <span className="font-weight-bold">Address:</span> 10 Suffolk st
+                Soha, London, UK
+              </p>
+              <p>
+                <span className="font-weight-bold">Telephone:</span> +12 34 567
+                890
+              </p>
             </div>
           </div>
         </div>

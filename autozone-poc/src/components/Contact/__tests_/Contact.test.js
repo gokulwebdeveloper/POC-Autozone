@@ -2,38 +2,38 @@ import React from "react";
 import { unmountComponentAtNode } from "react-dom";
 import "@babel/polyfill";
 import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 import Contact from "../Contact";
 
-let container = null;
-
+let wrapper;
+//mount component for testing
 beforeEach(() => {
-  // Setting up Dom element as a render target
-  container = document.createElement("div");
-  document.body.appendChild(container);
+  wrapper = mount(<Contact />);
 });
 
+//Cleanup after test execution
 afterEach(() => {
-  // Cleanup on exit
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
+  wrapper.unmount();
 });
-
-const wrapper = shallow(<Contact />);
 describe("tests for Contact.js", () => {
   it("renders the comoponent", () => {
     expect(wrapper).toBeTruthy();
   });
-
-//   it("should render the button", () => {
-//     const button = wrapper.find("button");
-//     const buttonText = button.text();
-//     expect(buttonText).toBe("Logout");
-//   });
-
-//   it("should render the h1", () => {
-//     const label = wrapper.find("h1");
-//     const labelText = label.text();
-//     expect(labelText).toBe("Image Gallery");
-//   });
+  it("has h2 tag title", () => {
+    const h2 = wrapper.find("h2");
+    const h2Text = h2.text();
+    expect(h2Text).toBe("How to Find Us");
+  });
+  it("should have 3 paragraph tags", () => {
+    const p = wrapper.find("p");
+    expect(p).toHaveLength(3);
+  });
+  it("should have 2 span tags", () => {
+    const span = wrapper.find("span");
+    expect(span).toHaveLength(2);
+  });
+  it("SnapShot Match", () => {
+    const page = renderer.create(<Contact />).toJSON();
+    expect(page).toMatchSnapshot();
+  });
 });
