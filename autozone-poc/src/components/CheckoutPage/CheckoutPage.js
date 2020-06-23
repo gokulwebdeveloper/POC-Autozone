@@ -10,17 +10,14 @@ export default function CheckoutPage() {
            <BreadcrumbArea title="Checkout" />
 
             <div className="checkout_area section-padding-80">
-                <div className="container">
-                    <div className="row">
-
+                <div className="container">   
+                    <form action="#" method="post" className="row">
                         <div className="col-12 col-md-6">
                             <div className="checkout_details_area mt-50 clearfix">
 
                                 <div className="cart-page-heading mb-30">
                                     <h5>Billing Address</h5>
                                 </div>
-
-                                <form action="#" method="post">
                                     <div className="row">
                                         <div className="col-md-6 mb-3">
                                             <InputWithLabel labelText="First Name" inputId="first_name" inputType="text" isRequired={true} />
@@ -70,7 +67,6 @@ export default function CheckoutPage() {
                                             <InputWithLabel labelText="Subscribe to our newsletter" inputId="customCheck3" inputType="checkbox" isRequired={false} />
                                         </div>
                                     </div>
-                                </form>
                             </div>
                         </div>
 
@@ -148,7 +144,7 @@ export default function CheckoutPage() {
                                 <Button btnText="Place Order" />
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </>
