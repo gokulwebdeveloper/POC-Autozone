@@ -50,13 +50,13 @@ const Menu = () => {
                                     <li><a href="shop.html">Shop</a></li>
                                     <li><a href="single-product-details.html">Product Details</a></li>
                                     <li><NavLink  to="/checkout">Checkout</NavLink ></li>
-                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><NavLink  to="/blog">Blog</NavLink ></li>
                                     <li><a href="single-blog.html">Single Blog</a></li>
                                     <li><a href="regular-page.html">Regular Page</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             <span className="dd-trigger"></span><span className="dd-arrow"></span></li>
-                            <li><a href="blog.html">Blog</a></li>
+                            <li><NavLink  to="/blog">Blog</NavLink ></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
