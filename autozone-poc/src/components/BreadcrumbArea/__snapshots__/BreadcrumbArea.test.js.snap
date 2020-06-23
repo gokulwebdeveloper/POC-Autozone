@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test BreadCrumbArea component SnapShot Match 1`] = `
+<div
+  className="breadcumb_area bg-img"
+  style={
+    Object {
+      "backgroundImage": "url(breadcumb.jpg)",
+    }
+  }
+>
+  <div
+    className="container h-100"
+  >
+    <div
+      className="row h-100 align-items-center"
+    >
+      <div
+        className="col-12"
+      >
+        <div
+          className="page-title text-center"
+        >
+          <h2>
+            title
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

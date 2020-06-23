@@ -1,0 +1,676 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test CheckoutPage SnapShot Match 1`] = `
+Array [
+  <div
+    className="breadcumb_area bg-img"
+    style={
+      Object {
+        "backgroundImage": "url(breadcumb.jpg)",
+      }
+    }
+  >
+    <div
+      className="container h-100"
+    >
+      <div
+        className="row h-100 align-items-center"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="page-title text-center"
+          >
+            <h2>
+              Checkout
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="checkout_area section-padding-80"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12 col-md-6"
+        >
+          <div
+            className="checkout_details_area mt-50 clearfix"
+          >
+            <div
+              className="cart-page-heading mb-30"
+            >
+              <h5>
+                Billing Address
+              </h5>
+            </div>
+            <form
+              action="#"
+              method="post"
+            >
+              <div
+                className="row"
+              >
+                <div
+                  className="col-md-6 mb-3"
+                >
+                  <label
+                    htmlFor="first_name"
+                  >
+                    First Name
+                     
+                    <span>
+                      *
+                    </span>
+                  </label>
+                  <input
+                    className="form-control"
+                    defaultValue=""
+                    id="first_name"
+                    required={true}
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="col-md-6 mb-3"
+                >
+                  <label
+                    htmlFor="last_name"
+                  >
+                    Last Name
+                     
+                    <span>
+                      *
+                    </span>
+                  </label>
+                  <input
+                    className="form-control"
+                    defaultValue=""
+                    id="last_name"
+                    required={true}
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="col-12 mb-3"
+                >
+                  <label
+                    htmlFor="company"
+                  >
+                    Company Name
+                     
+                  </label>
+                  <input
+                    className="form-control"
+                    defaultValue=""
+                    id="company"
+                    required={false}
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="col-12 mb-3"
+                >
+                  <label
+                    htmlFor="country"
+                  >
+                    Country 
+                    <span>
+                      *
+                    </span>
+                  </label>
+                  <select
+                    className="nice-select w-100"
+                    id="country"
+                  >
+                    <option
+                      value="usa"
+                    >
+                      United States
+                    </option>
+                    <option
+                      value="uk"
+                    >
+                      United Kingdom
+                    </option>
+                    <option
+                      value="ger"
+                    >
+                      Germany
+                    </option>
+                    <option
+                      value="fra"
+                    >
+                      France
+                    </option>
+                    <option
+                      value="ind"
+                    >
+                      India
+                    </option>
+                    <option
+                      value="aus"
+                    >
+                      Australia
+                    </option>
+                    <option
+                      value="bra"
+                    >
+                      Brazil
+                    </option>
+                    <option
+                      value="cana"
+                    >
+                      Canada
+                    </option>
+                  </select>
+                </div>
+                <div
+                  className="col-12 mb-3"
+                >
+                  <label
+                    htmlFor="street_address"
+                  >
+                    Address
+                     
+                    <span>
+                      *
+                    </span>
+                  </label>
+                  <input
+                    className="form-control"
+                    defaultValue=""
+                    id="street_address"
+                    required={true}
+                    type="text"
+                  />
+                  <input
+                    className="form-control mt-3"
+                    id="street_address2"
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="col-12 mb-3"
+                >
+                  <label
+                    htmlFor="postcode"
+                  >
+                    Postcode
+                     
+                    <span>
+                      *
+                    </span>
+                  </label>
+                  <input
+                    className="form-control"
+                    defaultValue=""
+                    id="postcode"
+                    required={true}
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="col-12 mb-3"
+                >
+                  <label
+                    htmlFor="city"
+                  >
+                    Town/City
+                     
+                    <span>
+                      *
+                    </span>
+                  </label>
+                  <input
+                    className="form-control"
+                    defaultValue=""
+                    id="city"
+                    required={true}
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="col-12 mb-3"
+                >
+                  <label
+                    htmlFor="state"
+                  >
+                    Province
+                     
+                    <span>
+                      *
+                    </span>
+                  </label>
+                  <input
+                    className="form-control"
+                    defaultValue=""
+                    id="state"
+                    required={true}
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="col-12 mb-3"
+                >
+                  <label
+                    htmlFor="phone_number"
+                  >
+                    Phone No
+                     
+                    <span>
+                      *
+                    </span>
+                  </label>
+                  <input
+                    className="form-control"
+                    defaultValue=""
+                    id="phone_number"
+                    min="0"
+                    required={true}
+                    type="text"
+                  />
+                </div>
+                <div
+                  className="col-12 mb-4"
+                >
+                  <label
+                    htmlFor="email_address"
+                  >
+                    Email Address
+                     
+                    <span>
+                      *
+                    </span>
+                  </label>
+                  <input
+                    className="form-control"
+                    defaultValue=""
+                    id="email_address"
+                    required={true}
+                    type="email"
+                  />
+                </div>
+                <div
+                  className="col-12"
+                >
+                  <div
+                    className="custom-control custom-checkbox d-block mb-2"
+                  >
+                    <input
+                      className="custom-control-input"
+                      id="customCheck1"
+                      required={false}
+                      type="checkbox"
+                    />
+                    <label
+                      className="custom-control-label"
+                      htmlFor="customCheck1"
+                    >
+                      Terms and conitions
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="custom-control custom-checkbox d-block mb-2"
+                  >
+                    <input
+                      className="custom-control-input"
+                      id="customCheck2"
+                      required={false}
+                      type="checkbox"
+                    />
+                    <label
+                      className="custom-control-label"
+                      htmlFor="customCheck2"
+                    >
+                      Create an accout
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="custom-control custom-checkbox d-block mb-2"
+                  >
+                    <input
+                      className="custom-control-input"
+                      id="customCheck3"
+                      required={false}
+                      type="checkbox"
+                    />
+                    <label
+                      className="custom-control-label"
+                      htmlFor="customCheck3"
+                    >
+                      Subscribe to our newsletter
+                       
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          className="col-12 col-md-6 col-lg-5 ml-lg-auto"
+        >
+          <div
+            className="order-details-confirmation"
+          >
+            <div
+              className="cart-page-heading"
+            >
+              <h5>
+                Your Order
+              </h5>
+              <p>
+                The Details
+              </p>
+            </div>
+            <ul
+              className="order-details-form mb-4"
+            >
+              <li>
+                <span>
+                  Product
+                </span>
+                 
+                <span>
+                  Total
+                </span>
+              </li>
+              <li>
+                <span>
+                  Cocktail Yellow dress
+                </span>
+                 
+                <span>
+                  $59.90
+                </span>
+              </li>
+              <li>
+                <span>
+                  Subtotal
+                </span>
+                 
+                <span>
+                  $59.90
+                </span>
+              </li>
+              <li>
+                <span>
+                  Shipping
+                </span>
+                 
+                <span>
+                  Free
+                </span>
+              </li>
+              <li>
+                <span>
+                  Total
+                </span>
+                 
+                <span>
+                  $59.90
+                </span>
+              </li>
+            </ul>
+            <div
+              className="mb-4"
+              id="accordion"
+              role="tablist"
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-header"
+                  id="headingOne"
+                  role="tab"
+                >
+                  <h6
+                    className="mb-0"
+                  >
+                    <div
+                      className="custom-control custom-radio d-block mb-2"
+                    >
+                      <input
+                        className="custom-control-input"
+                        defaultChecked={true}
+                        id="paymentRadio1"
+                        name="paymentRadio"
+                        required={false}
+                        type="radio"
+                      />
+                      <label
+                        className="custom-control-label"
+                        htmlFor="paymentRadio1"
+                      >
+                        Paypal
+                         
+                      </label>
+                    </div>
+                    <a
+                      aria-controls="collapseOne"
+                      aria-expanded="false"
+                      className="collapsed"
+                      data-toggle="collapse"
+                      href="#collapseOne"
+                    >
+                      <i
+                        className="fa fa-info-circle ml-2"
+                      />
+                    </a>
+                  </h6>
+                </div>
+                <div
+                  aria-labelledby="headingOne"
+                  className="collapse"
+                  data-parent="#accordion"
+                  id="collapseOne"
+                  role="tabpanel"
+                >
+                  <div
+                    className="card-body"
+                  >
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card"
+              >
+                <div
+                  className="card-header"
+                  id="headingTwo"
+                  role="tab"
+                >
+                  <h6
+                    className="mb-0"
+                  >
+                    <div
+                      className="custom-control custom-radio d-block mb-2"
+                    >
+                      <input
+                        className="custom-control-input"
+                        id="paymentRadio2"
+                        name="paymentRadio"
+                        required={false}
+                        type="radio"
+                      />
+                      <label
+                        className="custom-control-label"
+                        htmlFor="paymentRadio2"
+                      >
+                        cash on delievery
+                         
+                      </label>
+                    </div>
+                    <a
+                      aria-controls="collapseTwo"
+                      aria-expanded="false"
+                      className="collapsed"
+                      data-toggle="collapse"
+                      href="#collapseTwo"
+                    >
+                      <i
+                        className="fa fa-info-circle ml-2"
+                      />
+                    </a>
+                  </h6>
+                </div>
+                <div
+                  aria-labelledby="headingTwo"
+                  className="collapse"
+                  data-parent="#accordion"
+                  id="collapseTwo"
+                  role="tabpanel"
+                >
+                  <div
+                    className="card-body"
+                  >
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quis in veritatis officia inventore, tempore provident dignissimos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card"
+              >
+                <div
+                  className="card-header"
+                  id="headingThree"
+                  role="tab"
+                >
+                  <h6
+                    className="mb-0"
+                  >
+                    <div
+                      className="custom-control custom-radio d-block mb-2"
+                    >
+                      <input
+                        className="custom-control-input"
+                        id="paymentRadio3"
+                        name="paymentRadio"
+                        required={false}
+                        type="radio"
+                      />
+                      <label
+                        className="custom-control-label"
+                        htmlFor="paymentRadio3"
+                      >
+                        credit card
+                         
+                      </label>
+                    </div>
+                    <a
+                      aria-controls="collapseThree"
+                      aria-expanded="false"
+                      className="collapsed"
+                      data-toggle="collapse"
+                      href="#collapseThree"
+                    >
+                      <i
+                        className="fa fa-info-circle ml-2"
+                      />
+                    </a>
+                  </h6>
+                </div>
+                <div
+                  aria-labelledby="headingThree"
+                  className="collapse"
+                  data-parent="#accordion"
+                  id="collapseThree"
+                  role="tabpanel"
+                >
+                  <div
+                    className="card-body"
+                  >
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quo sint repudiandae suscipit ab soluta delectus voluptate, vero vitae
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card"
+              >
+                <div
+                  className="card-header"
+                  id="headingFour"
+                  role="tab"
+                >
+                  <h6
+                    className="mb-0"
+                  >
+                    <div
+                      className="custom-control custom-radio d-block mb-2"
+                    >
+                      <input
+                        className="custom-control-input"
+                        id="paymentRadio4"
+                        name="paymentRadio"
+                        required={false}
+                        type="radio"
+                      />
+                      <label
+                        className="custom-control-label"
+                        htmlFor="paymentRadio4"
+                      >
+                        direct bank transfer
+                         
+                      </label>
+                    </div>
+                    <a
+                      aria-controls="collapseFour"
+                      aria-expanded="true"
+                      className="collapsed"
+                      data-toggle="collapse"
+                      href="#collapseFour"
+                    >
+                      <i
+                        className="fa fa-info-circle ml-2"
+                      />
+                    </a>
+                  </h6>
+                </div>
+                <div
+                  aria-labelledby="headingThree"
+                  className="collapse show"
+                  data-parent="#accordion"
+                  id="collapseFour"
+                  role="tabpanel"
+                >
+                  <div
+                    className="card-body"
+                  >
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est cum autem eveniet saepe fugit, impedit magni.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              className="btn essence-btn"
+            >
+              Place Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
