@@ -95,7 +95,7 @@ const Menu = () => {
                   <NavLink to="/checkout">Checkout</NavLink>
                 </li>
                 <li>
-                  <a href="blog.html">Blog</a>
+                <NavLink  to="/blog">Blog</NavLink >
                 </li>
                 <li>
                   <a href="single-blog.html">Single Blog</a>
@@ -111,7 +111,7 @@ const Menu = () => {
               <span className="dd-arrow"></span>
             </li>
             <li>
-              <a href="blog.html">Blog</a>
+            <NavLink  to="/blog">Blog</NavLink >
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>
