@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 import { Map, GoogleApiWrapper } from "google-maps-react";
 
 const mapStyles = {
@@ -15,6 +16,11 @@ function GoogleMap(props) {
       initialCenter={props.initialCenter}
     />
   );
+}
+
+GoogleMap.propTypes = {
+  initialCenter: PropTypes.object,
+  zoom: PropTypes.number,
 }
 
 GoogleMap.defaultProps = {
