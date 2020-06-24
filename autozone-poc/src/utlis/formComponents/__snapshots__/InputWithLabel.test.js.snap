@@ -2,18 +2,18 @@
 
 exports[`test InputWithLabel component SnapShot Match 1`] = `
 Array [
-  <label>
-    label
+  <label
+    htmlFor="idtext"
+  >
+    name
      
-    <span>
-      *
-    </span>
   </label>,
   <input
     className="form-control"
     defaultValue=""
-    required={true}
-    type="text"
+    id="idtext"
+    required={false}
+    type="email"
   />,
 ]
 `;

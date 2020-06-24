@@ -7,39 +7,42 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: "babel-loader",
+        },
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader"
-          }
-        ]
+            loader: "html-loader",
+          },
+        ],
       },
-      { 
-        test: /\.css$/, 
-        use: [ 
+      {
+        test: /\.css$/,
+        use: [
           // Creates `style` nodes from JS strings
-          'style-loader',
+          "style-loader",
           // Translates CSS into CommonJS
-          'css-loader' ]
-
+          "css-loader",
+        ],
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          'style-loader',
+          "style-loader",
           // Translates CSS into CommonJS
-          'css-loader',
+          "css-loader",
           // Compiles Sass to CSS
-          'sass-loader',
+          "sass-loader",
         ],
       },
-      { test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/, use: ['url-loader?limit=100000'] }
-    ]
+      {
+        test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
+        use: ["url-loader?limit=100000"],
+      },
+    ],
   },
   devServer: {
     historyApiFallback: true
@@ -47,7 +50,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
-      filename: "./index.html"
-    })
-  ]
+      filename: "./index.html",
+    }),
+  ],
 };
