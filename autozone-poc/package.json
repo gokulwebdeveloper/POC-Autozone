@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --open --mode development --watch",
     "build": "webpack --mode production",
     "lint": "eslint",
     "test": "jest --config ./jest.config.js",
@@ -15,6 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.2",
+    "@babel/polyfill": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "@typescript-eslint/eslint-plugin": "^3.3.0",
@@ -28,7 +29,10 @@
     "eslint": "^7.2.0",
     "eslint-plugin-react": "^7.20.0",
     "file-loader": "^6.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "image-webpack-loader": "^6.0.0",
     "jest": "^26.0.1",
+    "prop-types": "^15.7.2",
     "react-test-renderer": "^16.13.1",
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
@@ -41,6 +45,7 @@
   "dependencies": {
     "babel-core": "^7.0.0-bridge.0",
     "bootstrap": "^4.5.0",
+    "google-maps-react": "^2.0.6",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "i": "^0.3.6",

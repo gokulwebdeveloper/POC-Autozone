@@ -1,0 +1,44 @@
+import React from "react";
+import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import RegularPage from "../RegularPage";
+import HeaderImage from "../../../assets/img/bg-img/bg-8.jpg";
+
+let wrapper;
+//mount component for testing
+beforeEach(() => {
+  wrapper = shallow(<RegularPage />);
+});
+
+//Cleanup after test execution
+afterEach(() => {
+  wrapper.unmount();
+});
+
+describe("test CheckoutPage", () => {
+  //test if CheckoutPage component exists
+  it("CheckoutPage Exists", () => {
+    expect(wrapper.exists()).toBeTruthy();
+  });
+
+  it("check for the header image", () => {
+    const imgTag = wrapper.find("img");
+    expect(imgTag.prop("src")).toEqual(HeaderImage);
+  });
+
+  it("should check for the h2 tag", () => {
+    const h2Tag = wrapper.find("h2");
+    expect(h2Tag.text()).not.toBe("");
+  });
+
+  it("should have 2 paragraph tags", () => {
+    const p = wrapper.find("p");
+    expect(p).toHaveLength(2);
+  });
+
+  //SnapShot Match test
+  it("SnapShot Match", () => {
+    const page = renderer.create(<RegularPage />).toJSON();
+    expect(page).toMatchSnapshot();
+  });
+});
