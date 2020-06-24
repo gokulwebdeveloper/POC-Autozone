@@ -8,7 +8,7 @@ import '../utlis/style/style.css';
 import Welcome from './Welcome';
 import Checkout from './CheckoutPage/CheckoutPage';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
-
+import Home from "./Home";
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
             <Checkout />
           </Route>
           <Route path="/">
-            <Welcome />
+            <Home />
           </Route>
         </Switch>
         <Footer />
