@@ -12,6 +12,7 @@ import Checkout from "./CheckoutPage/CheckoutPage";
 import Blog from "./Blog/Blog";
 import Shops from "./Shops/Shops";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Singleblog from "./single-blog/single-blog";
 
 
 
@@ -43,7 +44,9 @@ const App = () => {
         <Route path="/">
           <Welcome />
         </Route>
-      </Switch>
+        <Route exact path="/singleblog" component={Singleblog} >
+         </Route>
+    </Switch>
       <Footer />
     </Router>
   );
