@@ -8,7 +8,7 @@ import Contact from "../Contact";
 let wrapper;
 //mount component for testing
 beforeEach(() => {
-  wrapper = mount(<Contact />);
+  wrapper = shallow(<Contact />);
 });
 
 //Cleanup after test execution
