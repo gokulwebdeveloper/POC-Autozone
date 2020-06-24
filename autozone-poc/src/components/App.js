@@ -17,6 +17,7 @@ import Home from "./HomePage/Home";
 >>>>>>> d7f6c4fd... completed the page with static data
 import ProductDetails from './ProductDetails/ProductDetails';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Singleblog from "./single-blog/single-blog";
 
 
 
@@ -51,7 +52,9 @@ const App = () => {
         <Route path="/">
           <Home />
         </Route>
-      </Switch>
+        <Route exact path="/singleblog" component={Singleblog} >
+         </Route>
+    </Switch>
       <Footer />
     </Router>
   );
