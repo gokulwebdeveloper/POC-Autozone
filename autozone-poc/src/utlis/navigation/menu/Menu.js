@@ -67,7 +67,7 @@ const Menu = () => {
                 <NavLink  to="/blog">Blog</NavLink >
                 </li>
                 <li>
-                  <a href="single-blog.html">Single Blog</a>
+                <NavLink  to="/singleblog">SingleBlog</NavLink >
                 </li>
                 <li>
                   <NavLink to="/regularPage">Regular Page</NavLink>
