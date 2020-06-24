@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,7 +23,7 @@ const Footer = () => {
                       <a href="blog.html">Blog</a>
                     </li>
                     <li>
-                      <a href="contact.html">Contact</a>
+                      <NavLink to="/contact">Contact</NavLink>
                     </li>
                   </ul>
                 </div>

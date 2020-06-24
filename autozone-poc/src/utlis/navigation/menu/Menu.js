@@ -113,6 +113,9 @@ const Menu = () => {
             <li>
               <a href="blog.html">Blog</a>
             </li>
+            <li>
+              <NavLink to="/contact">Contact</NavLink>
+            </li>
           </ul>
         </div>
       </div>
