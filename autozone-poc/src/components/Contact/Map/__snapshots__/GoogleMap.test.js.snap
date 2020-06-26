@@ -5,3 +5,9 @@ exports[`test CheckoutPage SnapShot Match 1`] = `
   Loading...
 </div>
 `;
+
+exports[`test GoogleMap SnapShot Match 1`] = `
+<div>
+  Loading...
+</div>
+`;

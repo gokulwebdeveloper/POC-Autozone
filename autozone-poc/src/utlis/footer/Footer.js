@@ -20,7 +20,7 @@ const Footer = () => {
                       <a href="shop.html">Shop</a>
                     </li>
                     <li>
-                      <a href="blog.html">Blog</a>
+                    <NavLink  to="/blog">Blog</NavLink >
                     </li>
                     <li>
                       <NavLink to="/contact">Contact</NavLink>

@@ -118,7 +118,11 @@ describe("test InputWithLabel component", () => {
 
   //SnapShot Match test
   it("SnapShot Match", () => {
-    const input = renderer.create(<InputWithLabel />).toJSON();
+    const input = renderer.create(<InputWithLabel 
+    labelText="name"
+    inputId="idtext"
+    inputType="email"
+    isRequired={false}/>).toJSON();
     expect(input).toMatchSnapshot();
   });
 });

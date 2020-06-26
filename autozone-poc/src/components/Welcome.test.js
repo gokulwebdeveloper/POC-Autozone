@@ -3,6 +3,7 @@ import { shallow } from "enzyme";
 import "@babel/polyfill";
 import Welcome from "./Welcome";
 
+let container;
 beforeEach(() => {
   // setup a DOM element as a render target
   container = document.createElement("div");

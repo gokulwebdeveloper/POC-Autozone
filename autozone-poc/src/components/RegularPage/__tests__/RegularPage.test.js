@@ -15,9 +15,9 @@ afterEach(() => {
   wrapper.unmount();
 });
 
-describe("test CheckoutPage", () => {
-  //test if CheckoutPage component exists
-  it("CheckoutPage Exists", () => {
+describe("test RegularPage", () => {
+  //test if RegularPage component exists
+  it("RegularPage Exists", () => {
     expect(wrapper.exists()).toBeTruthy();
   });
 
