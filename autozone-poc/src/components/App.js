@@ -7,7 +7,6 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Home from "./Home";
 import Header from "../utlis/header/Header";
 import Footer from "../utlis/footer/Footer";
-import RegularPage from "./RegularPage/RegularPage";
 import Contact from "./Contact/Contact";
 //import 'bootstrap/dist/css/bootstrap.css';
 //import 'bootstrap/dist/js/bootstrap.js';
