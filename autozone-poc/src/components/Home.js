@@ -13,21 +13,21 @@ import ScrollUpArrowBtn from '../utlis/button/ScrollUpArrowBtn';
 
 
 const Home = props => {
-    const bgImgStyle = {
-        'backgroundImage': `url(${BgImg})`
-    }  
-    const bgImgTopCatArea1 = {
-      'backgroundImage': `url(${BgImgTopCatArea1})`
-  }  
+  const bgImgStyle = {
+    'backgroundImage': `url(${BgImg})`
+  }
+  const bgImgTopCatArea1 = {
+    'backgroundImage': `url(${BgImgTopCatArea1})`
+  }
   const bgImgTopCatArea2 = {
     'backgroundImage': `url(${BgImgTopCatArea2})`
-}  
-const bgImgTopCatArea3 = {
-  'backgroundImage': `url(${BgImgTopCatArea3})`
-}  
-const bgImgCatArea = {
-  'backgroundImage': `url(${BgImgCatArea})`
-}
+  }
+  const bgImgTopCatArea3 = {
+    'backgroundImage': `url(${BgImgTopCatArea3})`
+  }
+  const bgImgCatArea = {
+    'backgroundImage': `url(${BgImgCatArea})`
+  }
 
     return (
       <div>
