@@ -13,6 +13,7 @@ import "../utlis/style/style.css";
 import Checkout from "./CheckoutPage/CheckoutPage";
 import Blog from "./Blog/Blog";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import RegularPage from "./RegularPage/RegularPage";
 
 const App = () => {
   return (
