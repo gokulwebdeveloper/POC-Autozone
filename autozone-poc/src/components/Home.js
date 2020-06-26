@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import Button from '../utlis/button/Button';
 import TopCatagoryArea from '../utlis/top_catagory_area/TopCatagoryArea';
 import SimpleSlider from '../utlis/slick_slider/SimpleSlider';
+import ScrollUpArrowBtn from '../utlis/button/ScrollUpArrowBtn';
 
 
 
@@ -30,6 +31,7 @@ const bgImgCatArea = {
 
     return (
       <div>
+        <ScrollUpArrowBtn/>
         <section className="welcome_area bg-img" style={bgImgStyle}>
           <div className="container h-100">
             <div className="row h-100 align-items-center">
