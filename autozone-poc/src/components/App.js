@@ -2,8 +2,6 @@ import React from "react";
 import '../utlis/style/css/core-style.css';
 import '../utlis/style/style.css';
 import Welcome from './Welcome';
-import Checkout from './CheckoutPage/CheckoutPage';
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Home from "./Home";
 import Header from "../utlis/header/Header";
 import Footer from "../utlis/footer/Footer";
