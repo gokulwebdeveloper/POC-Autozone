@@ -1,31 +1,47 @@
 import React from "react";
-import Header from '../utlis/header/Header';
-import Footer from '../utlis/footer/Footer';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
 import '../utlis/style/css/core-style.css';
 import '../utlis/style/style.css';
 import Welcome from './Welcome';
 import Checkout from './CheckoutPage/CheckoutPage';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Home from "./Home";
+import Header from "../utlis/header/Header";
+import Footer from "../utlis/footer/Footer";
+import RegularPage from "./RegularPage/RegularPage";
+import Contact from "./Contact/Contact";
+//import 'bootstrap/dist/css/bootstrap.css';
+//import 'bootstrap/dist/js/bootstrap.js';
+import "../utlis/style/css/core-style.css";
+import "../utlis/style/style.css";
+import Checkout from "./CheckoutPage/CheckoutPage";
+import Blog from "./Blog/Blog";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const App = () => {
   return (
-      <Router>
+    <Router>
       <Header />
-        <Switch>
-          <Route path="/checkout">
-            <Checkout />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+      <Switch>
+        <Route path="/blog">
+          <Blog />
+        </Route>
+        <Route path="/checkout">
+          <Checkout />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/regularPage">
+          <RegularPage />
+        </Route>
+        <Route path="/">
+          <Welcome />
+          <Home />
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
   );
 };
-
 
 export default App;
