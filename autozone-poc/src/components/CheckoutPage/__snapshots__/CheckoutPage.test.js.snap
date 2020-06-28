@@ -54,6 +54,11 @@ Array [
                 Billing Address
               </h5>
             </div>
+            <p
+              className="formErrorMsg"
+            >
+              Please fill all required fields
+            </p>
             <div
               className="row"
             >
@@ -73,8 +78,12 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="first_name"
+                  onBlur={[Function]}
                   required={true}
                   type="text"
+                />
+                <p
+                  className="formErrorMsg"
                 />
               </div>
               <div
@@ -93,8 +102,12 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="last_name"
+                  onBlur={[Function]}
                   required={true}
                   type="text"
+                />
+                <p
+                  className="formErrorMsg"
                 />
               </div>
               <div
@@ -110,8 +123,12 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="company"
+                  onBlur={[Function]}
                   required={false}
                   type="text"
+                />
+                <p
+                  className="formErrorMsg"
                 />
               </div>
               <div
@@ -187,8 +204,12 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="street_address"
+                  onBlur={[Function]}
                   required={true}
                   type="text"
+                />
+                <p
+                  className="formErrorMsg"
                 />
                 <input
                   className="form-control mt-3"
@@ -212,8 +233,12 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="postcode"
+                  onBlur={[Function]}
                   required={true}
                   type="text"
+                />
+                <p
+                  className="formErrorMsg"
                 />
               </div>
               <div
@@ -232,8 +257,12 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="city"
+                  onBlur={[Function]}
                   required={true}
                   type="text"
+                />
+                <p
+                  className="formErrorMsg"
                 />
               </div>
               <div
@@ -252,8 +281,12 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="state"
+                  onBlur={[Function]}
                   required={true}
                   type="text"
+                />
+                <p
+                  className="formErrorMsg"
                 />
               </div>
               <div
@@ -273,8 +306,12 @@ Array [
                   defaultValue=""
                   id="phone_number"
                   min="0"
+                  onBlur={[Function]}
                   required={true}
                   type="text"
+                />
+                <p
+                  className="formErrorMsg"
                 />
               </div>
               <div
@@ -293,8 +330,12 @@ Array [
                   className="form-control"
                   defaultValue=""
                   id="email_address"
+                  onBlur={[Function]}
                   required={true}
                   type="email"
+                />
+                <p
+                  className="formErrorMsg"
                 />
               </div>
               <div
@@ -661,6 +702,7 @@ Array [
             </div>
             <button
               className="btn essence-btn"
+              id="checkoutBtn"
             >
               Place Order
             </button>

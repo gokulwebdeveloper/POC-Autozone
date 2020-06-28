@@ -3,5 +3,7 @@
 exports[`test Button component SnapShot Match 1`] = `
 <button
   className="btn essence-btn"
-/>
+>
+  button
+</button>
 `;
