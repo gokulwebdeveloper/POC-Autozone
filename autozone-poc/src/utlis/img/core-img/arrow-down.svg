@@ -34,5 +34,5 @@
       }
     </style>
   </defs>
-  <path id="Forma_1" data-name="Forma 1" class="cls-1" d="M306,93.758L270.3,58,153,175.486,35.7,58,0,93.758,153,247Z" transform="translate(0 -58)"/>
+  <path id="Forma_1" data-name="Forma 1" className="cls-1" d="M306,93.758L270.3,58,153,175.486,35.7,58,0,93.758,153,247Z" transform="translate(0 -58)"/>
 </svg>

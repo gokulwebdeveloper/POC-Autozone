@@ -8,7 +8,12 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-        },
+          options: {
+            presets: ['@babel/preset-env',
+                      '@babel/react',{
+                      'plugins': ['@babel/plugin-proposal-class-properties']}]
+          }
+        }
       },
       {
         test: /\.html$/,
@@ -41,7 +46,7 @@ module.exports = {
       {
         test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
         use: ["url-loader?limit=100000"],
-      },
+      }
     ],
   },
   devServer: {
