@@ -9,6 +9,7 @@ import "../utlis/style/style.css";
 import Blog from "./Blog/Blog";
 import Shops from "./Shops/Shops";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Welcome from './Welcome';
 import Checkout from './CheckoutPage/CheckoutPage';
 import RegularPage from "./RegularPage/RegularPage";
@@ -16,6 +17,9 @@ import Home from "./HomePage/Home";
 import ProductDetails from './ProductDetails/ProductDetails';
 =======
 >>>>>>> bda80329... Completed Page Screen.
+=======
+import ProductDetails from './ProductDetails/ProductDetails';
+>>>>>>> 6c23abef... completed the page with static data
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 
@@ -43,11 +47,17 @@ const App = () => {
           <RegularPage />
         </Route>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Route path="/single-product-details">
           <ProductDetails />
         </Route>
 =======
 >>>>>>> bda80329... Completed Page Screen.
+=======
+        <Route path="/single-product-details">
+          <ProductDetails />
+        </Route>
+>>>>>>> 6c23abef... completed the page with static data
         <Route path="/shops">
             <Shops />
         </Route>
