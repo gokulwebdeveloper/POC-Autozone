@@ -12,8 +12,12 @@ Array [
     className="form-control"
     defaultValue=""
     id="idtext"
+    onBlur={[Function]}
     required={false}
     type="email"
+  />,
+  <p
+    className="formErrorMsg"
   />,
 ]
 `;
