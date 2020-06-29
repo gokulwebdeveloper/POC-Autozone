@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function Button({ btnText }) {
-  return <button className="btn essence-btn">{btnText}</button>;
+export default function Button({ btnText, ...etc }) {
+  return <button className="btn essence-btn" {...etc} >{btnText}</button>;
 }
 
 Button.propTypes = {
@@ -10,5 +10,5 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  text: "button",
+  btnText: "button",
 };

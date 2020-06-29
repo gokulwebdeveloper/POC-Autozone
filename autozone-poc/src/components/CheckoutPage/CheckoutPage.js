@@ -3,8 +3,21 @@ import BreadcrumbArea from "../BreadcrumbArea/BreadcrumbArea";
 import InputWithLabel from "../../utlis/formComponents/InputWithLabel";
 import Button from "../../utlis/button/Button";
 import "./CheckoutPage.css";
+import $ from 'jquery';
 
 export default function CheckoutPage() {
+  $(document).ready(function(){
+    $('#checkoutBtn').on('click', function(){
+      $('input[required]').each(function(element) {
+        let val = $(this).val();
+        if(val === ''){
+          $('.checkout_area .formErrorMsg').text("please provide some input");
+          $('.checkout_area .formErrorMsg:first').text("please fill all the fields");
+          $('.checkout_area .formErrorMsg').show();
+        }
+      });
+    })
+  });
   return (
     <>
       <BreadcrumbArea title="Checkout" />
@@ -17,6 +30,7 @@ export default function CheckoutPage() {
                 <div className="cart-page-heading mb-30">
                   <h5>Billing Address</h5>
                 </div>
+                <p className="formErrorMsg">Please fill all required fields</p>
                 <div className="row">
                   <div className="col-md-6 mb-3">
                     <InputWithLabel
@@ -314,7 +328,7 @@ export default function CheckoutPage() {
                     </div>
                   </div>
                 </div>
-                <Button btnText="Place Order" />
+                <Button btnText="Place Order" id="checkoutBtn"/>
               </div>
             </div>
           </form>

@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import $ from 'jquery';
+import './InputWithLabel.css';
 
 export default function TextInput({
   labelText,
@@ -11,6 +13,15 @@ export default function TextInput({
   let inputLabel;
   switch (inputType) {
     case "text":
+      function textValidationHandler(){
+        let inputData = $(`#${inputId}`).val();
+        if(isRequired && inputData === ''){
+          $(`#${inputId} + .formErrorMsg`).text("Please provide some Input");
+          $(`#${inputId} + .formErrorMsg`).show();
+        }else{
+          $(`#${inputId} + .formErrorMsg`).hide();
+        }
+      }
       inputLabel = (
         <>
           <label htmlFor={inputId}>
@@ -21,14 +32,51 @@ export default function TextInput({
             className="form-control"
             id={inputId}
             required={isRequired}
+            onBlur = {textValidationHandler}
             defaultValue=""
             {...etc}
           />
+          <p className="formErrorMsg"></p>
+        </>
+      );
+      break;
+
+      case "inputWithoutLabel":
+      function inputValidationHandler(){
+        let inputData = $(`#${inputId}`).val();
+        if(isRequired && inputData === ''){
+          $(`#${inputId} + .formErrorMsg`).text("Please provide some Input");
+          $(`#${inputId} + .formErrorMsg`).show();
+        }else{
+          $(`#${inputId} + .formErrorMsg`).hide();
+        }
+      }
+      inputLabel = (
+        <>
+          <input
+            type="text"
+            className="form-control"
+            id={inputId}
+            required={isRequired}
+            onBlur = {inputValidationHandler}
+            defaultValue=""
+            {...etc}
+          />
+          <p className="formErrorMsg"></p>
         </>
       );
       break;
 
     case "email":
+      function emailValidationHandler(){
+        let inputData = $(`#${inputId}`).val();
+        if(isRequired && (inputData === '' || inputData.indexOf('@') === -1 || inputData.indexOf('.') === -1)){
+          $(`#${inputId} + .formErrorMsg`).text("Please provide proper email address");
+          $(`#${inputId} + .formErrorMsg`).show();
+        }else{
+          $(`#${inputId} + .formErrorMsg`).hide();
+        }
+      }
       inputLabel = (
         <>
           <label htmlFor={inputId}>
@@ -39,9 +87,11 @@ export default function TextInput({
             className="form-control"
             id={inputId}
             required={isRequired}
+            onBlur = {emailValidationHandler}
             defaultValue=""
             {...etc}
           />
+          <p className="formErrorMsg"></p>
         </>
       );
       break;
