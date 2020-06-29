@@ -32,6 +32,12 @@ describe("tests for Contact.js", () => {
     const span = wrapper.find("span");
     expect(span).toHaveLength(2);
   });
+  it("should load googleMaps correctly", () => {
+    const googleMap = wrapper.find("GoogleMap");
+    console.log("Google Map", googleMap);
+    expect(googleMap).toBeTruthy();
+  });
+
   it("SnapShot Match", () => {
     const page = renderer.create(<Contact />).toJSON();
     expect(page).toMatchSnapshot();
