@@ -1,0 +1,39 @@
+.owl-prev {
+    position: absolute;
+    left: 0;
+    left: 30px;
+    height: 30px;
+    text-align: center;
+    transform: translateY(-50%);
+    top: 50%;
+    background: url(../../assets/img/core-img/long-arrow-left.svg) no-repeat !important;
+    width: 30px;
+    opacity: 0.4;
+    border: none !important;
+  }
+  
+  .owl-nav span {
+    visibility: hidden;
+  }
+  
+  button.owl-prev:focus {
+    border:transparent 0px
+  }
+  
+  .owl-next {
+    position: absolute;
+    right: 0;
+    right: 30px;
+    height: 30px;
+    text-align: center;
+    transform: translateY(-50%);
+    top: 50%;
+    background: url(../../assets/img/core-img/long-arrow-right.svg) no-repeat !important;
+    width: 30px;
+    opacity: 0.4;
+  }
+    
+  button.owl-prev:focus, 
+  button.owl-next:focus {
+    outline: none;
+  }

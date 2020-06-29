@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from "react";
+
+import React, { Component, useState } from "react";
 import blog1 from "../../utlis/img/bg-img/blog1.jpg";
 import blog2 from "../../utlis/img/bg-img/blog2.jpg";
 import blog3 from "../../utlis/img/bg-img/blog3.jpg";
@@ -6,8 +7,11 @@ import blog4 from "../../utlis/img/bg-img/blog4.jpg";
 import blog5 from "../../utlis/img/bg-img/blog5.jpg";
 import blog6 from "../../utlis/img/bg-img/blog6.jpg";
 import InnerBgImg from "../../utlis/img/bg-img/breadcumb2.jpg";
+import "../Blog/Blog.css";
+import { NavLink } from "react-router-dom";
 
 const Blog = props => {
+  
     return (
     <div>
       <div data-testid="background"
@@ -48,9 +52,15 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
-                  <a href="#">
+                  <NavLink 
+                  to= {{
+                    pathname:"/singleblog",
+                    propsFor: {
+                      imgpath: blog1
+                    }
+                    }}>
                     Continue reading <i className="fa fa-angle-right"></i>
-                  </a>
+                    </NavLink>
                 </div>
               </div>
             </div>
@@ -76,9 +86,14 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
-                  <a href="#">
+                  <NavLink to= {{
+                    pathname:"/singleblog",
+                    propsFor: {
+                      imgpath: blog2
+                    }
+                    }}>
                     Continue reading <i className="fa fa-angle-right"></i>
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -104,9 +119,14 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
-                  <a href="#">
+                  <NavLink to= {{
+                    pathname:"/singleblog",
+                    propsFor: {
+                      imgpath: blog3
+                    }
+                    }}>
                     Continue reading <i className="fa fa-angle-right"></i>
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -132,9 +152,14 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
-                  <a href="#">
+                  <NavLink to= {{
+                    pathname:"/singleblog",
+                    propsFor: {
+                      imgpath: blog4
+                    }
+                    }}>
                     Continue reading <i className="fa fa-angle-right"></i>
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -160,9 +185,14 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
-                  <a href="#">
+                  <NavLink to= {{
+                    pathname:"/singleblog",
+                    propsFor: {
+                      imgpath: blog5
+                    }
+                    }}>
                     Continue reading <i className="fa fa-angle-right"></i>
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -188,16 +218,21 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
-                  <a href="#">
+                  <NavLink to= {{
+                    pathname:"/singleblog",
+                    propsFor: {
+                      imgpath: blog6
+                    }
+                    }}>
                     Continue reading <i className="fa fa-angle-right"></i>
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
     );
 };
 

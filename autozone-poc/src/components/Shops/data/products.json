@@ -1,0 +1,181 @@
+[{
+    "id": 1,
+    "product_image": "../../../../src/utlis/img/product-img/product-1.jpg",
+    "product_name": "Knot Front Mini Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 2,
+    "product_image": "../../../../src/utlis/img/product-img/product-2.jpg",
+    "product_name": "Denim Top",
+    "product_description": "Topshop",
+    "original_price": "95.00",
+    "offer_price": "82.50"
+  },
+  {
+    "id": 3,
+    "product_image": "../../../../src/utlis/img/product-img/product-3.jpg",
+    "product_name": "Knot Front Mini Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 4,
+    "product_image": "../../../../src/utlis/img/product-img/product-4.jpg",
+    "product_name": "Salwar Suit",
+    "product_description": "Topshop",
+    "original_price": "150.00",
+    "offer_price": "120.55"
+  },
+  {
+    "id": 5,
+    "product_image": "../../../../src/utlis/img/product-img/product-5.jpg",
+    "product_name": "Long Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 6,
+    "product_image": "../../../../src/utlis/img/product-img/product-6.jpg",
+    "product_name": "Short Kurti",
+    "product_description": "Topshop",
+    "original_price": "65.00",
+    "offer_price": "50.00"
+  },
+  {
+    "id": 7,
+    "product_image": "../../../../src/utlis/img/product-img/product-7.jpg",
+    "product_name": "Knot Front Mini Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 8,
+    "product_image": "../../../../src/utlis/img/product-img/product-6.jpg",
+    "product_name": "Denim Top",
+    "product_description": "Topshop",
+    "original_price": "95.00",
+    "offer_price": "82.50"
+  },
+  {
+    "id": 9,
+    "product_image": "../../../../src/utlis/img/product-img/product-9.jpg",
+    "product_name": "Knot Front Mini Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 10,
+    "product_image": "../../../../src/utlis/img/product-img/product-8.jpg",
+    "product_name": "Salwar Suit",
+    "product_description": "Topshop",
+    "original_price": "150.00",
+    "offer_price": "120.55"
+  },
+  {
+    "id": 10,
+    "product_image": "../../../../src/utlis/img/product-img/product-3.jpg",
+    "product_name": "Long Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 12,
+    "product_image": "../../../../src/utlis/img/product-img/product-4.jpg",
+    "product_name": "Short Kurti",
+    "product_description": "Topshop",
+    "original_price": "65.00",
+    "offer_price": "50.00"
+  },
+  {
+    "id": 13,
+    "product_image": "../../../../src/utlis/img/product-img/product-5.jpg",
+    "product_name": "Knot Front Mini Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 14,
+    "product_image": "../../../../src/utlis/img/product-img/product-2.jpg",
+    "product_name": "Denim Top",
+    "product_description": "Topshop",
+    "original_price": "95.00",
+    "offer_price": "82.50"
+  },
+  {
+    "id": 15,
+    "product_image": "../../../../src/utlis/img/product-img/product-1.jpg",
+    "product_name": "Knot Front Mini Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 16,
+    "product_image": "../../../../src/utlis/img/product-img/product-9.jpg",
+    "product_name": "Salwar Suit",
+    "product_description": "Topshop",
+    "original_price": "150.00",
+    "offer_price": "120.55"
+  },
+  {
+    "id": 17,
+    "product_image": "../../../../src/utlis/img/product-img/product-8.jpg",
+    "product_name": "Long Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 18,
+    "product_image": "../../../../src/utlis/img/product-img/product-7.jpg",
+    "product_name": "Short Kurti",
+    "product_description": "Topshop",
+    "original_price": "65.00",
+    "offer_price": "50.00"
+  },
+  {
+    "id": 19,
+    "product_image": "../../../../src/utlis/img/product-img/product-6.jpg",
+    "product_name": "Knot Front Mini Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 20,
+    "product_image": "../../../../src/utlis/img/product-img/product-5.jpg",
+    "product_name": "Denim Top",
+    "product_description": "Topshop",
+    "original_price": "95.00",
+    "offer_price": "82.50"
+  },
+  {
+    "id": 21,
+    "product_image": "../../../../src/utlis/img/product-img/product-4.jpg",
+    "product_name": "Knot Front Mini Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 22,
+    "product_image": "../../../../src/utlis/img/product-img/product-3.jpg",
+    "product_name": "Salwar Suit",
+    "product_description": "Topshop",
+    "original_price": "150.00",
+    "offer_price": "120.55"
+  },
+  {
+    "id": 23,
+    "product_image": "../../../../src/utlis/img/product-img/product-2.jpg",
+    "product_name": "Long Dress",
+    "product_description": "Topshop",
+    "original_price": "75.00",
+    "offer_price": "55.00"
+  }, {
+    "id": 24,
+    "product_image": "../../../../src/utlis/img/product-img/product-1.jpg",
+    "product_name": "Short Kurti",
+    "product_description": "Topshop",
+    "original_price": "65.00",
+    "offer_price": "50.00"
+  }
+]

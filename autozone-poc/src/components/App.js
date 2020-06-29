@@ -14,15 +14,9 @@ import RegularPage from "./RegularPage/RegularPage";
 import Home from "./HomePage/Home";
 import ProductDetails from './ProductDetails/ProductDetails';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-
-
-
-
+import Singleblog from "./single-blog/single-blog";
 
 const App = () => {
-
-
-
   return (
     <Router>
       <Header />
@@ -48,7 +42,9 @@ const App = () => {
         <Route path="/">
           <Home />
         </Route>
-      </Switch>
+        <Route exact path="/singleblog" component={Singleblog} >
+         </Route>
+    </Switch>
       <Footer />
     </Router>
   );
