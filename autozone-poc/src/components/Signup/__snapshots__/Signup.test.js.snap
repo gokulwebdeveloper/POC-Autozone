@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Signup Page SnapShot Match 1`] = `
+<div>
+  <div
+    className="container h-100"
+  >
+    <div
+      className="row h-100 align-items-center"
+    >
+      <div
+        className="col-md-4"
+      />
+      <div
+        className="col-md-4 align-items-center signupcontainer"
+      >
+        <div
+          className="page-title text-center"
+        >
+          <h2
+            className="signuphead"
+          >
+            Sign Up
+          </h2>
+          <form
+            onSubmit={[Function]}
+          >
+            <div
+              className="col-md-12 mb-4"
+            >
+              <label
+                htmlFor="first_Name"
+              >
+                First Name
+                 
+                <span>
+                  *
+                </span>
+              </label>
+              <input
+                className="form-control"
+                defaultValue=""
+                id="first_Name"
+                onBlur={[Function]}
+                onChange={[Function]}
+                required={true}
+                type="text"
+              />
+              <p
+                className="formErrorMsg"
+              />
+            </div>
+            <div
+              className="col-md-12 mb-4"
+            >
+              <label
+                htmlFor="last_Name"
+              >
+                Last Name
+                 
+                <span>
+                  *
+                </span>
+              </label>
+              <input
+                className="form-control"
+                defaultValue=""
+                id="last_Name"
+                onBlur={[Function]}
+                onChange={[Function]}
+                required={true}
+                type="text"
+              />
+              <p
+                className="formErrorMsg"
+              />
+            </div>
+            <div
+              className="col-md-12 mb-4"
+            >
+              <label
+                htmlFor="email_Address"
+              >
+                Email Address
+                 
+                <span>
+                  *
+                </span>
+              </label>
+              <input
+                className="form-control"
+                defaultValue=""
+                id="email_Address"
+                onBlur={[Function]}
+                onChange={[Function]}
+                required={true}
+                type="email"
+              />
+              <p
+                className="formErrorMsg"
+              />
+            </div>
+            <div
+              className="col-md-12 mb-4"
+            >
+              <label
+                htmlFor="passwords"
+              >
+                Password
+                 
+                <span>
+                  *
+                </span>
+              </label>
+              <input
+                className="form-control"
+                defaultValue=""
+                id="passwords"
+                onBlur={[Function]}
+                onChange={[Function]}
+                required={true}
+                type="password"
+              />
+              <p
+                className="formErrorMsg"
+              />
+            </div>
+            <div
+              className="col-md-12 mb-4"
+            >
+              <label
+                htmlFor="confirm_password"
+              >
+                Confirm Password
+                 
+                <span>
+                  *
+                </span>
+              </label>
+              <input
+                className="form-control"
+                defaultValue=""
+                id="confirm_password"
+                onBlur={[Function]}
+                onChange={[Function]}
+                required={true}
+                type="password"
+              />
+              <p
+                className="formErrorMsg"
+              />
+            </div>
+            <br />
+            <br />
+            <button
+              className="btn essence-btn"
+              type="submit"
+            >
+              Signup
+            </button>
+            <br />
+          </form>
+          <br />
+          <br />
+          <br />
+        </div>
+      </div>
+      <div
+        className="col-md-4"
+      />
+    </div>
+  </div>
+</div>
+`;

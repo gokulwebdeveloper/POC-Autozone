@@ -1,0 +1,81 @@
+.blog-comment{
+    min-height: 50px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+.comment-respond{
+    margin: 30px;
+}
+.comment-form{
+    margin: 30PX;
+    
+}
+.comment-input{
+    display: flex;
+    
+}
+.form-group-name{
+    width: 350px;
+    margin-bottom: 20px;
+    color:#FFFFFF;
+    outline: none;
+    margin-right: 20px;
+   
+}
+.form-group-email{
+    width: 350px;
+    margin-bottom: 20px;
+    color:#FFFFFF;
+    outline: none;
+   
+}
+.form-group-sub{
+    width: 500px;
+    margin-bottom: 20px;
+}
+.form-group-textarea{
+    width: 550px;
+    color:#FFFFFF;
+    margin-bottom: 20px;
+}
+.userimg{
+    width: 20px;
+    height: 20px;
+}
+.submit-btn{
+    width: 180px;
+    height: 40px;
+    color: rgb(73, 71, 71);
+    margin-top: 20px;
+    font-size: 16px;
+    border: 0px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgb(245, 239, 231);;
+    transition-duration: 0.4s;
+}
+.submit-btn:hover{
+background-color: rgb(58, 32, 131);
+color: white;
+
+}
+.comments-list{
+    background-color:rgb(245, 239, 231);
+    width: 800px;
+    height: 60px;
+    padding: 20px;
+    text-align: start;
+    border-radius: 15px;
+    margin-left: 30PX;
+    margin: 20px;
+    
+  }
+  .comment-count{
+      margin: 30px;
+  }
+  
+ .bgimg{
+            width: 1920px;
+            height: 500px;
+
+        }

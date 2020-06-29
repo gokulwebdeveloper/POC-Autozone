@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Signin Page SnapShot Match 1`] = `
+<div>
+  <div
+    className="container h-100"
+  >
+    <div
+      className="row h-100 align-items-center"
+    >
+      <div
+        className="col-4"
+      />
+      <div
+        className="col-4 align-items-center signincontainer"
+      >
+        <div
+          className="page-title text-center"
+        >
+          <h2
+            className="signinhead"
+          >
+            Sign In
+          </h2>
+          <form
+            onSubmit={[Function]}
+          >
+            <label
+              htmlFor="email_address"
+            >
+              Email Address
+               
+              <span>
+                *
+              </span>
+            </label>
+            <input
+              className="form-control"
+              defaultValue=""
+              id="email_address"
+              onBlur={[Function]}
+              onChange={[Function]}
+              required={true}
+              type="email"
+            />
+            <p
+              className="formErrorMsg"
+            />
+            <label
+              htmlFor="password"
+            >
+              Password
+               
+              <span>
+                *
+              </span>
+            </label>
+            <input
+              className="form-control"
+              defaultValue=""
+              id="password"
+              onBlur={[Function]}
+              onChange={[Function]}
+              required={true}
+              type="password"
+            />
+            <p
+              className="formErrorMsg"
+            />
+            <br />
+            <br />
+            <div
+              className="link"
+            >
+              <a
+                href="/signup"
+              >
+                Signup
+              </a>
+            </div>
+            <br />
+            <button
+              className="btn essence-btn"
+              type="submit"
+            >
+              Signin
+            </button>
+            <br />
+            <br />
+          </form>
+        </div>
+      </div>
+      <div
+        className="col-4"
+      />
+    </div>
+  </div>
+</div>
+`;
