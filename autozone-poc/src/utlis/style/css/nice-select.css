@@ -183,3 +183,12 @@
 .no-csspointerevents .nice-select.open .list {
     display: block;
 }
+
+
+option:checked {
+    background-color: transparent;
+    font-weight: bold;
+    color: #0315ff;
+    outline: none;
+    outline-color: transparent;
+} 

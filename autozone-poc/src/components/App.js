@@ -11,6 +11,7 @@ import Welcome from "./Welcome";
 import Checkout from "./CheckoutPage/CheckoutPage";
 import Blog from "./Blog/Blog";
 import Shops from "./Shops/Shops";
+import ProductDetails from './ProductDetails/ProductDetails';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 
@@ -36,6 +37,9 @@ const App = () => {
         </Route>
         <Route path="/regularPage">
           <RegularPage />
+        </Route>
+        <Route path="/single-product-details">
+          <ProductDetails />
         </Route>
         <Route path="/shops">
             <Shops />
