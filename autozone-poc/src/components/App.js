@@ -41,7 +41,7 @@ const App = ({getProducts}) => {
         <Route path="/shops">
             <Shops />
         </Route>
-        <Route exact path="/singleblog" component={Singleblog} >
+         <Route exact path="/singleblog" component={Singleblog} >
          </Route>
          <Route path="/">
           <Home />
