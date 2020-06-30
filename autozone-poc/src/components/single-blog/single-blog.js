@@ -8,26 +8,21 @@ import Rp4 from "../../utlis/img/bg-img/rp4.jpg";
 import "../single-blog/single-blog.css";
 import Comments from "./Comments";
 
-
 //Component structure
 const Singleblog = (props) => {
-  let bgImage ;
-  
-  if(props.location.propsFor.imgPath){
-    bgImage = props.location.propsFor.imgPath;
-    
-  }
-  else {
-    console.log("Imagepathhhh"+bgImage);
+  let bgImage;
+
+  if (props.location.propsFor) {
+    bgImage = props.location.propsFor.imgpath;
+  } else {
     bgImage = Background;
   }
-
 
   return (
     <Fragment>
       <div className="single-blog-wrapper">
         <div className="single-blog-post-thumb">
-          <img className="bgimg" src={bgImage}  alt=""></img>
+          <img className="bgimg" src={bgImage} alt=""></img>
         </div>
         <div className="single-blog-content-wrapper d-flex">
           <div className="single-blog--text">
@@ -112,10 +107,8 @@ const Singleblog = (props) => {
       <div className="blog-comment">
         <Comments />
       </div>
-
-      
     </Fragment>
-  );  
+  );
 };
 
 export default Singleblog;
