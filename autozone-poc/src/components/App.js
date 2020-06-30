@@ -8,10 +8,13 @@ import "../utlis/style/css/core-style.css";
 import "../utlis/style/style.css";
 import Blog from "./Blog/Blog";
 import Shops from "./Shops/Shops";
+<<<<<<< HEAD
 import Welcome from './Welcome';
 import Checkout from './CheckoutPage/CheckoutPage';
 import RegularPage from "./RegularPage/RegularPage";
 import Home from "./HomePage/Home";
+=======
+>>>>>>> d7f6c4fd... completed the page with static data
 import ProductDetails from './ProductDetails/ProductDetails';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
