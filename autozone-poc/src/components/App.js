@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import "../utlis/style/css/core-style.css";
 import "../utlis/style/style.css";
-import Welcome from "./Welcome";
 import Checkout from "./CheckoutPage/CheckoutPage";
 import Blog from "./Blog/Blog";
 import Shops from "./Shops/Shops";
