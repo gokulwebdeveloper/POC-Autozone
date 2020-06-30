@@ -11,6 +11,7 @@ import Welcome from "./Welcome";
 import Checkout from "./CheckoutPage/CheckoutPage";
 import Blog from "./Blog/Blog";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Home from "./HomePage/Home";
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
           <RegularPage />
         </Route>
         <Route path="/">
-          <Welcome />
+          <Home />
         </Route>
       </Switch>
       <Footer />
