@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SingleBlog exists SnapShot Match 1`] = `ShallowWrapper {}`;

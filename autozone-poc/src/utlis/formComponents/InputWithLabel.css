@@ -1,0 +1,5 @@
+.formErrorMsg{
+    color: red;
+    font-size: 0.8rem!important;
+    display: none;
+}
