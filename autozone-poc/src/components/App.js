@@ -7,22 +7,15 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import "../utlis/style/css/core-style.css";
 import "../utlis/style/style.css";
-import Welcome from "./Welcome";
 import Checkout from "./CheckoutPage/CheckoutPage";
 import Blog from "./Blog/Blog";
 import Shops from "./Shops/Shops";
 import ProductDetails from './ProductDetails/ProductDetails';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Singleblog from "./single-blog/single-blog";
-
-
-
-
+import Home from "./HomePage/Home";
 
 const App = () => {
-
-
-
   return (
     <Router>
       <Header />
@@ -46,7 +39,7 @@ const App = () => {
             <Shops />
         </Route>
         <Route path="/">
-          <Welcome />
+          <Home />
         </Route>
         <Route exact path="/singleblog" component={Singleblog} >
          </Route>
