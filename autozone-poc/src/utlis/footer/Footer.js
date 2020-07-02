@@ -9,11 +9,11 @@ const Footer = () => {
           <div className="row">
             <div className="col-12 col-md-6">
               <div className="single_widget_area d-flex mb-30">
-                <div className="footer-logo mr-50">
+                {/* <div className="footer-logo mr-50">
                   <a href="#">
                     <img src="img/core-img/logo2.png" alt="" />
                   </a>
-                </div>
+                </div> */}
                 <div className="footer_menu">
                   <ul>
                     <li>
