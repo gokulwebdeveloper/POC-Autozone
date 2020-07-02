@@ -20,15 +20,15 @@ const Product = (props) => {
             <div className="single-product-wrapper">
                 
                 <div className="product-img">
-                    {/* <img src={(props.product_image)} alt={""} /> */}
+                    <img src={(props.product_image)} alt={""} />
                     {console.log('Image Id '+ imgpath)}
-                    <img src={imgpath} alt={""} />
+                    {/* <img src={imgpath} alt={""} /> */}
                     
-                    <img className="hover-img" src={imgpath} alt="" />
+                    <img className="hover-img" src={(props.product_image)} alt="" />
 
                     
                     <div className="product-badge offer-badge">
-                        <span>-30%</span>
+                        <span>{props.offer_badge}</span>
                     </div>
                     
                     <div className="product-favourite">
@@ -38,14 +38,14 @@ const Product = (props) => {
 
                 
                 <div className="product-description">
-                    <span>Topshop</span>
+                    <span>{props.product_brand}</span>
                     <a href="single-product-details.html">
-                        {/* <h6>{props.product_name}</h6> */}
-                        <h6>{props.title}</h6>
+                        <h6>{props.product_name}</h6>
+                        {/* <h6>{props.title}</h6> */}
                     </a>
                 <p className="product-price">
-                    {/* <span className="old-price">${props.original_price}</span> ${props.offer_price} */}
-                    <span className="old-price">$125</span> $95.65
+                    <span className="old-price">${props.original_price}</span> ${props.offer_price}
+                    {/* <span className="old-price">$125</span> $95.65 */}
                     </p>
 
                     

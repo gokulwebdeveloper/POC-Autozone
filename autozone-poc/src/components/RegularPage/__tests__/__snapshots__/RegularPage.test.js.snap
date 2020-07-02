@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test CheckoutPage SnapShot Match 1`] = `
+exports[`test RegularPage SnapShot Match 1`] = `
 <div
   className="container-fluid main-container"
 >

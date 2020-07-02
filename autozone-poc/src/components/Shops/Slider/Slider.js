@@ -1,7 +1,7 @@
 import React, { useEffect} from 'react';
+import $ from 'jquery';
 import 'jquery-ui/ui/widgets/slider';
 import 'jquery-ui-dist/jquery-ui.css';
-import $ from 'jquery';
 window.jQuery = $;
 window.$ = $;
 
