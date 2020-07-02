@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "../utlis/header/Header";
 import Footer from "../utlis/footer/Footer";
 import RegularPage from "./RegularPage/RegularPage";
@@ -14,8 +14,13 @@ import ProductDetails from './ProductDetails/ProductDetails';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Singleblog from "./single-blog/single-blog";
 import Home from "./HomePage/Home";
+import {connect} from 'react-redux';
+import {getProducts} from '../Redux/actions';
 
-const App = () => {
+const App = ({getProducts}) => {
+  useEffect(()=>{
+    getProducts();
+  },[]);
   return (
     <Router>
       <Header />
@@ -49,4 +54,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default connect(null,{getProducts})(App);
