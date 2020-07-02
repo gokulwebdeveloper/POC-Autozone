@@ -20,7 +20,7 @@ const App = () => {
     <Router>
       <Header />
       <Switch>
-        <Route path="/blog">
+        <Route  path="/blog">
           <Blog />
         </Route>
         <Route path="/checkout">
@@ -38,11 +38,11 @@ const App = () => {
         <Route path="/shops">
             <Shops />
         </Route>
-        <Route path="/">
+         <Route exact path="/singleblog" component={Singleblog} >
+         </Route>
+         <Route path="/">
           <Home />
         </Route>
-        <Route exact path="/singleblog" component={Singleblog} >
-         </Route>
     </Switch>
       <Footer />
     </Router>
