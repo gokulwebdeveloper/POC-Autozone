@@ -15,6 +15,7 @@ const Comments = () => {
   const [list, setList] = React.useState(initialList);
 
   const handleSubmit = (event) => {
+   
     setList(list.concat(state.name + " : " + state.comments));
     setState({ name: "", email: "", comments: "" });
     event.preventDefault();
@@ -34,7 +35,7 @@ const Comments = () => {
                 inputType="inputWithoutLabel"
                 placeholder="Name..."
                 value={state.name}
-                onChange={(e) => setState({ name: e.target.value })}
+                onChange={(e) => setState({ ...state, name: e.target.value })}
                 className="form-control"
               />
             </div>
@@ -44,7 +45,7 @@ const Comments = () => {
                 inputType="inputWithoutLabel"
                 placeholder="Email..."
                 value={state.email}
-                onChange={(e) => setState({ email: e.target.value })}
+                onChange={(e) => setState({ ...state, email: e.target.value })}
                 className="form-control"
               />
             </div>
@@ -52,7 +53,7 @@ const Comments = () => {
           <div className="form-group-textarea">
             <textarea
               value={state.comments}
-              onChange={(e) => setState({ comments: e.target.value })}
+              onChange={(e) => setState({ ...state, comments: e.target.value })}
               placeholder="Comment..."
               cols="98"
               rows="8"
@@ -85,7 +86,7 @@ const Comments = () => {
                 type="inputWithoutLabel"
                 placeholder="Name..."
                 value={state.name}
-                onChange={(e) => setState({ name: e.target.value })}
+                onChange={(e) => setState({ ...state, name: e.target.value })}
                 className="form-control"
               />
             </div>
@@ -95,7 +96,7 @@ const Comments = () => {
                 type="inputWithoutLabel"
                 placeholder="Email..."
                 value={state.email}
-                onChange={(e) => setState({ email: e.target.value })}
+                onChange={(e) => setState({ ...state, email: e.target.value })}
                 className="form-control"
               />
             </div>
@@ -103,7 +104,7 @@ const Comments = () => {
           <div className="form-group-textarea">
             <textarea
               value={state.comments}
-              onChange={(e) => setState({ comments: e.target.value })}
+              onChange={(e) => setState({ ...state, comments: e.target.value })}
               placeholder="Comment..."
               cols="98"
               rows="8"

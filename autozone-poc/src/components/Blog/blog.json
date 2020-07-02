@@ -2,152 +2,137 @@
   {
     "id": 1,
     "title": "HOW TO REPLACE YOUR CABIN AIR FILTER",
-    "image": "../src/utlis/img/azo-blog-img/blog1.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/06/how-to-replace-your-cabin-air-filter-350x180.jpg",
     "content": "Changing your vehicle’s cabin air filter only takes a few minutes and helps protect your lungs by keeping the air inside your vehicle clean.",
     "recent_date":"09/02/2020",
     "blogStatus":true,
-    "video":"https://www.autozone.com/videos/tvpembed/201547489/",
     "description": "Changing your vehicle’s cabin air filter only takes a few minutes and helps protect your lungs by keeping the air inside your vehicle clean. Filters should be replaced every 15,000 to 30,000 miles or if you notice they are dirty during an inspection.Park your vehicle on a flat, dry surface and make sure the parking brake is on. In some situations you may need a screwdriver or socket set, but most installations can be done by hand.      Sometimes the filter can be pretty dirty, so you may want to wear safety gloves and goggles, and even put a covering down on your passenger side floor mat. This is in case dust or debris fall out when removing the old filter.Open and, often times, remove the glove box to access the cabin air filter. The owner's manual should have detailed information on removal. This may require a screwdriver, or simply pressing down on a tab or two.      Some vehicles allow access without removing the glove box, but there are others where the cabin air filter is accessed from under the hood. The owner's manual or a Repair Guide will have detailed information on location & removal for your vehicle.Remove the old cabin air filter and any debris. Note the placement of the old filter. You may want to vacuum the area.Install the new filter. Note the direction the old filter was installed and match the new filter. Air flow direction is usually indicated by arrows on the filter."
     
   },
   {
     "id": 2,
     "title": "HOW TO REPLACE YOUR CAR'S AIR FILTER",
-    "image": "../src/utlis/img/azo-blog-img/blog2.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/06/how-to-replace-your-air-filter-350x180.jpg",
     "content": "The engine air filter, or air filter, cleans the air entering your engine and protects its sensitive parts from debris and dust.Your engine air filter is located under the hood.",
     "recent_date":"09/04/2020",
     "blogStatus":false,
-    "video":"https://www.autozone.com/videos/tvpembed/201547489/",
     "description": "The engine air filter, or air filter, cleans the air entering your engine and protects its sensitive parts from debris and dust. Your engine air filter is located under the hood. The air filter box should be easily identifiable and simply opened by releasing latches or tabs by hand. Some air filter boxes may require a screwdriver or socket set to open.Locate the air filter housing. Open the air filter housing. The housing is likely secured with clamps that can be undone with your hands, but sometimes you might need a screwdriver or small ratchet to open the housing.Remove the old air filter and any debris. Note how the old air filter is installed. You'll want to replicate this when installing the new air filter.Install the new air filter. Match the direction and placement of the old housing. Close the air filter housing and secure it the way it was before. That's it. That's all there is to getting fresh air into your engine."
   },
   {
     "id": 3,
     "title": "HOW DO I REPLACE SPARK PLUGS?",
-    "image": "../src/utlis/img/azo-blog-img/blog3.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/06/how-do-i-replace-a-spark-plug-350x180.jpg",
     "content": "Replacing worn spark plugs can greatly improve your engine’s performance and efficiency.",
     "recent_date":"22/02/2020",
     "blogStatus":true,
-    "video":"",
     "description": "Replacing worn spark plugs can greatly improve your engine’s performance and efficiency. Replacement intervals vary widely by car manufacturer and spark plug metal types and design. Recommended spark plug replacement intervals can range from 30,000 miles to every 100,000 miles. You will need to follow the recommendations in your owners’ manual. It’s OK to upgrade but never down grade from the manufactures factory requirements. Doing so will hinder performance and may cause issues related to sister components or the engine itself. Spark plugs fire constantly and wear down over driving time, reducing their efficiency. Spark plug replacement can be challenging on some vehicles engines. The greatest challenges you’ll face is accessibility and sticking components such as when removing the spark plug wires or ignition coils/boots and unscrewing the spark plugs. Some spark plugs can be difficult to reach and require removal of the upper plenum/intake manifold. In these cases, a new plenum gasket will be needed. Check the Repair Guide for your specific vehicle and engine."
   },
   {
     "id": 4,
     "title": "WHICH DURALAST BATTERY IS RIGHT FOR YOUR VEHICLE?",
-    "image": "../src/utlis/img/azo-blog-img/blog4.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/06/batteryfamily-in-the-desert-350x180.jpg",
     "content": "Which battery is right for you? AutoZone is the number one battery destination for safe starts and long battery life and carries several warranty-backed options.",
     "recent_date":"09/05/2020",
     "blogStatus":false,
-    "video":"https://www.autozone.com/videos/tvpembed/201549301",
     "description": "Which battery is right for you? AutoZone is the number one battery destination for safe starts and long battery life and carries several warranty-backed options. What makes the batteries different? Warranty length, amount of lead plates, power for your engine and accessories, and expected battery life."
   },
   {
     "id": 5,
     "title": "HOW TO TEST A CAR BATTERY WITH A MULTIMETER",
-    "image": "../src/utlis/img/azo-blog-img/blog5.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/12/test-battery-multimeter-350x180.jpg",
     "content": "Using a multimeter, you can determine if your battery is healthy enough to keep around. If it is, you can often recharge it to make sure it runs well in the future.",
     "recent_date":"19/06/2020",
     "blogStatus":true,
-    "video":"https://www.autozone.com/videos/tvpembed/201547489/",
     "description": "You get in the car and turn the ignition but don't hear the comforting hum of your engine. It won't start and the lack of power indicates it's probably the battery. Sometimes the reason is obvious, such as realizing you left your headlights on all night. But other than searching how to tell if car battery is dead how do you know if you can jump it or just need to replace it? A cheap tool and a simple test can let you know if your battery is holding a charge. Learn the easy solutions to potential problems that can come with a busted battery."
   },
   {
     "id": 6,
     "title": "HOW TO JUMP START A CAR BATTERY",
-    "image": "../src/utlis/img/azo-blog-img/blog6.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/06/jump-start-a-car-350x180.jpg",
     "content": "A jump start will help bring your car back to life for a short time if the battery has failed or there’s a charging component failure. If your engine won’t spin over, the battery may be the problem.",
     "recent_date":"22/03/2020",
     "blogStatus":false,
-    "video":"",
     "description": "A jump start will help bring your car back to life for a short time if the battery has failed or there’s a charging component failure. If your engine won’t spin over, the battery may be the problem. If that’s the case, a jump start can get you back on the road for long enough to get to your local AutoZone or a repair shop. You’ll need another car and a pair of jumper cables, or a portable jump starter. This only takes a few minutes to set up, but you’ll want to carefully follow a few specific steps to stay safe. It’s always a good idea to have jumper cables and an emergency kit or battery booster in your vehicle in case you have a problem. A note of caution: If the vehicle that will not start has an internal short or other electrical problems damage may possibly occur to the other vehicle when the jumper cables are connected."
   },
   {
     "id": 7,
     "title": "HOW TO CHANGE HEADLIGHTS",
-    "image": "../src/utlis/img/azo-blog-img/blog7.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/07/how-to-check-and-change-headlight-bulbs-350x180.jpg",
     "content": "Got a headlight bulb out or you just want to see better at night? AutoZone has got you covered.",
     "recent_date":"09/01/2020",
     "blogStatus":true,
-    "video":"https://www.autozone.com/videos/tvpembed/163084109/",
     "description": "Got a headlight bulb out or you just want to see better at night? AutoZone has got you covered. When you're shopping for bulbs check with an AutoZoner at the front counter. Make sure the bulbs you're getting are going to fit your vehicle or you can go to AutoZone.com or follow the AutoZone app."
   },
   {
     "id": 8,
     "title": "CHECK AND CHANGE YOUR WINDSHIELD WIPERS",
-    "image": "../src/utlis/img/azo-blog-img/blog8.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/06/check-and-change-wipers-350x180.jpg",
     "content": "Having trouble seeing in the rain? Might be old or dirty wiper blades.Check for obvious dirt or obstructions that could cause the noise or cleaning miss.",
     "recent_date":"09/06/2020",
     "blogStatus":false,
-    "video":"https://www.autozone.com/videos/tvpembed/177859530/",
     "description": "Having trouble seeing in the rain? Might be old or dirty wiper blades. To know whether or not to replace your wipers, listen and look at how your blades clean the windshield. If they are quiet and smooth, easily clearing water, they are working correctly. If they are loud, the swipe feels rough, or they’re leaving a whole section of the windshield uncleaned, they may be in trouble. Check for obvious dirt or obstructions that could cause the noise or cleaning miss. If the blade is dirty or has something stuck in it, clean it with glass cleaner and remove the debris. If you notice any chunks of the blade missing or the problem continues after a cleaning, it’s time to replace."
   },
   {
     "id": 9,
     "title": "HOW TO REPLACE BRAKES",
-    "image": "../src/utlis/img/azo-blog-img/blog9.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/06/duralast-brake-pads-and-rotors-hero-350x180.jpg",
     "content": "Your brake pads and rotors help your vehicle make safe stops, so it’s important to replace them when necessary.",
     "recent_date":"15/02/2020",
     "blogStatus":false,
-    "video":"https://www.autozone.com/videos/tvpembed/201547383/",
     "description": "Your brake pads and rotors help your vehicle make safe stops, so it’s important to replace them when necessary. AutoZone recommends inspecting or having your brake pads inspected when rotating or changing your tires. If you’re experiencing an issue like squealing, squeaking or grinding, pulsation from the pedal, steering wheel shimmy (or shaking), this could be an indication of worn or failing pads or rotors. AutoZone recommends replacing pads and rotors together for a complete brake job. Check out the video above or keep scrolling for general steps on how to replace brake pads and rotors in the most vehicles."
   },
   {
     "id": 10,
     "title": "HOW TO CHANGE YOUR OIL",
-    "image": "../src/utlis/img/azo-blog-img/blog10.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/06/easy-steps-to-change-your-oil-350x180.jpg",
     "content": "Changing your oil is an essential part of vehicle maintenance that most people can do at home. If you’re using conventional oil, changes are recommended every 3,000 to 5,000 miles.",
     "recent_date":"20/02/2020",
     "blogStatus":true,
-    "video":"https://www.autozone.com/videos/tvpembed/201547482/",
     "description": "Changing your oil is an essential part of vehicle maintenance that most people can do at home. If you’re using conventional oil, changes are recommended every 3,000 to 5,000 miles. Synthetic oil may allow for longer intervals between changes. Consult your owner’s manual, a repair guide, the oil jug, or talk to an AutoZoner for more specific intervals for your vehicle."
   },
   {
     "id": 11,
     "title": "HOW TO FIX SMALL CRACKS & CHIPS IN YOUR WINDSHIELD",
-    "image": "../src/utlis/img/azo-blog-img/blog11.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2020/06/windshield-crack-fix-hero-350x180.jpg",
     "content": "our car’s windshield is subjected to a number of impacts, scratches and other incidents that can cause damage. A minor crack or chip is easily caused by a flying stone, gravel or accidental impact.",
     "recent_date":"28/03/2020",
     "blogStatus":true,
-    "video":"",
     "description": "Your car’s windshield is subjected to a number of impacts, scratches and other incidents that can cause damage. A minor crack or chip is easily caused by a flying stone, gravel or accidental impact. Without prompt care, these minor issues can lead to spider cracks across your entire windshield. Learn how to fix a cracked windshield and where to turn for reliable DIY repair kits."
   },
   {
     "id": 12,
     "title": "HOW TO PROPERLY WAX YOUR CAR",
-    "image": "../src/utlis/img/azo-blog-img/blog12.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2020/04/how-to-wax-car-350x180.jpg",
     "content": "A proper wax process can restore your car’s exterior and protect it from elements like bird droppings and road grime, UV damage, and fading.",
     "recent_date":"08/06/2020",
     "blogStatus":true,
-    "video":"",
     "description": "A proper wax process can restore your car’s exterior and protect it from elements like bird droppings and road grime, UV damage, and fading. Learn how to wax a car by yourself to save money and enjoy a quality DIY maintenance routine. Compare wax products and follow this step-by-step guide to care for your car."
   },
   {
     "id": 13,
     "title": "HOW AND WHEN TO CHECK YOUR OIL",
-    "image": "../src/utlis/img/azo-blog-img/blog13.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/12/how-to-check-oil-level-hero-350x180.jpg",
     "content": "Your car's engine is filled with moving parts, and moving parts require adequate lubrication if they're to work properly and smoothly.",
     "recent_date":"09/07/2020",
     "blogStatus":true,
-    "video":"",
     "description": "Your car’s engine is filled with moving parts, and moving parts require adequate lubrication if they’re to work properly and smoothly. Motor oil provides that lubrication, meaning one of the most important things you can do to take care of your car is check your oil levels often. Seeing to it that your oil levels stay at ideal levels will not only help your car run better, but it will extend the life of your engine as well, saving you a small fortune in repair costs over time. Making sure your engine has enough clean oil is the best way to prevent harmful build-up that can affect performance as well. Here’s a closer look at what you need to know to properly stay on top of things."
   },
   {
     "id": 14,
     "title": "HOW TO BLEED BRAKE FLUID BY YOURSELF",
-    "image": "../src/utlis/img/azo-blog-img/blog14.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/06/Bleeding-MC-onCar-350x180.jpg",
     "content": "Every vehicle’s brakes need to have the fluid bled and replaced from time to time. Schedules vary, so check your owner’s manual for exact timelines.If your brake pedal is feeling spongy, bleed and replace the fluid.",
     "recent_date":"09/01/2020",
     "blogStatus":true,
-    "video":"",
     "description": "Every vehicle’s brakes need to have the fluid bled and replaced from time to time. Schedules vary, so check your owner’s manual for exact timelines. Some manufactures recommend new fluid every 20,000 miles, and some recommend a bleed at 150,000 miles. Overall, it’s a good idea to bleed and replace your brake fluid every five years or every time you work on your brake system. Keeping fluid fresh helps maintain solid stops. It’s cheaper and easier than replacing brake lines or the master cylinder, both of which can corrode with old fluid. If your brake pedal is feeling spongy, bleed and replace the fluid. Check the master cylinder and caliper pistons, but if you feel the pedal sink after you stop, it’s most likely the fluid. Brake fluid is hygroscopic, which means it absorbs water. Even though it lives in a closed system, water sometimes seeps inside. Water has a lower boiling point than brake fluid. So when fluid heats up from the friction of stopping, the absorbed water boils and evaporates. This creates air pockets and these pockets lead to weak, spongy brakes."
   },
   {
     "id": 15,
     "title": "WET WEATHER DRIVING TIPS",
-    "image": "../src/utlis/img/azo-blog-img/blog15.jpg",
+    "image": "https://www.autozone.com/diy/wp-content/uploads/2019/06/wet-weather-driving-tips-1-350x180.jpg",
     "content": "When it’s wet and raining, your best practices for safety are slower speeds, better visibility, and firm control.",
     "recent_date":"18/03/2020",
     "blogStatus":true,
-    "video":"",
     "description": "When it’s wet and raining, your best practices for safety are slower speeds, better visibility, and firm control. By keeping up with some basic maintenance and following a few best practices, you can put yourself in a position of staying safe when the weather is wet."
   }
 ]
