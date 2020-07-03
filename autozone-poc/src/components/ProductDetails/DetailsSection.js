@@ -9,11 +9,121 @@ const DetailsSection = (props) => {
     const currentProduct = props.currentProduct;
 
     useEffect( ()=>{
-        console.log("ImageListHooks: componentDidUpdate");
+        updateFavoriteIco();
+        var currentCntrl = document.getElementById("txtcartquantity");
+
+        if(currentCntrl)
+            currentCntrl.value = 1;
+
         return ( ()=>{
            console.log('ImageListHooks: componentWillUnmount');
         });
      }, [currentProduct]);
+
+     function updateFavoriteIco()
+     {
+        var currentCntrl = document.getElementById("favme");
+
+        if(currentCntrl!=null)
+        {
+            if(currentProduct.isFavourite)
+                currentCntrl.className = "favme fa fa-heart active";
+            else
+                currentCntrl.className = "favme fa fa-heart";
+        }
+     }
+
+     function changeFavStatus() {
+        var currentCntrl = document.getElementById("favme");
+
+        if(currentCntrl==null)
+            return;
+
+        if(!currentCntrl.className.includes("active"))
+            currentCntrl.className = "favme fa fa-heart active";
+        else
+            currentCntrl.className = "favme fa fa-heart";
+    }
+
+    function onQtyChange()
+    {
+        var currentCntrl = document.getElementById("txtcartquantity");
+
+        if(currentCntrl==null)
+            return;
+        
+        if(currentCntrl.value == null)
+            currentCntrl.value = 1;
+        else if(currentCntrl.value > 5)
+        {
+            currentCntrl.value = 1;
+        }
+        else
+            return;
+    }
+
+    function onIncreaseQty()
+    {
+        var currentCntrl = document.getElementById("txtcartquantity");
+
+        if(currentCntrl==null)
+            return;
+        
+        if(currentCntrl.value == null)
+            currentCntrl.value = 1;
+        else
+        {
+            var val = parseInt(currentCntrl.value);
+            
+            if(val < 5)
+            {
+                currentCntrl.value = val + 1;
+                updateCartPrice();
+            }
+            else
+                return;
+        }
+    }
+
+    function onDecreaseQty()
+    {
+        var currentCntrl = document.getElementById("txtcartquantity");
+
+        if(currentCntrl==null)
+            return;
+        
+        if(currentCntrl.value == null)
+            currentCntrl.value = 1;
+        else
+        {
+            var val = currentCntrl.value;
+            if(val > 1)
+            {
+                currentCntrl.value = val - 1;
+                updateCartPrice();
+            }
+            else
+                return;
+        }
+    }
+
+    function updateCartPrice()
+    {
+        var currentCntrl = document.getElementById("txtcartquantity");
+
+        if(currentCntrl==null)
+            return;
+
+        var cartCntrl = document.getElementById("cartprice");
+
+        if(cartCntrl==null)
+            return;
+
+        var val = parseInt(currentCntrl.value);
+                var price = parseFloat(currentProduct.offer_price);
+                var total = val * price;
+                cartCntrl.innerHTML = total;
+    }
     
     var styleDisplayNone = {
         display:'none',
@@ -28,18 +138,6 @@ const DetailsSection = (props) => {
     var styleowlitems = {
        width: 459,
     };
-
-    function changeFavStatus() {
-        var currentCntrl = document.getElementById("favme");
-
-        if(currentCntrl==null)
-            return;
-
-        if(!currentCntrl.className.includes("active"))
-            currentCntrl.className = "favme fa fa-heart active";
-        else
-            currentCntrl.className = "favme fa fa-heart";
-    }
 
     return (
         
@@ -65,28 +163,40 @@ const DetailsSection = (props) => {
         {/* <!-- Single Product Description --> */}
         <div className="single_product_desc clearfix">
             <span>{currentProduct.product_brand}</span>
-            <a href="cart.html">
                 <h2>{currentProduct.product_name}</h2>
-            </a>
-            <p className="product-price"><span className="old-price">${currentProduct.original_price}</span> ${currentProduct.offer_price}</p>
             <p className="product-desc">{currentProduct.product_desc}</p>
+           
+            <div >
+                <p className="product-price"><span className="old-price">${currentProduct.original_price}</span>
+                <span className="new-price"> $</span>
+                    <span id="cartprice" className="new-price">{currentProduct.offer_price}</span></p>
+            
+            <div className="d-flex">
+            <div className="d-flex">
+                <button className="single_product_desc quantitybutton"
+                        onClick={onDecreaseQty}>
+                    <img src="src/assets/img/core-img/minus.svg" alt="decrease button"/>
+                </button>
+            </div>
+            <div className="d-flex">
+                <input id="txtcartquantity" className="form-control quantitybox"
+                onChange={onQtyChange} maxLength="1"/>
+            </div>
+            <div className="d-flex">
+                <button className="single_product_desc quantitybutton"
+                onClick={onIncreaseQty}>
+                    <img src="src/assets/img/core-img/add.svg" alt="increase button"/>
+                </button>
+            </div>
+            </div>
+            </div>
 
             {/* <!-- Form --> */}
             <form className="cart-form clearfix" method="post">
+            
                 {/* <!-- Select Box --> */}
                 <div className="select-box d-flex mt-50 mb-30">
-                    <select id="productSize" className="nice-select mr-5">
-                        <option >Size: XL</option>
-                        <option >Size: X</option>
-                        <option >Size: M</option>
-                        <option >Size: S</option>
-                    </select>
-                    <select id="productColor" className="nice-select mr-5">
-                        <option >Color: Black</option>
-                        <option >Color: White</option>
-                        <option >Color: Red</option>
-                        <option >Color: Purple</option>
-                    </select>
+                    
                 </div>
                 {/* <!-- Cart & Favourite Box --> */}
                 <div className="cart-fav-box d-flex align-items-center">

@@ -37,3 +37,35 @@
   button.owl-next:focus {
     outline: none;
   }
+
+  .form-control.quantitybox {
+    width: 40px;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .single_product_desc .quantitybutton{
+    min-width: 30px;
+    padding: 0px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .single_product_desc .quantitybutton:focus{
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .single_product_details_area .single_product_desc .product-price .new-price{
+    display: inline-block;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 24px;
+    color: #dc0345;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 0px;
+  }
