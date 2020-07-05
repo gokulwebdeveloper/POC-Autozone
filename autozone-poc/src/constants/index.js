@@ -5,6 +5,8 @@ export const setproductdetail = "SET_PRODUCTDETAILS";
 export const addtocart = "ADD_TO_CART";
 export const removefromcart = "REMOVE_FROM_CART";
 export const emptycart = "REMOVE_CART_DATA";
+export const filterproducts = "FILTER_PRODUCTS";
+export const sortproducts = "SORT_PRODUCTS";
 
 // localStorage
 export const CART_DATA = "CART_DATA";
