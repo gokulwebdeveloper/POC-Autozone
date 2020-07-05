@@ -1,7 +1,7 @@
 .owl-prev {
     position: absolute;
     left: 0;
-    left: 30px;
+    left: 20px;
     height: 30px;
     text-align: center;
     transform: translateY(-50%);
@@ -23,7 +23,7 @@
   .owl-next {
     position: absolute;
     right: 0;
-    right: 30px;
+    right: 20px;
     height: 30px;
     text-align: center;
     transform: translateY(-50%);
@@ -40,10 +40,12 @@
 
   .form-control.quantitybox {
     width: 40px;
+    height: 35px;
     margin-right: 5px;
     margin-left: 5px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 18px;
   }
 
   .single_product_desc .quantitybutton{
@@ -68,4 +70,31 @@
     font-weight: 700;
     text-decoration: none;
     margin-right: 0px;
+  }
+
+  .owl-stage .owl-item:active{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .owl-carousel .owl-stage-outer .owl-stage .owl-item div{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .single_product_desc .priceperitem{
+  font-size: 10px;
+  height: 10px;
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: normal;
+  color: #484848;
+  }
+
+  .single_product_desc .outofstock{
+    color: #dc0345;
+    height: 10px;
+    margin: 0px 0px 10px 0px;
   }
