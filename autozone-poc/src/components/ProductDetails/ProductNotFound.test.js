@@ -3,7 +3,7 @@ import { unmountComponentAtNode } from "react-dom";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import '@testing-library/jest-dom/extend-expect';
-import ProductDetails from "./ProductDetails";
+import ProductNotFound from "./ProductNotFound";
 
 let container = null;
 beforeEach(() => {
@@ -13,9 +13,9 @@ beforeEach(() => {
 });
 
 describe("renders component with images", () => {
-  const details = shallow(<ProductDetails />);
+  const details = shallow(<ProductNotFound />);
   it("SnapShot Match for Product Details screen", () => {
-    const page = renderer.create(<ProductDetails />).toJSON();
+    const page = renderer.create(<ProductNotFound />).toJSON();
     expect(page).toMatchSnapshot();
   });
 });

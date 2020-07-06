@@ -4,12 +4,17 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import OwlCarousel from 'react-owl-carousel';
 import '../ProductDetails/ProductDetails.css';
 import Button from '../../utlis/button/Button';
+import PropTypes from 'prop-types';
+import Rating from 'react-rating';
+import { connect } from 'react-redux';
+import {addToCart} from '../../Redux/actions';
 
 const DetailsSection = (props) => {
     const currentProduct = props.currentProduct;
     
     const maxAllowedQty = 5;
     useEffect( ()=>{
+
         updateFavoriteIco();
         var txtcartquantity = document.getElementById("txtcartquantity");
 
@@ -29,10 +34,6 @@ const DetailsSection = (props) => {
             else
                 outOfStock.style.visibility = "visible";
         }
-
-        return ( ()=>{
-            
-        });
      }, [currentProduct]);
 
      function updateFavoriteIco()
@@ -179,6 +180,25 @@ const DetailsSection = (props) => {
             pricePerItem.innerHTML = "Each $ "+currentProduct.offer_price;
     }
 
+    function addToCart()
+    {
+        var txtcartquantity = document.getElementById("txtcartquantity");
+
+        var qty= parseInt(txtcartquantity.value);
+
+        var price = parseFloat(currentProduct.offer_price);
+        var total = parseFloat(qty * price);
+
+        addKeyValue(props.currentProduct,"quantity", qty);
+        addKeyValue(props.currentProduct,"price", total);
+
+        props.dispatchAddToCart(props.currentProduct);
+    }
+
+    function addKeyValue(obj, key, data){
+        obj[key] = data;
+      }
+
     return (
         
         <section className="single_product_details_area d-flex align-items-center">
@@ -209,6 +229,15 @@ const DetailsSection = (props) => {
             <div className="single_product_desc clearfix">
                 <span>{currentProduct.product_brand}</span>
                     <h2>{currentProduct.product_name}</h2>
+                    <Rating
+                    initialRating={currentProduct.rating}
+                    readonly
+                    className="rating"
+                    emptySymbol="fa fa-star-o fa-2x" 
+                    fullSymbol="fa fa-star fa-2x"
+                    fractions={2}
+                    />
+                    
                     <h6 id="outOfStock" className="outofstock">Out of stock</h6>
                    
                 <p className="product-desc">{currentProduct.product_desc}</p>
@@ -219,11 +248,10 @@ const DetailsSection = (props) => {
                 
                 <div id="divQty" className="d-flex">
                 <div className="d-flex">
-                    
                     <button id="btnDecreaseQty" className="quantitybutton"
                             onClick={onDecreaseQty} 
                             disabled={currentProduct.product_instock === true ? false : true}>
-                        <img src="src/assets/img/core-img/minus.svg" alt="decrease button"/>
+                        <img src="../src/assets/img/core-img/minus.svg" alt="decrease button"/>
                     </button>
                 </div>
                 <div className="d-flex">
@@ -235,27 +263,39 @@ const DetailsSection = (props) => {
                     <button className="quantitybutton"
                     onClick={onIncreaseQty}
                     disabled={currentProduct.product_instock === true ? false : true}>
-                        <img src="src/assets/img/core-img/add.svg" alt="increase button"/>
+                        <img src="../src/assets/img/core-img/add.svg" alt="increase button"/>
                     </button>
                 </div>
                 </div>
                 <div id="pricePerItem" className="priceperitem" ></div>
 
-                {/* <!-- Form --> */}
-                <form className="cart-form mt-30" method="post">
                     {/* <!-- Cart & Favourite Box --> */}
                     <div className="cart-fav-box d-flex align-items-center">
                         <Button id="btnAddtoCart" btnText="Add to Cart" 
-                        disabled={currentProduct.product_instock === true ? false : true}/>
+                        disabled={currentProduct.product_instock === true ? false : true}
+                        onClick={addToCart}/>
                         {/* <!-- Favourite --> */}
                         <div className="product-favourite ml-4" onClick={changeFavStatus}>
                             <a id="favme" className="favme fa fa-heart"></a>
                         </div>
                     </div>
-            </form>
             </div>
         </section>
     );
 };
 
-export default DetailsSection;
+DetailsSection.propTypes = {
+    props: PropTypes.object,
+}
+
+const mapStateToProps = productDetail =>{
+    return productDetail;
+}
+
+const mapDispatchToProps = (dispatch) =>{
+    return {
+        dispatchAddToCart: product => dispatch(addToCart(product))
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(DetailsSection);

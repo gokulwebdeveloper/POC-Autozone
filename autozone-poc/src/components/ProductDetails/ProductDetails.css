@@ -87,6 +87,7 @@
   .single_product_desc .priceperitem{
   font-size: 10px;
   height: 10px;
+  margin: 10px;
   letter-spacing: normal;
   text-transform: none;
   font-weight: normal;
@@ -96,5 +97,8 @@
   .single_product_desc .outofstock{
     color: #dc0345;
     height: 10px;
-    margin: 0px 0px 10px 0px;
   }
+
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }

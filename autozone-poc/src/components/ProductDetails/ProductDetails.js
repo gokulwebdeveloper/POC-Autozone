@@ -1,40 +1,31 @@
 import React from 'react';
 import DetailsSection from './DetailsSection';
-import DummyDetails from './DummyDetails';
-import jsonData from '../../../data/products.json';
-import action from '../../Redux/actions/index';
-import getproductdetail from '../../constants';
-import store from '../../Redux/store/index';
-import {connect, Dispatch} from "react-redux";
-
-const queryString = require('query-string');
+import ProductNotFound from './ProductNotFound';
+import PropTypes from 'prop-types';
+import {connect} from "react-redux";
+import {getProductDetail} from '../../Redux/actions';
 
 const ProductDetails = (props) => {
-    var parsed = queryString.parse(location.search);
-    //console.log(parsed.id); // replace param with your own 
+    var prodId = props.match.params.id;
 
-    if(jsonData && parsed)
-    {
-        const prodId = parsed.id;
-        var currentProduct;// = store.dispatch(getproductdetail(prodId));
-        //console.log(currentProduct);
-
-        // var test = props.getproductdetail(prodId);
-        // console.log(test);
-        
-        var element =  jsonData.filter((w)=>w.id == prodId);
-        if(element)
-            currentProduct = element[0];
+    if(prodId){
+        if(props.productDetail)
+            return <DetailsSection currentProduct={props.productDetail.data[0]} />
         else
-            return <DummyDetails/>
-
-        if(currentProduct)
-            return <DetailsSection currentProduct={currentProduct} />
-        else
-            return <DummyDetails/>
+            return <ProductNotFound/>
     }
     else
-       return <DummyDetails/>
+       return <ProductNotFound/>
 };
 
-export default ProductDetails;
+ProductDetails.propTypes = {
+    props: PropTypes.object,
+}
+
+const mapStateToProps = ({productDetail}) =>{
+    return {productDetail};
+}
+
+const mapDispatchToProps = {getProductDetail}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails);

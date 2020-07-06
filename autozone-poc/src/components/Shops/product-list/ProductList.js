@@ -14,10 +14,7 @@ const ProductList = () => {
     const fetchData = () => {
         const data = require('../data/products.json');
         const slice = data.slice(offset, offset + perPage);
-        const postData = slice.map(pd => 
-            <React.Fragment>
-                <Product key={pd.Id} {...pd} />
-            </React.Fragment>)
+        const postData = slice.map(pd => <Product key={pd.id} {...pd} />)
         setPageCount(Math.ceil(data.length / perPage));
         setPostData(postData);
         

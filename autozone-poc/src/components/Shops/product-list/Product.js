@@ -1,7 +1,10 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import {connect} from "react-redux";
+import {getProductDetail} from '../../../Redux/actions';
 
 const Product = (props) => {
-    const detailsPath = "/single-product-details?id="+props.id;
+    const detailsPath = "/single-product-details/"+props.id;
     let imageId = props.id;
     
     if(imageId > 9){
@@ -34,9 +37,9 @@ const Product = (props) => {
                 
                 <div className="product-description">
                     <span>{props.product_brand}</span>
-                    <a href={detailsPath} >
+                    <Link to={detailsPath} onClick={()=>props.getProductDetail(props.id)}>
                         <h6>{props.product_name}</h6>
-                    </a>
+                    </Link>
                 <p className="product-price">
                     <span className="old-price">${props.original_price}</span> ${props.offer_price}
                     {/* <span className="old-price">$125</span> $95.65 */}
@@ -57,4 +60,6 @@ const Product = (props) => {
     );
 };
 
-export default Product;
+const mapDispatchToProps = {getProductDetail}
+
+export default connect(null, mapDispatchToProps)(Product);
