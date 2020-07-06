@@ -2,180 +2,228 @@
     "id": 1,
     "product_image": "../../../../src/utlis/img/product-img/product-1.jpg",
     "product_name": "Knot Front Mini Dress",
-    "product_description": "Topshop",
+    "product_brand": "Topshop",
     "original_price": "75.00",
-    "offer_price": "55.00"
+    "offer_price": "55.00",
+    "offer_badge": "-30%",
+    "isFavourite": false
   }, {
     "id": 2,
     "product_image": "../../../../src/utlis/img/product-img/product-2.jpg",
     "product_name": "Denim Top",
-    "product_description": "Topshop",
+    "product_brand": "Asos",
     "original_price": "95.00",
-    "offer_price": "82.50"
+    "offer_price": "82.50",
+    "offer_badge": "-10%",
+    "isFavourite": false
   },
   {
     "id": 3,
     "product_image": "../../../../src/utlis/img/product-img/product-3.jpg",
     "product_name": "Knot Front Mini Dress",
-    "product_description": "Topshop",
+    "product_brand": "River Island",
     "original_price": "75.00",
-    "offer_price": "55.00"
+    "offer_price": "55.00",
+    "offer_badge": "-5%",
+    "isFavourite": false
   }, {
     "id": 4,
     "product_image": "../../../../src/utlis/img/product-img/product-4.jpg",
     "product_name": "Salwar Suit",
-    "product_description": "Topshop",
+    "product_brand": "Mango",
     "original_price": "150.00",
-    "offer_price": "120.55"
+    "offer_price": "120.55",
+    "offer_badge": "New",
+    "isFavourite": false
   },
   {
     "id": 5,
     "product_image": "../../../../src/utlis/img/product-img/product-5.jpg",
     "product_name": "Long Dress",
-    "product_description": "Topshop",
+    "product_brand": "Zara",
     "original_price": "75.00",
-    "offer_price": "55.00"
+    "offer_price": "55.00",
+    "offer_badge": "-35%",
+    "isFavourite": false
   }, {
     "id": 6,
     "product_image": "../../../../src/utlis/img/product-img/product-6.jpg",
     "product_name": "Short Kurti",
-    "product_description": "Topshop",
+    "product_brand": "Topshop",
     "original_price": "65.00",
-    "offer_price": "50.00"
+    "offer_price": "50.00",
+    "offer_badge": "-7%",
+    "isFavourite": false
   },
   {
     "id": 7,
     "product_image": "../../../../src/utlis/img/product-img/product-7.jpg",
     "product_name": "Knot Front Mini Dress",
-    "product_description": "Topshop",
+    "product_brand": "Zara",
     "original_price": "75.00",
-    "offer_price": "55.00"
+    "offer_price": "55.00",
+    "offer_badge": "-12%",
+    "isFavourite": false
   }, {
     "id": 8,
     "product_image": "../../../../src/utlis/img/product-img/product-6.jpg",
     "product_name": "Denim Top",
-    "product_description": "Topshop",
+    "product_brand": "Topshop",
     "original_price": "95.00",
-    "offer_price": "82.50"
+    "offer_price": "82.50",
+    "offer_badge": "-22%",
+    "isFavourite": false
   },
   {
     "id": 9,
     "product_image": "../../../../src/utlis/img/product-img/product-9.jpg",
     "product_name": "Knot Front Mini Dress",
-    "product_description": "Topshop",
+    "product_brand": "River Island",
     "original_price": "75.00",
-    "offer_price": "55.00"
+    "offer_price": "55.00",
+    "offer_badge": "-18%",
+    "isFavourite": false
   }, {
     "id": 10,
     "product_image": "../../../../src/utlis/img/product-img/product-8.jpg",
     "product_name": "Salwar Suit",
-    "product_description": "Topshop",
-    "original_price": "150.00",
-    "offer_price": "120.55"
+    "product_brand": "Asos",
+    "original_price": "135.00",
+    "offer_price": "110.00",
+    "offer_badge": "-16%",
+    "isFavourite": false
   },
   {
     "id": 10,
     "product_image": "../../../../src/utlis/img/product-img/product-3.jpg",
     "product_name": "Long Dress",
-    "product_description": "Topshop",
-    "original_price": "75.00",
-    "offer_price": "55.00"
+    "product_brand": "Mango",
+    "original_price": "80.00",
+    "offer_price": "69.00",
+    "offer_badge": "-19%",
+    "isFavourite": false
   }, {
     "id": 12,
     "product_image": "../../../../src/utlis/img/product-img/product-4.jpg",
     "product_name": "Short Kurti",
-    "product_description": "Topshop",
-    "original_price": "65.00",
-    "offer_price": "50.00"
+    "product_brand": "Zara",
+    "original_price": "92.00",
+    "offer_price": "79.00",
+    "offer_badge": "-23%",
+    "isFavourite": false
   },
   {
     "id": 13,
     "product_image": "../../../../src/utlis/img/product-img/product-5.jpg",
     "product_name": "Knot Front Mini Dress",
-    "product_description": "Topshop",
+    "product_brand": "Zara",
     "original_price": "75.00",
-    "offer_price": "55.00"
+    "offer_price": "55.00",
+    "offer_badge": "-9%",
+    "isFavourite": false
   }, {
     "id": 14,
     "product_image": "../../../../src/utlis/img/product-img/product-2.jpg",
     "product_name": "Denim Top",
-    "product_description": "Topshop",
+    "product_brand": "River Island",
     "original_price": "95.00",
-    "offer_price": "82.50"
+    "offer_price": "82.50",
+    "offer_badge": "-65%",
+    "isFavourite": false
   },
   {
     "id": 15,
     "product_image": "../../../../src/utlis/img/product-img/product-1.jpg",
     "product_name": "Knot Front Mini Dress",
-    "product_description": "Topshop",
+    "product_brand": "Mango",
     "original_price": "75.00",
-    "offer_price": "55.00"
+    "offer_price": "55.00",
+    "offer_badge": "-55%",
+    "isFavourite": false
   }, {
     "id": 16,
     "product_image": "../../../../src/utlis/img/product-img/product-9.jpg",
     "product_name": "Salwar Suit",
-    "product_description": "Topshop",
-    "original_price": "150.00",
-    "offer_price": "120.55"
+    "product_brand": "Topshop",
+    "original_price": "110.00",
+    "offer_price": "98.55",
+    "offer_badge": "-40%",
+    "isFavourite": false
   },
   {
     "id": 17,
     "product_image": "../../../../src/utlis/img/product-img/product-8.jpg",
     "product_name": "Long Dress",
-    "product_description": "Topshop",
-    "original_price": "75.00",
-    "offer_price": "55.00"
+    "product_brand": "Asos",
+    "original_price": "96.35",
+    "offer_price": "89.00",
+    "offer_badge": "-35%",
+    "isFavourite": false
   }, {
     "id": 18,
     "product_image": "../../../../src/utlis/img/product-img/product-7.jpg",
     "product_name": "Short Kurti",
-    "product_description": "Topshop",
-    "original_price": "65.00",
-    "offer_price": "50.00"
+    "product_brand": "Mango",
+    "original_price": "125.00",
+    "offer_price": "99.00",
+    "offer_badge": "-30%",
+    "isFavourite": false
   },
   {
     "id": 19,
-    "product_image": "../../../../src/utlis/img/product-img/product-6.jpg",
+    "product_image": "../../../../src/utlis/img/product-img/product-8.jpg",
     "product_name": "Knot Front Mini Dress",
-    "product_description": "Topshop",
+    "product_brand": "Topshop",
     "original_price": "75.00",
-    "offer_price": "55.00"
+    "offer_price": "55.00",
+    "offer_badge": "-10%",
+    "isFavourite": false
   }, {
     "id": 20,
     "product_image": "../../../../src/utlis/img/product-img/product-5.jpg",
     "product_name": "Denim Top",
-    "product_description": "Topshop",
+    "product_brand": "River Island",
     "original_price": "95.00",
-    "offer_price": "82.50"
+    "offer_price": "82.50",
+    "offer_badge": "-30%",
+    "isFavourite": false
   },
   {
     "id": 21,
     "product_image": "../../../../src/utlis/img/product-img/product-4.jpg",
     "product_name": "Knot Front Mini Dress",
-    "product_description": "Topshop",
+    "product_brand": "Asos",
     "original_price": "75.00",
-    "offer_price": "55.00"
+    "offer_price": "55.00",
+    "offer_badge": "-7%",
+    "isFavourite": false
   }, {
     "id": 22,
     "product_image": "../../../../src/utlis/img/product-img/product-3.jpg",
     "product_name": "Salwar Suit",
-    "product_description": "Topshop",
-    "original_price": "150.00",
-    "offer_price": "120.55"
+    "product_brand": "River Island",
+    "original_price": "99.00",
+    "offer_price": "92.55",
+    "offer_badge": "-22%",
+    "isFavourite": false
   },
   {
     "id": 23,
     "product_image": "../../../../src/utlis/img/product-img/product-2.jpg",
     "product_name": "Long Dress",
-    "product_description": "Topshop",
-    "original_price": "75.00",
-    "offer_price": "55.00"
+    "product_brand": "Topshop",
+    "original_price": "69.00",
+    "offer_price": "55.00",
+    "offer_badge": "-15%",
+    "isFavourite": false
   }, {
     "id": 24,
     "product_image": "../../../../src/utlis/img/product-img/product-1.jpg",
     "product_name": "Short Kurti",
-    "product_description": "Topshop",
-    "original_price": "65.00",
-    "offer_price": "50.00"
+    "product_brand": "Zara",
+    "original_price": "68.00",
+    "offer_price": "35.00",
+    "offer_badge": "-17%",
+    "isFavourite": false
   }
 ]

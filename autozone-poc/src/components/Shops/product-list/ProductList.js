@@ -1,103 +1,71 @@
-import React, { Component, Fragment } from 'react';
-import axios from 'axios'
+import React, { useState, useEffect, Fragment } from 'react';
 import ReactPaginate from 'react-paginate';
 import './ProductList.css';
 import Product from './Product.js';
+import PropTypes from 'prop-types';
 
-class ProductList extends Component {
+const ProductList = () => {
+    const [offset, setOffset] = useState(0);
+    const [currentPage, setCurrentPage] = useState(0);
+    const [pageCount, setPageCount] = useState(0);
+    const [postData, setPostData] = useState([]);
+    const perPage = 6;
 
-    constructor(props) {
-        super(props);
-        this.state = {
-          offset: 0,
-          data: [],
-          perPage: 6,
-          currentPage: 0
-        };
-    this.handlePageClick = this.handlePageClick.bind(this);
+    const fetchData = () => {
+        const data = require('../data/products.json');
+        const slice = data.slice(offset, offset + perPage);
+        const postData = slice.map(pd => 
+            <React.Fragment>
+                <Product key={pd.Id} {...pd} />
+            </React.Fragment>)
+        setPageCount(Math.ceil(data.length / perPage));
+        setPostData(postData);
+        
+        
     }
-
-    receivedData() {
-        axios
-            .get(`https://jsonplaceholder.typicode.com/photos`)
-            .then(res => {
-  
-                const data = res.data;
-                const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
-                const postData = slice.map(pd => <React.Fragment>
-                    {/* <p>{pd.title}</p>
-                    <img src={pd.thumbnailUrl} alt=""/> */}
-                    <Product key={pd.Id} {...pd} />
-                </React.Fragment>)
-  
-                this.setState({
-                    pageCount: Math.ceil(data.length / this.state.perPage),
-                   
-                    postData
-                })
-            });
-    }
-    handlePageClick = (e) => {
+    const handlePageClick = (e) => {
         const selectedPage = e.selected;
-        const offset = selectedPage * this.state.perPage;
-  
-        this.setState({
-            currentPage: selectedPage,
-            offset: offset
-        }, () => {
-            this.receivedData()
-        });
-  
+        const offset = selectedPage * perPage;
+
+        setCurrentPage(selectedPage);
+        setOffset(offset);
+
     };
-  
-    componentDidMount() {
-        this.receivedData()
-    }
-    render() {
-        return (
-            <Fragment>
-                {this.state.postData}
-                <ReactPaginate
-                    previousLabel={"prev"}
-                    nextLabel={"next"}
-                    breakLabel={"..."}
-                    breakClassName={"break-me"}
-                    pageCount={this.state.pageCount}
-                    marginPagesDisplayed={2}
-                    pageRangeDisplayed={5}
-                    onPageChange={this.handlePageClick}
-                    containerClassName={"pagination"}
-                    subContainerClassName={"pages pagination"}
-                    activeClassName={"active"}/>
-            </Fragment>
-  
-        )
-    }
+
+    useEffect(() => {
+        fetchData();
+    }, [currentPage]);
+
+    return (
+        <Fragment>
+            {postData}
+            <ReactPaginate
+                previousLabel={"prev"}
+                nextLabel={"next"}
+                breakLabel={"..."}
+                breakClassName={"break-me"}
+                pageCount={pageCount}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                onPageChange={handlePageClick}
+                containerClassName={"pagination"}
+                subContainerClassName={"pages pagination"}
+                activeClassName={"active"}/>
+        </Fragment>
+
+    );
+};
+
+ProductList.propTypes = {
+    pageCount: PropTypes.number,
+    postData: PropTypes.array,
+    
 }
 
-export default ProductList;
-
-// import React, { Fragment } from 'react';
-// import Product from './Product';
-// import PropTypes from 'prop-types';
-// import Pagination from '../Pagination/Pagination';
-
-// const ProductList = () => {
-//     const products = require('../data/products.json');
+ProductList.defaultProps = {
+    pageCount: 0,
+    postData: [],
     
-//     return(
-//         <Fragment>
-//             {console.log("List of products"+JSON.stringify(products))}
-//                 {products.map(product => (
-//                    <Product id="product" {...product} />
-//                 ))}
-//                 <Pagination totalCount={products.length} {...products}/>
-//         </Fragment>
-//     );
-// };
+};
 
-// ProductList.propTypes = {
-//     products: PropTypes.array,
-// }
-
-// export default ProductList;
+export default ProductList;

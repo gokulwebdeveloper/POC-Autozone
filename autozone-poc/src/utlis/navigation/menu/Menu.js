@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Bgsix from "../../img/bg-img/bg-6.jpg";
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import "./Menu.css";
 
 const Menu = () => {
   return (
@@ -84,6 +85,22 @@ const Menu = () => {
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>
+            </li>
+            <li className="cn-dropdown-item has-down pr12">
+              <a href="#">About Us</a>
+              <ul className="dropdown aboutUs-dropdown">
+                <li>
+                  <NavLink to="/aboutAutozone">About AutoZone</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/investorInformation">Investor Information</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/affliateProgram">Affliate Program</NavLink>
+                </li>
+              </ul>
+              <span className="dd-trigger"></span>
+              <span className="dd-arrow"></span>
             </li>
           </ul>
         </div>
