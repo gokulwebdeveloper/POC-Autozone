@@ -229,7 +229,8 @@ const DetailsSection = (props) => {
             <div className="single_product_desc clearfix">
                 <span>{currentProduct.product_brand}</span>
                     <h2>{currentProduct.product_name}</h2>
-                    <Rating
+                    <p className="rating-row">
+                         <Rating
                     initialRating={currentProduct.rating}
                     readonly
                     className="rating"
@@ -237,7 +238,10 @@ const DetailsSection = (props) => {
                     fullSymbol="fa fa-star fa-2x"
                     fractions={2}
                     />
-                    
+                    <span className="rating-number">({currentProduct.rating})</span>
+                    <span className="warranty">{currentProduct.warranty}</span>
+                    </p>
+
                     <h6 id="outOfStock" className="outofstock">Out of stock</h6>
                    
                 <p className="product-desc">{currentProduct.product_desc}</p>
@@ -268,7 +272,8 @@ const DetailsSection = (props) => {
                 </div>
                 </div>
                 <div id="pricePerItem" className="priceperitem" ></div>
-
+                
+                <div className="orderByMessage">{currentProduct.orderByMessage}</div>
                     {/* <!-- Cart & Favourite Box --> */}
                     <div className="cart-fav-box d-flex align-items-center">
                         <Button id="btnAddtoCart" btnText="Add to Cart" 
@@ -279,6 +284,7 @@ const DetailsSection = (props) => {
                             <a id="favme" className="favme fa fa-heart"></a>
                         </div>
                     </div>
+                    
             </div>
         </section>
     );

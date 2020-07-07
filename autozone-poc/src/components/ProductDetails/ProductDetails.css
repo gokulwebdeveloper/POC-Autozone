@@ -102,3 +102,25 @@
 .error-template {padding: 40px 15px;text-align: center;}
 .error-actions {margin-top:15px;margin-bottom:15px;}
 .error-actions .btn { margin-right:10px; }
+
+.single_product_desc .rating-row{
+    display: inline-flex;
+    margin-bottom: -50px;
+}
+
+.single_product_desc .rating-row.warranty{
+  color: #484848;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.single_product_desc .rating-row .rating-number{
+  color: #484848;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.orderByMessage{
+  color: #484848;
+  margin-bottom: 10px;
+}
