@@ -8,13 +8,19 @@ import PropTypes from 'prop-types';
 import Rating from 'react-rating';
 import { connect } from 'react-redux';
 import {addToCart} from '../../Redux/actions';
+import moment from 'moment';
 
 const DetailsSection = (props) => {
     const currentProduct = props.currentProduct;
-    
+    const nextDay = new Date();
+    const today = new Date();
+    nextDay.setDate(nextDay.getDate() + 1);
+
+    const deliveryMessage = "Order Before 9:00 PM "+moment(today).format('MMM DD')+" for "+moment(nextDay).format('MMM DD')+" delivery";
+
     const maxAllowedQty = 5;
     useEffect( ()=>{
-
+        
         updateFavoriteIco();
         var txtcartquantity = document.getElementById("txtcartquantity");
 
@@ -273,7 +279,7 @@ const DetailsSection = (props) => {
                 </div>
                 <div id="pricePerItem" className="priceperitem" ></div>
                 
-                <div className="orderByMessage">{currentProduct.orderByMessage}</div>
+            <div className="orderByMessage">{deliveryMessage}</div>
                     {/* <!-- Cart & Favourite Box --> */}
                     <div className="cart-fav-box d-flex align-items-center">
                         <Button id="btnAddtoCart" btnText="Add to Cart" 
