@@ -25,15 +25,10 @@ describe('SimpleSlider page testing', () => {
         expect(wrapper.exists()).toBeTruthy();
     });
 
-    // Render the span tag 
-    test('renders the span tag', () => {
-        const span = wrapper.find("span");
-        expect(span).toHaveLength(24);
-    });
-    // Render the a tag
-    test('renders the a tag', () => {
-        const a = wrapper.find("a");
-        expect(a).toHaveLength(39);
+    // Render the slider tag 
+    test('renders the SlickSlider ', () => {
+        const slickSlider = wrapper.find("SlickSlider");
+        expect(slickSlider).toHaveLength(1);
     });
 
 });

@@ -24,11 +24,6 @@ describe('TopCatagoryArea page testing', () => {
     expect(wrapper.exists()).toBeTruthy();
   });
 
-  // Render the a tag
-  test('renders the a tag', () => {
-    const a = wrapper.find("a");
-    expect(a).toHaveLength(1);
-  });
 
   //SnapShot Match test
   it("SnapShot Match", () => {

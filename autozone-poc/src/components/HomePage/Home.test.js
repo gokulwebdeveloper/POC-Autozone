@@ -6,7 +6,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import '../../matchMedia.mock' // Must be imported before the tested file
 import Home from './Home';
 import ScrollUpArrowBtn from '../../utlis/button/ScrollUpArrowBtn';
-import SimpleSlider from '../../utlis/slick_slider/SimpleSlider';
 
 configure({ adapter: new Adapter() });
 let wrapper;
@@ -23,16 +22,6 @@ describe('Home page testing', () => {
     //test if home component exists
     it("Home Exists", () => {
         expect(wrapper.exists()).toBeTruthy();
-    });
-    // length of h2 tags
-    test('renders the h2 tag called', () => {
-        const h2 = wrapper.find("h2");
-        expect(h2).toHaveLength(3);
-    });
-    // length of h6 tags
-    test('renders the h6 tag called', () => {
-        const h6 = wrapper.find("h6");
-        expect(h6).toHaveLength(18);
     });
 
     //if it has TopCatagoryArea componenent
