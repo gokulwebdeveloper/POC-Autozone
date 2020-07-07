@@ -67,10 +67,7 @@
     "react-dom": "^16.13.1",
     "react-owl-carousel": "^2.3.1",
     "react-paginate": "^6.3.2",
-<<<<<<< HEAD
     "react-rating": "^2.0.5",
-=======
->>>>>>> 42f8c6c6c6d33070588efe9d32cd49f729deb62b
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scroll-up-button": "^1.6.4",

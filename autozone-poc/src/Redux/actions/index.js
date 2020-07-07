@@ -22,7 +22,6 @@ export const setProductDetail = (data) =>{
     return(
         {type: setproductdetail, payload: data}
     )
-<<<<<<< HEAD
 }
 
 export const addToCart = (data) =>{
@@ -43,6 +42,4 @@ export const emptyCartData = () =>{
     return(
         {type: emptycart}
     )
-=======
->>>>>>> 42f8c6c6c6d33070588efe9d32cd49f729deb62b
 }
