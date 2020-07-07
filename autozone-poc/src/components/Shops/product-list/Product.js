@@ -1,9 +1,10 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
+import {connect} from "react-redux";
+import {getProductDetail} from '../../../Redux/actions';
 
 const Product = (props) => {
-    console.log("Props"+JSON.stringify(props));
-    
+    const detailsPath = "/single-product-details/"+props.id;
     let imageId = props.id;
     
     if(imageId > 9){
@@ -13,7 +14,6 @@ const Product = (props) => {
         }
     }
 
-    console.log("Props>>"+imageId);
     let imgpath="../../../../src/utlis/img/product-img/product-"+imageId+".jpg";
     return(
         <div className="col-12 col-sm-6 col-lg-4"> 
@@ -25,7 +25,6 @@ const Product = (props) => {
                     {/* <img src={imgpath} alt={""} /> */}
                     
                     <img className="hover-img" src={(props.product_image)} alt="" />
-
                     
                     <div className="product-badge offer-badge">
                         <span>{props.offer_badge}</span>
@@ -35,14 +34,12 @@ const Product = (props) => {
                         <a href="#" className="favme fa fa-heart"></a>
                     </div>
                 </div>
-
                 
                 <div className="product-description">
                     <span>{props.product_brand}</span>
-                    <a href="single-product-details.html">
+                    <Link to={detailsPath} onClick={()=>props.getProductDetail(props.id)}>
                         <h6>{props.product_name}</h6>
-                        {/* <h6>{props.title}</h6> */}
-                    </a>
+                    </Link>
                 <p className="product-price">
                     <span className="old-price">${props.original_price}</span> ${props.offer_price}
                     {/* <span className="old-price">$125</span> $95.65 */}
@@ -63,4 +60,6 @@ const Product = (props) => {
     );
 };
 
-export default Product;
+const mapDispatchToProps = {getProductDetail}
+
+export default connect(null, mapDispatchToProps)(Product);

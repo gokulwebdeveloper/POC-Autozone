@@ -10,19 +10,12 @@ import Comments from "./Comments";
 
 //Component structure
 const Singleblog = (props) => {
-  let bgImage;
-
-  if (props.location.propsFor) {
-    bgImage = props.location.propsFor.imgpath;
-  } else {
-    bgImage = Background;
-  }
-
+  
   return (
     <Fragment>
       <div className="single-blog-wrapper">
         <div className="single-blog-post-thumb">
-          <img className="bgimg" src={bgImage} alt=""></img>
+          <img className="bgimg" src={Background} alt=""></img>
         </div>
         <div className="single-blog-content-wrapper d-flex">
           <div className="single-blog--text">

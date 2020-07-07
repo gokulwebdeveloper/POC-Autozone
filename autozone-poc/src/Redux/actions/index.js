@@ -1,4 +1,4 @@
-import {getproducts, setproducts, getproductdetail, setproductdetail} from '../../constants';
+import {getproducts, setproducts, getproductdetail, setproductdetail, addtocart, removefromcart, emptycart} from '../../constants';
 
 export const getProducts = () =>{
     return(
@@ -21,5 +21,25 @@ export const getProductDetail = (productId) =>{
 export const setProductDetail = (data) =>{
     return(
         {type: setproductdetail, payload: data}
+    )
+}
+
+export const addToCart = (data) =>{
+    return(
+        {type: addtocart, payload: data}
+    )
+}
+
+export const removeFromCart = (index) =>{
+    console.log(index);
+    
+    return(
+        {type: removefromcart, payload: index}
+    )
+}
+
+export const emptyCartData = () =>{
+    return(
+        {type: emptycart}
     )
 }
