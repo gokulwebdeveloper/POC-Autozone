@@ -22,7 +22,7 @@ const DetailsSection = (props) => {
     useEffect( ()=>{
         
         updateFavoriteIco();
-        var txtcartquantity = document.getElementById("txtcartquantity");
+        let txtcartquantity = document.getElementById("txtcartquantity");
 
         if(txtcartquantity!=null)
         {
@@ -32,7 +32,7 @@ const DetailsSection = (props) => {
                 txtcartquantity.value = 0;
         }
 
-        var outOfStock = document.getElementById("outOfStock");
+        let outOfStock = document.getElementById("outOfStock");
         if(outOfStock!=null)
         {
             if(currentProduct.product_instock)
@@ -44,7 +44,7 @@ const DetailsSection = (props) => {
 
      function updateFavoriteIco()
      {
-        var currentCntrl = document.getElementById("favme");
+        let currentCntrl = document.getElementById("favme");
 
         if(currentCntrl!=null)
         {
@@ -56,7 +56,7 @@ const DetailsSection = (props) => {
      }
 
      function changeFavStatus() {
-        var currentCntrl = document.getElementById("favme");
+        let currentCntrl = document.getElementById("favme");
 
         if(currentCntrl==null)
             return;
@@ -69,12 +69,12 @@ const DetailsSection = (props) => {
 
     function onQtyChange()
     {
-        var currentCntrl = document.getElementById("txtcartquantity");
+        let currentCntrl = document.getElementById("txtcartquantity");
 
         if(currentCntrl==null)
             return;
         
-        var qty = parseInt(currentCntrl.value);
+        let qty = parseInt(currentCntrl.value);
 
         if(currentCntrl.value == null)
         {
@@ -97,7 +97,7 @@ const DetailsSection = (props) => {
 
     function onQtyLostFocus()
     {
-        var currentCntrl = document.getElementById("txtcartquantity");
+        let currentCntrl = document.getElementById("txtcartquantity");
 
         if(currentCntrl==null)
             return;
@@ -111,7 +111,7 @@ const DetailsSection = (props) => {
 
     function onIncreaseQty()
     {
-        var currentCntrl = document.getElementById("txtcartquantity");
+        let currentCntrl = document.getElementById("txtcartquantity");
 
         if(currentCntrl==null)
             return;
@@ -120,7 +120,7 @@ const DetailsSection = (props) => {
             currentCntrl.value = 1;
         else
         {
-            var val = parseInt(currentCntrl.value);
+            let val = parseInt(currentCntrl.value);
             
             if(val < maxAllowedQty)
             {
@@ -134,7 +134,7 @@ const DetailsSection = (props) => {
 
     function onDecreaseQty()
     {
-        var currentCntrl = document.getElementById("txtcartquantity");
+        let currentCntrl = document.getElementById("txtcartquantity");
 
         if(currentCntrl==null)
             return;
@@ -143,7 +143,7 @@ const DetailsSection = (props) => {
             currentCntrl.value = 1;
         else
         {
-            var val = currentCntrl.value;
+            let val = currentCntrl.value;
             if(val > 1)
             {
                 currentCntrl.value = val - 1;
@@ -156,26 +156,26 @@ const DetailsSection = (props) => {
 
     function updateCartPrice()
     {
-        var currentCntrl = document.getElementById("txtcartquantity");
+        let currentCntrl = document.getElementById("txtcartquantity");
 
         if(currentCntrl==null)
             return;
 
-        var cartCntrl = document.getElementById("cartprice");
+        let cartCntrl = document.getElementById("cartprice");
 
         if(cartCntrl==null)
             return;
 
-        var qty = parseInt(currentCntrl.value);
-        var price = parseFloat(currentProduct.offer_price);
-        var total = qty * price;
+        let qty = parseInt(currentCntrl.value);
+        let price = parseFloat(currentProduct.offer_price);
+        let total = qty * price;
         cartCntrl.innerHTML = total;
         updateEach(qty);
     }
 
     function updateEach(qty)
     {
-        var pricePerItem = document.getElementById("pricePerItem");
+        let pricePerItem = document.getElementById("pricePerItem");
     
         if(pricePerItem==null)
             return;
@@ -188,12 +188,12 @@ const DetailsSection = (props) => {
 
     function addToCart()
     {
-        var txtcartquantity = document.getElementById("txtcartquantity");
+        let txtcartquantity = document.getElementById("txtcartquantity");
 
-        var qty= parseInt(txtcartquantity.value);
+        let qty= parseInt(txtcartquantity.value);
 
-        var price = parseFloat(currentProduct.offer_price);
-        var total = parseFloat(qty * price);
+        let price = parseFloat(currentProduct.offer_price);
+        let total = parseFloat(qty * price);
 
         addKeyValue(props.currentProduct,"quantity", qty);
         addKeyValue(props.currentProduct,"price", total);
@@ -222,7 +222,7 @@ const DetailsSection = (props) => {
                 responsiveRefreshRate={200}>
 
                 {currentProduct.product_image.map((image, index) => {
-                    var imagePath = image.replace("../","../src/utlis/");
+                    let imagePath = image.replace("../","../src/utlis/");
                 return (
                     <div key={index}><img src={imagePath} alt="" /></div>
                     )

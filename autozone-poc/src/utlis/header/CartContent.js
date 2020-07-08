@@ -8,7 +8,7 @@ import {closeNav} from '../../utlis/header/Header';
 const CartContent = (props) => {
     const cartData = props.cartData;
     
-var stylehideOverflow = {
+const stylehideOverflow = {
     overflow: "hidden",
     outline: "none",
   }
