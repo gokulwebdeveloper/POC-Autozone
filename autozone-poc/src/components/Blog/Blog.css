@@ -1,11 +1,6 @@
-.blog-wrapper .single-blog-area .hover-content p{
-    height: 84px;
-    line-height: 2;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-}
 
-.blog-wrapper .single-blog-area{border:0px;width:500px;}
+.blog-wrapper .single-blog-area{width:600px;}
+.container-blog{ margin-right:35px; margin-left:50px;}
 
 .blog-background-image{
     width: 100%;
@@ -15,8 +10,64 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    display: block;
+    display: block; 
 }
 
+@media only screen and (max-width: 767px){
+.blog-background-image {
+    height: 250px;
+}
+.blog-wrapper .single-blog-area{width:fit-content;
+  } 
+.container-blog{margin:0px}
+}
 
+.blog-wrapper .single-blog-area .post-title p {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    line-height: 1.5;}
+    @media only screen and (max-width: 767px) {
+      .blog-wrapper .single-blog-area .post-title p {
+        font-size: 14px; } }
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      .blog-wrapper .single-blog-area .post-title p {
+        font-size: 18px;} }
+
+        .blog-wrapper .single-blog-area .hover-content .hover-post-title p {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.5;
+            color: black;
+            margin-bottom: 20px; }
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+              .blog-wrapper .single-blog-area .hover-content .hover-post-title p {
+                font-size: 16px;
+                margin-bottom: 10px; } }
+            @media only screen and (max-width: 767px) {
+              .blog-wrapper .single-blog-area .hover-content .hover-post-title p {
+                font-size: 14px;
+                margin-bottom: 10px; } }
+            @media only screen and (min-width: 576px) and (max-width: 767px) {
+              .blog-wrapper .single-blog-area .hover-content .hover-post-title p {
+                font-size: 18px;
+                margin-bottom: 20px; } }
+               .blog-wrapper .single-blog-area .hover-content .hover-post-title p:hover {
+              color: #0315ff; }
+
+              .blog-wrapper .single-blog-area .hover-content .reading p{
+                color: #0315ff;
+                font-weight: 500; 
+              }
+ .row-blog{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width:fit-content;
+  
+}
+                 
 

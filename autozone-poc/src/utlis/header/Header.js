@@ -4,7 +4,7 @@ import Search from "../search/Search";
 import Heart from "../img/core-img/heart.svg";
 import User from "../img/core-img/user.svg";
 import Bag from "../img/core-img/bag.svg";
-import CartContent from "./CartContent";
+import CartContent from "../Cart/CartContent";
 import { NavLink } from "react-router-dom";
 import { connect } from 'react-redux';
 

@@ -27,7 +27,7 @@ const Product = (props) => {
             <div className="single-product-wrapper">
                 
                 <div className="product-img">
-                    <img src={currentProduct.product_image[0]} alt={""} />
+                    <img src={currentProduct.product_image[0]} alt={currentProduct.product_name} />
                     
                     <img className="hover-img" src={currentProduct.product_image[1]} alt="" />
 

@@ -54,10 +54,10 @@ const App = ({getProducts}) => {
           <Signup />
         </Route>
       <Route path="/signin">
-          <Signin />
+          <Signin /> 
         </Route>
-         <Route exact path="/singleblog" component={Singleblog} >
-         </Route>
+         <Route exact path="/singleblog/:bId" component={Singleblog} ></Route>
+         
          <Route path="/">
           <Home />
         </Route>

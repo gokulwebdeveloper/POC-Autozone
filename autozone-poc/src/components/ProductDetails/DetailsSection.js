@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react';
-import '../../requiredLoader';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import OwlCarousel from 'react-owl-carousel';
+import '../../matchMedia.mock';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import '../ProductDetails/ProductDetails.css';
 import Button from '../../utlis/button/Button';
 import PropTypes from 'prop-types';
@@ -22,44 +23,52 @@ const DetailsSection = ({currentProduct, dispatchAddToCart}) => {
         updateFavoriteIco(currentProduct);
         let txtcartquantity = document.getElementById("txtcartquantity");
 
-        if(txtcartquantity!=null)
+        if(txtcartquantity)
         {
             if(currentProduct.product_instock)
-                txtcartquantity.value = 1;
+                currentProduct.quantity ? txtcartquantity.value = currentProduct.quantity : txtcartquantity.value = 1;
             else
                 txtcartquantity.value = 0;
         }
 
         let outOfStock = document.getElementById("outOfStock");
-        if(outOfStock!=null)
+        if(outOfStock)
         {
             if(currentProduct.product_instock)
                 outOfStock.style.visibility = "hidden";
             else
                 outOfStock.style.visibility = "visible";
         }
-     }, [currentProduct]);
+     });
 
     return (
         <section className="single_product_details_area d-flex align-items-center">
             <div className="single_product_thumb clearfix">
-            <OwlCarousel
-                className={'owl-carousel'}
-                loop={true}
-                nav={true}
-                dots={false}
-                autoplay={true}
-                autoplayTimeout={5000}
-                autoplaySpeed={1000}
-                fluidSpeed={1000}
-                items={1}
-                responsiveRefreshRate={200}>
+            <Slider 
+                    dots={true}
+                    infinite={true}
+                    speed={1000}
+                    slidesToShow={1}
+                    slidesToScroll={1}
+                    swipeToSlide={true}
+                    initialSlide={0}
+                    autoplay={true}
+                    autoplaySpeed={4000}
+                    arrows={true}
+                    >
 
-                {currentProduct.product_image.map((image, index) => {
-                return <img key={index} src={image} alt={currentProduct.product_name} />
-                })
-                }
-            </OwlCarousel>
+                    {
+                    currentProduct.product_image ? 
+
+                    currentProduct.product_image.map((image, index) => {
+                    return (
+                        <img src={image} alt={currentProduct.product_name} key={index}/>
+                        )
+                    })
+                    
+                    : "No Images"
+                    }
+                </Slider>
             </div>
 
             {/* <!-- Single Product Description --> */}
@@ -133,13 +142,10 @@ function addToCartFn(currentProduct, dispatchAddToCart)
 {
     let txtcartquantity = document.getElementById("txtcartquantity");
 
-    let qty= parseInt(txtcartquantity.value);
-
-    let price = parseFloat(currentProduct.offer_price);
-    let total = parseFloat(qty * price);
+    let qty = parseInt(txtcartquantity.value);
 
     addKeyValue(currentProduct,"quantity", qty);
-    addKeyValue(currentProduct,"price", total);
+    addKeyValue(currentProduct,"price", currentProduct.offer_price);
 
     dispatchAddToCart(currentProduct);
 }
