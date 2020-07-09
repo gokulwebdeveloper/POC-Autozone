@@ -1,7 +1,16 @@
 import React from "react";
 import parse from "html-react-parser";
-import Data from "../MockData/Mock.json";
+import RetrieveJson from "../../../utlis/RetrieveAPI/RetrieveJson";
+import "./AffliateProgram.css";
 
 export default function AffliateProgram() {
-  return parse(Data[0].affiliateProgram.content);
+  const [list, setList] = RetrieveJson(
+    "./src/components/AboutUs/MockData/Mock.json"
+  );
+
+  return list.length > 0 ? (
+    parse(list[0].affiliateProgram.content)
+  ) : (
+    <div></div>
+  );
 }

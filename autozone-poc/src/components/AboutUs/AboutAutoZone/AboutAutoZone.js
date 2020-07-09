@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import parse from "html-react-parser";
 import "./AboutAutoZone.css";
-import MockData from "../MockData/Mock.json";
+import RetrieveJson from "../../../utlis/RetrieveAPI/RetrieveJson";
 
 export default function About() {
-  return parse(MockData[0].about.content);
+  const [list, setList] = RetrieveJson(
+    "./src/components/AboutUs/MockData/Mock.json"
+  );
+
+  return list.length > 0 ? parse(list[0].about.content) : <div></div>;
 }

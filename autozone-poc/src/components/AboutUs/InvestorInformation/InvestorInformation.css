@@ -1,6 +1,13 @@
 .single-line-img {
-    /* width: min-content; */
-    min-width: 100%;
-    height: 1px;
-    color: black;
+  min-width: 100%;
+  height: 1px;
+  color: black;
+}
+
+.investor-information-image {
+  content: url(../Assets/AZO_12345.jpg);
+}
+
+.investor-logo {
+  content: url(../Assets//IR_logo.gif);
 }

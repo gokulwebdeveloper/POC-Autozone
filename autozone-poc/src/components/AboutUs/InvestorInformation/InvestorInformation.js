@@ -1,8 +1,16 @@
 import React from "react";
 import parse from "html-react-parser";
-import MockData from "../MockData/Mock.json";
+import RetrieveJson from "../../../utlis/RetrieveAPI/RetrieveJson";
 import "./InvestorInformation.css";
 
 export default function InvestorInformation() {
-  return parse(MockData[0].investorRelations.content);
+  const [list, setList] = RetrieveJson(
+    "./src/components/AboutUs/MockData/Mock.json"
+  );
+
+  return list.length > 0 ? (
+    parse(list[0].investorInformation.content)
+  ) : (
+    <div></div>
+  );
 }
