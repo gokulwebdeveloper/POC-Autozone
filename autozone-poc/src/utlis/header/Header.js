@@ -48,7 +48,7 @@ const Header = () => {
             </div>
 
             <div className="user-login-info">
-              <a href="#">
+              <a href="/signin">
                 <img src={User} alt="" />
               </a>
             </div>
