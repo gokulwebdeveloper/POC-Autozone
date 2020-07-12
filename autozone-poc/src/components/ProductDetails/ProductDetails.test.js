@@ -1,6 +1,6 @@
 import React from "react";
 import { unmountComponentAtNode } from "react-dom";
-import { shallow, mount } from "enzyme";
+import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import '@testing-library/jest-dom/extend-expect';
 import ProductDetails from "./ProductDetails";

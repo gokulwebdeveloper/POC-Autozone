@@ -14,7 +14,7 @@ function* fetchProductsSaga(){
 
 function* getProductdetailSaga(action){
     const state =  yield select();
-    const data = state.productData.data.filter(item=>item.id === action.payload);
+    const data = state.productData.data.filter(item=>item.id == action.payload);
     yield put(setProductDetail(data));
 }
 
