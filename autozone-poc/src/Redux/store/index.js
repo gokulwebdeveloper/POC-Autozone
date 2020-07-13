@@ -10,7 +10,7 @@ export const sagaMiddleware = createSagaMiddleware();
 const middlewares = [sagaMiddleware];
 
 //apply middleware on store
-const store = createStore(rootReducer, compose(applyMiddleware(...middlewares), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
 //run saga generator function
 sagaMiddleware.run(rootSaga);

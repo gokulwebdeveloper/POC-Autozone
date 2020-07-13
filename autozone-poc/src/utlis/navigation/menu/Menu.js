@@ -67,9 +67,6 @@ const Menu = () => {
                 <NavLink  to="/blog">Blog</NavLink >
                 </li>
                 <li>
-                <NavLink  to="/singleblog">SingleBlog</NavLink >
-                </li>
-                <li>
                   <NavLink to="/regularPage">Regular Page</NavLink>
                 </li>
                 <li>

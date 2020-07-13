@@ -1,102 +1,69 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
-import Background from "../../utlis/img/bg-img/bg-7.jpg";
-import Rp1 from "../../utlis/img/bg-img/rp1.jpg";
-import Rp2 from "../../utlis/img/bg-img/rp2.jpg";
-import Rp3 from "../../utlis/img/bg-img/rp3.jpg";
-import Rp4 from "../../utlis/img/bg-img/rp4.jpg";
 import "../single-blog/single-blog.css";
 import Comments from "./Comments";
+import ScrollUpArrowBtn from "../../utlis/button/ScrollUpArrowBtn";
+import RetrieveJson from "../../utlis/RetrieveAPI/RetrieveJson";
 
 //Component structure
 const Singleblog = (props) => {
- 
+  const [list, setList] = RetrieveJson("data/blog.json");
+
+  const bloglist = list.map((item) => {
+    if (!item.blogStatus) {
+      return (
+        <div key={item.id}>
+          <div className="single-related-blog-post">
+            <img src={item.image} alt=""></img>
+            <a href="#">
+              <h5>{item.title}</h5>
+            </a>
+          </div>
+        </div>
+      );
+    }
+  });
+  const videoPlayer = list.map((item) => {
+    if (props != undefined && props.location != undefined) {
+      if (props.location.propsFor.img_id == item.id) {
+        if (item.video) {
+          return (
+            <iframe
+              style={{ width: "700px", height: "350px" }}
+              src={item.video}
+            ></iframe>
+          );
+        }
+      }
+    }
+  });
+
+  const sblist = list.map((item) => {
+    if (props != undefined && props.location != undefined) {
+      if (props.location.propsFor.img_id == item.id) {
+        return (
+          <div key={item.id}>
+            <div className="single-blog-post-thumb">
+              <img className="bgimg" src={item.image} alt=""></img>
+            </div>
+            <div className="single-blog-content-wrapper d-flex">
+              <div className="single-blog--text">
+                <h2>{item.title}</h2>
+                <p>{item.description}</p>
+                <div id="singleblogvideo">{videoPlayer}</div>
+              </div>
+              <div className="related-blog-post">{bloglist}</div>
+            </div>
+          </div>
+        );
+      }
+    }
+  });
+
   return (
     <Fragment>
-      <div className="single-blog-wrapper">
-        <div className="single-blog-post-thumb">
-          <img className="bgimg" src={Background} alt=""></img>
-        </div>
-        <div className="single-blog-content-wrapper d-flex">
-          <div className="single-blog--text">
-            <h2>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
-              perferendis rem accusantium ducimus animi nesciunt expedita omnis
-              aut quas molestias!
-            </h2>
-            <p>
-              Mauris viverra cursus ante laoreet eleifend. Donec vel fringilla
-              ante. Aenean finibus velit id urna vehicula, nec maximus est
-              sollicitudin. Praesent at tempus lectus, eleifend blandit felis.
-              Fusce augue arcu, consequat a nisl aliquet, consectetur elementum
-              turpis. Donec iaculis lobortis nisl, et viverra risus imperdiet
-              eu. Etiam mollis posuere elit non sagittis. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Nunc quis arcu a magna sodales
-              venenatis. Integer non diam sit amet magna luctus mollis ac eu
-              nisi. In accumsan tellus ut dapibus blandit.
-            </p>
-
-            <blockquote>
-              <h6>
-                <i className="fa fa-quote-left" aria-hidden="true"></i> Quisque
-                sagittis non ex eget vestibulum. Sed nec ultrices dui. Cras et
-                sagittis erat. Maecenas pulvinar, turpis in dictum tincidunt,
-                dolor nibh lacinia lacus.
-              </h6>
-              <span>Liam Neeson</span>
-            </blockquote>
-
-            <p>
-              Praesent ac magna sed massa euismod congue vitae vitae risus.
-              Nulla lorem augue, mollis non est et, eleifend elementum ante.
-              Nunc id pharetra magna. Praesent vel orci ornare, blandit mi sed,
-              aliquet nisi. Class aptent taciti sociosqu ad litora torquent per
-              conubia nostra, per inceptos himenaeos.
-            </p>
-          </div>
-
-          <div className="related-blog-post">
-            <div className="single-related-blog-post">
-              <img src={Rp1} alt=""></img>
-              <a href="#">
-                <h5>
-                  Cras lobortis nisl nec libero pulvinar lacinia. Nunc sed
-                  ullamcorper massa
-                </h5>
-              </a>
-            </div>
-
-            <div className="single-related-blog-post">
-              <img src={Rp2} alt=""></img>
-              <a href="#">
-                <h5>
-                  Fusce tincidunt nulla magna, ac euismod quam viverra id. Fusce
-                  eget metus feugiat
-                </h5>
-              </a>
-            </div>
-
-            <div className="single-related-blog-post">
-              <img src={Rp3} alt=""></img>
-              <a href="#">
-                <h5>
-                  Etiam leo nibh, consectetur nec orci et, tempus tempus ex
-                </h5>
-              </a>
-            </div>
-
-            <div className="single-related-blog-post">
-              <img src={Rp4} alt=""></img>
-              <a href="#">
-                <h5>
-                  Sed viverra pellentesque dictum. Aenean ligula justo, viverra
-                  in lacus porttitor
-                </h5>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ScrollUpArrowBtn />
+      <div className="single-blog-wrapper">{sblist}</div>
       <div className="blog-comment">
         <Comments />
       </div>
