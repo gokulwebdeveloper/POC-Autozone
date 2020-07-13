@@ -18,28 +18,28 @@ const Menu = () => {
               <NavLink  to="/shops">Shop</NavLink >
               <div className="megamenu">
               <ul className="single-mega cn-col-4">
-                  <li><NavLink  to="/shops">Women's Collection</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">Dresses</NavLink ></li>
-                  <li><NavLink  to="/shops">Blouses</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">T-shirts</NavLink ></li>
-                  <li><NavLink  to="/shops">Rompers</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">Bras &amp; Panties</NavLink ></li>
+                  <li><NavLink  to="/shops">Brakes and Traction Control</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">Brake Rotor</NavLink ></li>
+                  <li><NavLink  to="/shops">Brake Power Booster</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">Brake shoes Rear</NavLink ></li>
+                  <li><NavLink  to="/shops">Brake shoes Front</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">Wheel Cylinder Rear</NavLink ></li>
               </ul>
               <ul className="single-mega cn-col-4">
-                  <li><NavLink  to="/shops">Men's Collection</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">T-Shirts</NavLink ></li>
-                  <li><NavLink  to="/shops">Polo</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">Shirts</NavLink ></li>
-                  <li><NavLink  to="/shops">Jackets</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">Cooling Heating and Climatic Control</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">All</NavLink ></li>
+                  <li><NavLink  to="/shops">Radiator</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">AC Compressor</NavLink ></li>
+                  <li><NavLink  to="/shops">Water Pump</NavLink ></li>                                        
                   <li><NavLink  to="/shops">Trench</NavLink ></li>
               </ul>
               <ul className="single-mega cn-col-4">
-                  <li><NavLink  to="/shops">Kid's Collection</NavLink ></li>
-                  <li><NavLink  to="/shops">Dresses</NavLink ></li>
-                  <li><NavLink  to="/shops">Shirts</NavLink ></li>
-                  <li><NavLink  to="/shops">T-shirts</NavLink ></li>
-                  <li><NavLink  to="/shops">Jackets</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">Trench</NavLink ></li>
+                  <li><NavLink  to="/shops">Interior &amp; Hardwares</NavLink ></li>
+                  <li><NavLink  to="/shops">All</NavLink ></li>
+                  <li><NavLink  to="/shops">Headlight</NavLink ></li>
+                  <li><NavLink  to="/shops">Universal Seat belt</NavLink ></li>
+                  <li><NavLink  to="/shops">Seat Cover</NavLink ></li>                                        
+                  <li><NavLink  to="/shops">Latch</NavLink ></li>
               </ul>
                 <div className="single-mega cn-col-4">
                   <img src={Bgsix} alt="" />
