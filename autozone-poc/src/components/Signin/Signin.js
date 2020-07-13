@@ -17,7 +17,6 @@ export default function Signin() {
     data.emailid = emailid;
     data.password = password;
     axios.post("http://localhost:5000/user/signin", data).then((response) => {
-      console.log(response);
       localStorage.setItem('accessToken', response.data.accessToken)
       window.location.assign("/");
     });
