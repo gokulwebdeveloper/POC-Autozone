@@ -1,4 +1,7 @@
-import {getproducts, setproducts, getproductdetail, setproductdetail, addtocart, removefromcart, emptycart, filterproducts, sortproducts} from '../../constants';
+import {
+    getproducts, setproducts, getproductdetail, setproductdetail, addtocart, removefromcart,
+    emptycart, filterproducts, sortproducts, filterByRange, searchproducts
+} from '../../constants';
 
 export const getProducts = () => {
     return (
@@ -19,12 +22,18 @@ export const getProductDetail = (productId) => {
 }
 
 export const setProductDetail = (data) => {
-    
+
     return (
         { type: setproductdetail, payload: data }
     )
 }
 
+
+export const setFilterProducts = (productData) => {
+    return (
+        { type: filterproducts, payload: productData }
+    )
+}
 
 export const filterProducts = (productData, filter, filterType) => {
     if (productData == undefined || productData.data == undefined) {
@@ -49,7 +58,7 @@ export const filterProducts = (productData, filter, filterType) => {
             }
 
         })
-
+        
         return (
             { type: filterproducts, payload: filterProductData }
 
@@ -58,40 +67,47 @@ export const filterProducts = (productData, filter, filterType) => {
 
 }
 
-
 export const filterProductsByRange = (productData, minimum, maximum) => {
-    const filterProductData = productData.data.filter((item) => {
+    const filterProductByRange = productData.data.filter((item) => {
         if (item.offer_price >= minimum && item.offer_price <= maximum)
             return item;
-
     })
     return (
-        { type: filterproducts, payload: filterProductData }
-
+        {
+            type: filterByRange, payload: {
+                data: filterProductByRange,
+                min: minimum,
+                max: maximum
+            }
+        }
     )
 }
 
-export const addToCart = (data) =>{
-    return(
-        {type: addtocart, payload: data}
+export const addToCart = (data) => {
+    return (
+        { type: addtocart, payload: data }
     )
 }
 
-export const removeFromCart = (index) =>{
-    console.log(index);
+export const removeFromCart = (index) => {
     
-    return(
-        {type: removefromcart, payload: index}
+    return (
+        { type: removefromcart, payload: index }
     )
 }
 
-export const emptyCartData = () =>{
-    return(
-        {type: emptycart}
+export const emptyCartData = () => {
+    return (
+        { type: emptycart }
     )
 }
 
 export const sortProducts = (productData, sortType) => {
+    if(productData == undefined || productData.data == undefined) {
+        return ({
+            type: sortproducts, payload: { sortType, undefined }
+        })
+    }
 
     let sortedProductData;
     switch (sortType) {
@@ -110,3 +126,26 @@ export const sortProducts = (productData, sortType) => {
         type: sortproducts, payload: { sortType, sortedProductData }
     })
 }
+
+export const searchProduct = (productData, searchValue) => {
+    if (productData == undefined || productData.data == undefined) {
+        return (
+            { type: searchproducts, payload: {} }
+
+        )
+    } else { 
+        const searchResultsData = productData.data.filter((item) => {
+            if(item.product_name.toLowerCase().includes(searchValue) 
+                || item.product_brand.toLowerCase().includes(searchValue)
+                || item.category.toLowerCase().includes(searchValue)
+                || item.sub_category.toLowerCase().includes(searchValue) ){
+                   return item; 
+            }
+        })
+        return ({
+            type: searchproducts, payload: searchResultsData
+        })
+    }
+    
+} 
+

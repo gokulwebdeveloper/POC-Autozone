@@ -11,7 +11,7 @@ import { filterProductsByRange } from '../../../Redux/actions';
 function Slider(props) {
     var subTitle = "Filter by";
     var initialMinValue = 0;
-    var initialMaxValue = 460;
+    var initialMaxValue = 300;
     var selectedMinValue = 0;
     var selectedMaxValue = 0;
 
@@ -28,7 +28,7 @@ function Slider(props) {
                     $("#amount").val("Range: $" + ui.values[0] + " - $" + ui.values[1]);
                     selectedMinValue = ui.values[0];
                     selectedMaxValue = ui.values[1];
-                    props.filterProductsByRange(props.productData, selectedMinValue, selectedMaxValue);
+                    props.filterProductsByRange(props.productFilterData, selectedMinValue, selectedMaxValue);
                 }
             });
             $("#amount").val("Range: $" + $("#slider-range").slider("values", 0) +
@@ -63,5 +63,7 @@ function Slider(props) {
 
 }
 
-const mapStateToProps = ({ productData }) => ({ productData })
+const mapStateToProps = ({ productFilterData}) => ({
+	productFilterData: productFilterData
+})
 export default connect(mapStateToProps, { filterProductsByRange })(Slider);

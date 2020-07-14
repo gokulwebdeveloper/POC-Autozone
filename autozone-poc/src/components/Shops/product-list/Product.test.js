@@ -85,7 +85,6 @@ describe("Render Product Component", () => {
 
     it("Add to cart click action", () => {
         wrapper.find("Button").first().simulate('click');
-        console.log("store data : " + JSON.stringify(store.getState()) ) 
     });
 
     

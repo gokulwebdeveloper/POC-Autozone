@@ -1,16 +1,19 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { connect } from 'react-redux';
 import { filterProducts } from '../../../Redux/actions';
+import { changeStyle } from '../ShopHelper.js'
 
 function Brand(props) {
     function handleClick(e) {
         e.preventDefault();
+        changeStyle(e);
         props.filterProducts(props.productData, e.currentTarget.dataset.id, e.currentTarget.dataset.title);
     }
     function BrandItem(childProps) {
         return (
-            <li onClick={handleClick} data-id={childProps.value} data-title='Brands'>
-                <a href="#" >{childProps.value} </a>
+            <li >
+                <a onClick={handleClick} data-id={childProps.value} data-title='Brands'
+                    href="#" >{childProps.value} </a>
             </li>
         );
     }
@@ -30,8 +33,8 @@ function Brand(props) {
     );
 }
 
-const mapStateToProps = ({ productData }) => ({ 
-    productData 
+const mapStateToProps = ({ productData }) => ({
+    productData
 })
 export default connect(mapStateToProps, { filterProducts })(Brand);
 

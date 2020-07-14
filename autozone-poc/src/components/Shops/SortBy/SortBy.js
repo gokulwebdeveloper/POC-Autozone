@@ -5,13 +5,8 @@ import { sortProducts } from '../../../Redux/actions';
 
 function SortBy(props) {
     const handleChange = (e) => {
-        console.log('Selected Value: ' + e.target.value);
-        if (props.productFilterData == undefined ||
-            props.productFilterData.data == undefined ||
-            props.productFilterData.data.length == 0)
-            props.sortProducts(props.productData, e.target.value);
-        else
-            props.sortProducts(props.productFilterData, e.target.value);
+        if(props.sortedProductData != undefined)
+            props.sortProducts(props.sortedProductData, e.target.value);
     }
 
     return (
@@ -31,8 +26,8 @@ function SortBy(props) {
     );
 }
 
-const mapStateToProps = ({ productData, productFilterData }) => ({
+const mapStateToProps = ({ productData, sortedProductData }) => ({
     productData,
-    productFilterData
+    sortedProductData
 })
 export default connect(mapStateToProps, { sortProducts })(SortBy);

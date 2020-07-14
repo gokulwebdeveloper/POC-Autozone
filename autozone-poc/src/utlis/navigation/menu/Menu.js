@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import Bgsix from "../../img/bg-img/bg-6.jpg";
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import Bgsix from "../../img/azo-product-img/background/bg4.jpg";
+import { BrowserRouter as Router, NavLink, Link } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -18,28 +18,116 @@ const Menu = () => {
               <NavLink  to="/shops">Shop</NavLink >
               <div className="megamenu">
               <ul className="single-mega cn-col-4">
-                  <li><NavLink  to="/shops">Brakes and Traction Control</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">Brake Rotor</NavLink ></li>
-                  <li><NavLink  to="/shops">Brake Power Booster</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">Brake shoes Rear</NavLink ></li>
-                  <li><NavLink  to="/shops">Brake shoes Front</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">Wheel Cylinder Rear</NavLink ></li>
+                  <li><Link  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Brakes and Traction Control',
+                      filter: 'All'
+                    }
+                    }}>Brakes and Traction Control</Link ></li>                                        
+                  <li><NavLink  to="/shops" to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Brakes and Traction Control',
+                      filter: 'Brake Rotor'
+                    }
+                    }}>Brake Rotor</NavLink ></li>
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Brakes and Traction Control',
+                      filter: 'Brake Power Booster'
+                    }
+                    }}>Brake Power Booster</NavLink ></li>                                        
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Brakes and Traction Control',
+                      filter: 'Brake shoes Rear'
+                    }
+                    }}>Brake shoes Rear</NavLink ></li>
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Brakes and Traction Control',
+                      filter: 'Brake shoes Front'
+                    }
+                    }}>Brake shoes Front</NavLink ></li>                                        
+                
               </ul>
               <ul className="single-mega cn-col-4">
-                  <li><NavLink  to="/shops">Cooling Heating and Climatic Control</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">All</NavLink ></li>
-                  <li><NavLink  to="/shops">Radiator</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">AC Compressor</NavLink ></li>
-                  <li><NavLink  to="/shops">Water Pump</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">Trench</NavLink ></li>
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Cooling, Heating and Climate Control',
+                      filter: 'All'
+                    }
+                    }}>Cooling Heating and Climate Control</NavLink ></li>                                        
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Cooling, Heating and Climate Control',
+                      filter: 'Radiator'
+                    }
+                    }}>Radiator</NavLink ></li>                                        
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Cooling Heating and Climatic Control',
+                      filter: 'AC Compressor'
+                    }
+                    }}>AC Compressor</NavLink ></li>
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Cooling Heating and Climatic Control',
+                      filter: 'Water Pump'
+                    }
+                    }}>Water Pump</NavLink ></li>                                        
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Cooling Heating and Climatic Control',
+                      filter: 'Trench'
+                    }
+                    }}>Trench</NavLink ></li>
               </ul>
               <ul className="single-mega cn-col-4">
-                  <li><NavLink  to="/shops">Interior &amp; Hardwares</NavLink ></li>
-                  <li><NavLink  to="/shops">All</NavLink ></li>
-                  <li><NavLink  to="/shops">Headlight</NavLink ></li>
-                  <li><NavLink  to="/shops">Universal Seat belt</NavLink ></li>
-                  <li><NavLink  to="/shops">Seat Cover</NavLink ></li>                                        
-                  <li><NavLink  to="/shops">Latch</NavLink ></li>
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Interior',
+                      filter: 'All'
+                    }
+                    }}>Interior &amp; Hardwares</NavLink ></li>
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Collision Body Parts and Hardware',
+                      filter: 'Headlight'
+                    }
+                    }}>Headlight</NavLink ></li>
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Interior',
+                      filter: 'Universal Seat belt'
+                    }
+                    }}>Universal Seat belt</NavLink ></li>
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Interior',
+                      filter: 'Seat Cover'
+                    }
+                    }}>Seat Cover</NavLink ></li>                                        
+                  <li><NavLink  to={{
+                    pathname:'/shops',
+                    filter: {
+                      filterType: 'Interior',
+                      filter: 'Latch'
+                    }
+                    }}>Latch</NavLink ></li>
               </ul>
                 <div className="single-mega cn-col-4">
                   <img src={Bgsix} alt="" />
@@ -57,9 +145,6 @@ const Menu = () => {
                 <li>
                   <NavLink to="/shops">Shop</NavLink>
                 </li>
-                {/* <li>
-                  <NavLink to="/single-product-details">Product Details</NavLink>
-                </li> */}
                 <li>
                   <NavLink to="/checkout">Checkout</NavLink>
                 </li>
