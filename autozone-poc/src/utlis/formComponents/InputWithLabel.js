@@ -41,6 +41,36 @@ export default function TextInput({
       );
       break;
 
+      case "password":
+      function passwordValidationHandler(){
+        let inputData = $(`#${inputId}`).val();
+        if(isRequired && (inputData === '' || inputData.length <= 8)){
+          $(`#${inputId} + .formErrorMsg`).text("Please provide 8 characte password");
+          $(`#${inputId} + .formErrorMsg`).show();
+        }
+        else {
+          $(`#${inputId} + .formErrorMsg`).hide();
+        }
+      }
+      inputLabel = (
+        <>
+          <label htmlFor={inputId}>
+            {labelText} {isRequired ? <span>*</span> : null}
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            id={inputId}
+            required={isRequired}
+            onBlur = {passwordValidationHandler}
+            defaultValue=""
+            {...etc}
+          />
+          <p className="formErrorMsg"></p>
+        </>
+      );
+      break;
+
       case "inputWithoutLabel":
       function inputValidationHandler(){
         let inputData = $(`#${inputId}`).val();
