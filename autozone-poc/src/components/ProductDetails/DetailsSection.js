@@ -222,9 +222,8 @@ const DetailsSection = (props) => {
                 responsiveRefreshRate={200}>
 
                 {currentProduct.product_image.map((image, index) => {
-                    let imagePath = image.replace("../","../src/utlis/");
                 return (
-                    <div key={index}><img src={imagePath} alt="" /></div>
+                    <div key={index}><img src={image} alt={currentProduct.product_name} /></div>
                     )
                 })
                 }
