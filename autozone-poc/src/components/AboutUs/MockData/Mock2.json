@@ -1,0 +1,34 @@
+[
+    {
+        "aboutAutoZone": [
+            {
+                "id": 0,
+                "background-image": "image-src",
+                "title": "About AutoZone"
+            },
+            {
+                "id": 1,
+                "para1": "For more than 39 years, AutoZone has been committed to providing the best parts, prices and customer service in the automotive aftermarket industry. We have a rich culture and history of Going the Extra Mile for our customers and our community.",
+                "para2": "The foundation of AutoZone's success is our culture, which defines how our employees (called \"AutoZoners\") take care of customers. Each AutoZoner works hard to LIVE the Pledge, share their passion for WOW! Customer Service and Go the Extra Mile every day to continue building and growing AutoZone for our customers."
+            },
+            {
+                "id": 2,
+                "image": "image-src",
+                "para1": "AutoZone's history started with the vision of one man: J.R. \"Pitt\" Hyde III. After receiving his bachelor's degree in Economics, Pitt joined Malone & Hyde, Inc., a wholesale food company founded by his grandfather. He launched and developed Malone & Hyde's specialty retailing division, beginning with drug stores and expanding into sporting goods stores and supermarkets. During his research into new, potential markets, Pitt recognized the need for a retail automotive parts store that could help ordinary people take care of their vehicles by providing quality parts and Trustworthy Advice. Pitt believed that the characteristics found in supermarkets - clean, well-organized stores, accessible products, and great customer service - could be applied to the automotive parts business. In 1979, his vision became a reality."
+            },
+            {
+                "id": 3,
+                "para1": "Originally named \"Auto Shack\", the company first started as a division of Malone & Hyde. On July 4, 1979, we opened our first store in Forrest City, Arkansas. In its first year, Auto Shack opened eight stores in two states: Arkansas and Tennessee, and shipped merchandise out of a 12,000 square foot distribution center.",
+                "para2": "In 1987, Auto Shack became AutoZone, a freestanding company with Pitt serving as Chairperson and CEO. In 1991, AutoZone became a publically traded company on the New York Stock Exchange (ticker symbol: AZO). 1996, AutoZone launched a Commercial program offering credit and delivery to professional technicians. Later, with the purchase of ALLDATA, AutoZone acquired the nation 2019s leading provider of electronic automotive diagnostic and repair software. In 1998, AutoZone expanded its presence outside the U.S. borders to Mexico, opening our first AutoZone de Mexico store, and in 2012, AutoZone opened our first store in Brazil.",
+                "para3": "Today, AutoZone is the leading retailer and a leading distributor of automotive replacement parts and accessories in the U.S. with more than 6,000 stores across the fifty United States, the District of Columbia, Puerto Rico, Mexico and Brazil and more than 85,000 AutoZoners supporting operations on four continents.",
+                "image": "image-src"
+            }
+        ]
+    },
+    {
+        "investorInformation":[]
+    },
+    {
+        "affiliateProgram":[]
+    }
+]
