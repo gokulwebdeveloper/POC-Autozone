@@ -1,43 +1,62 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ReactTooltip from "react-tooltip";
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Button from '../../button/Button';
+import { connect } from 'react-redux';
+import { addToCart, getProductDetail } from '../../../Redux/actions';
 
 const SlickSlider = props => {
+    const detailsPath = "/single-product-details/"+props.currentProduct.id;
+
+    function addToCart()
+    {
+        let qty = 1;
+        let price = parseFloat(props.currentProduct.offer_price);
+        let total = parseFloat(qty * price);
+        addKeyValue(props.currentProduct,"quantity", qty);
+        addKeyValue(props.currentProduct,"price", total);
+        props.dispatchAddToCart(props.currentProduct);
+    }
+
+    function addKeyValue(obj, key, data){
+        obj[key] = data;
+      }
+    
     return (
         <div>
             <div className="single-product-wrapper">
                 <div className="product-img">
                     {
-                        props.slideData && props.slideData.product_image && props.slideData.product_image.length < 2 ? props.slideData.product_image.map((productImg) =>
+                        props.currentProduct && props.currentProduct.product_image && props.currentProduct.product_image.length < 2 ? props.currentProduct.product_image.map((productImg) =>
                             <div>
                                 <img src={productImg} alt="" />
                                 <img className="hover-img" src={productImg} alt="" />
                             </div>
                         ) : <div>
-                                <img src={props.slideData.product_image[0]} alt="" />
-                                <img className="hover-img" src={props.slideData.product_image[1]} alt="" />
+                                <img src={props.currentProduct.product_image[0]} alt="" />
+                                <img className="hover-img" src={props.currentProduct.product_image[1]} alt="" />
                             </div>
                     }
 
                     <div className="product-badge offer-badge">
-                        <span>{props.slideData.offer_badge}</span>
+                        <span>{props.currentProduct.offer_badge}</span>
                     </div>
                     <div className="product-favourite">
                         <a href="#" className="favme fa fa-heart"></a>
                     </div>
                 </div>
                 <div className="product-description">
-                    <span>{props.slideData.product_brand}</span>
-                    <NavLink to="/single-product-details">
-                        <h6 data-tip={props.slideData.product_name} data-background-color="#989898">{props.slideData.product_name}</h6>
+                    <span>{props.currentProduct.product_brand}</span>
+                    <Link to={detailsPath}>
+                        <h6 data-tip={props.currentProduct.product_name} data-background-color="#989898"
+                         onClick={()=>props.getProductDetail(props.currentProduct.id)}>
+                            {props.currentProduct.product_name}</h6>
                         <ReactTooltip />
-                    </NavLink>
-                    <p className="product-price">${props.slideData.offer_price}</p>
+                    </Link>
+                    <p className="product-price">${props.currentProduct.offer_price}</p>
                     <div className="hover-content">
                         <div className="add-to-cart-btn">
-                        <Button btnText="Add to Cart" />
+                        <Button btnText="Add to Cart" onClick={addToCart}/>
                         </div>
                     </div>
                 </div>
@@ -46,4 +65,12 @@ const SlickSlider = props => {
     );
 };
 
-export default SlickSlider;
+const mapDispatchToProps = (dispatch) =>{
+    return {
+        dispatchAddToCart: product => dispatch(addToCart(product)),
+        getProductDetail: id => dispatch(getProductDetail(id))
+
+    }
+} 
+
+export default connect(null, mapDispatchToProps)(SlickSlider);

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function TopCatagoryArea(props) {
 
@@ -11,7 +11,7 @@ export default function TopCatagoryArea(props) {
             <div className="col-12 col-sm-6 col-md-4">
                 <div className="single_catagory_area d-flex align-items-center justify-content-center bg-img" style={bgImgTopCatArea}>
                     <div className="catagory-content">
-                    <NavLink to="/shops">{props.topCatagoryAreaText}</NavLink>
+                    <Link to="/shops">{props.topCatagoryAreaText}</Link>
                     </div>
                 </div>
             </div>

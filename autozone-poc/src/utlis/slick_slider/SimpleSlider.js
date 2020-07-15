@@ -8,12 +8,18 @@ import { connect } from "react-redux";
 
 function SimpleSlider(props) { 
     let settings = props.settings;
+    let filterProductData = [];
+    props.productData ? props.productData.map((topCatagory, i) => {
+        if(topCatagory.rating >= 4.5) {
+            filterProductData.push(topCatagory);
+        }
+      }) : ''
     return (
         <div>
             <Slider {...settings}>
                 {
-                    props.productData ? props.productData.map((slideData, i) => 
-                        <SlickSlider key={i}  slideData={slideData}/>
+                    filterProductData ? filterProductData.map((slideData, i) => 
+                        <SlickSlider key={i}  currentProduct={slideData}/>
                     ) : ''
                 }
             

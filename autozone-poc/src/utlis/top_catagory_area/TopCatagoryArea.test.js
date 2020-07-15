@@ -5,6 +5,8 @@ import renderer from "react-test-renderer";
 import Adapter from 'enzyme-adapter-react-16';
 import '../../matchMedia.mock'
 import TopCatagoryArea from './TopCatagoryArea';
+import { Provider } from 'react-redux';
+import store from '../../Redux/store';
 
 configure({ adapter: new Adapter() });
 
@@ -12,13 +14,9 @@ describe('TopCatagoryArea page testing', () => {
   let wrapper;
   //mount component for testing
   beforeEach(() => {
-    wrapper = mount(<TopCatagoryArea />);
+    wrapper = mount(<Provider store={store}><TopCatagoryArea /></Provider>);
   })
 
-  //Cleanup after test execution
-  afterEach(() => {
-    wrapper.unmount();
-  })
   //test if TopCatagoryArea component exists
   it("TopCatagoryArea Exists", () => {
     expect(wrapper.exists()).toBeTruthy();
@@ -27,7 +25,7 @@ describe('TopCatagoryArea page testing', () => {
 
   //SnapShot Match test
   it("SnapShot Match", () => {
-    const topCatagoryAreaComponent = renderer.create(<TopCatagoryArea />).toJSON();
+    const topCatagoryAreaComponent = renderer.create(<Provider store={store}><TopCatagoryArea /></Provider>).toJSON();
     expect(topCatagoryAreaComponent).toMatchSnapshot();
   });
 })
