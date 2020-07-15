@@ -1,0 +1,13 @@
+.signuphead{
+    padding: 1rem;
+}
+
+.signupcontainer{
+    border: solid 1px #d0d0dc;
+    border-radius: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.btn-custome{
+    border-radius: 10px;
+}

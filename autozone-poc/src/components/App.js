@@ -16,6 +16,8 @@ import Singleblog from "./single-blog/single-blog";
 import Home from "./HomePage/Home";
 import {connect} from 'react-redux';
 import {getProducts} from '../Redux/actions';
+import Signin from "./Signin/Signin";
+import Signup from "./Signup/Signup"
 
 const App = ({getProducts}) => {
   useEffect(()=>{
@@ -40,6 +42,12 @@ const App = ({getProducts}) => {
         <Route path="/single-product-details/:id" component={ProductDetails} />
         <Route path="/shops">
             <Shops />
+        </Route>
+        <Route path="/signup">
+          <Signup />
+        </Route>
+      <Route path="/signin">
+          <Signin />
         </Route>
          <Route exact path="/singleblog" component={Singleblog} >
          </Route>

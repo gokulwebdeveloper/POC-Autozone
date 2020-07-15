@@ -1782,6 +1782,12 @@ img {
             color: #FFDF00;
             margin-bottom: 0px !important;
         }
+            .single-product-wrapper .product-description .rating span {
+              font-size: 20px;
+              font-weight: normal;
+              color: #FFDF00;
+              margin-bottom: 0px !important;
+          }
 
 /* ##### The End ##### */
 

@@ -1,74 +1,80 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useState } from "react";
 import Catagory from './Catagory/Catagory'
 import ShopsHeader from "./ShopsHeader/ShopsHeader";
 import ColorBox from "./ColorBox/ColorBox";
 import Brand from "./Brand/Brand";
 import Slider from "./Slider/Slider";
 import SortBy from "./SortBy/SortBy";
-import Pagination from "./Pagination/Pagination"
 import ProductList from "./product-list/ProductList";
 
 export default function Shops() {
 
-	var colors = [
-		"color1",
-		"color2",
-		"color3",
-		"color4",
-		"color5",
-		"color6",
-		"color7",
-		"color8",
-		"color9",
-		"color10"
-	];
-
 	var brandList = [
-		"Asos",
-		"Mango",
-		"River Island",
-		"Topshop",
-		"Zara"
+		"Duralast",
+		"Brakeware",
+		"XtraVision",
+		"Sylvania Automotive",
+		"STP",
+		"K&N",
+		"SureBilt radiators",
+		"Everco",
+		"Pilot",
+		"Pro Glide",
+		"ProElite"
 	];
 
 	var categoryList = [{
-		"title": "clothing",
+		"title": "Brakes and Traction Control",
 		"items": [
 			"All",
-			"Bodysuits",
-			"Dresses",
+			"Brake Rotor",
+			"Brake Power Booster",
 			"Hoodies Sweats",
-			"Jackets Coats",
-			"Jeans",
-			"Pants Leggings",
-			"Rompers Jumpsuits",
-			"Shirts Blouses",
-			"Shirts",
-			"Sweaters &amp; Knits"
+			"Brake Shoes Rear",
+			"Wheel Cylinder Rear"
 		]
 	},
 	{
-		"title": "shoes",
+		"title": "Collision Body Parts and Hardware",
 		"items": [
 			"All",
-			"Sadals",
-			"Heels Slipper",
-			"Shoes"
+			"Headlight"
 		]
 	},
 	{
-		"title": "accessories",
+		"title": "Ignition Tune Up and Routine Maintenance",
 		"items": [
 			"All",
-			"Watch",
-			"Pen drivers"
+			"Battery",
+			"Oil Filter"
+		]
+	},
+	{
+		"title": "Cooling, Heating and Climate Control",
+		"items": [
+			"All",
+			"Radiator",
+			"AC Compressor",
+			"Water Pump"
+		]
+	},
+	{
+		"title": "Interior",
+		"items": [
+			"All",
+			"Universal Seat Belt",
+			"Seat Cover"
 		]
 	}
 	];
+	const [sortBy, setSortBy] = useState('');
+	const handleSortBy = (sortByValue) => {
+		setSortBy(sortByValue)
+	}
 
 	return (
 		<Fragment>
-			<ShopsHeader heading="dresses" />
+			<ShopsHeader heading="Auto Spares" />
 			<section className="shop_grid_area section-padding-80">
 				<div className="container">
 					<div className="row">
@@ -79,16 +85,17 @@ export default function Shops() {
 								<div className="widget catagory mb-50">
 									<h6 className="widget-title mb-30">Catagories</h6>
 									<div className="catagories-menu">
-										<ul id="menu-content2" className="menu-content collapse show">
-											<Catagory data={categoryList[0]} datatarget="#clothing" id="clothing" />
-											<Catagory data={categoryList[1]} datatarget="#shoes" id="shoes" />
-											<Catagory data={categoryList[2]} datatarget="#accessories" id="accessories" />
+										<ul id="menu-content2" className="menu-content show">
+											<Catagory data={categoryList[0]} id="Brakes" />
+											<Catagory data={categoryList[1]} id="Collision" />
+											<Catagory data={categoryList[2]} id="Ignition" />
+											<Catagory data={categoryList[3]} id="Cooling" />
+											<Catagory data={categoryList[4]} id="Interior" />
 										</ul>
 									</div>
 								</div>
 
-								<Slider min="49" max="360" />
-								<ColorBox colors={colors} />
+								<Slider min="0" max="490" />
 								<Brand brandList={brandList} />
 							</div>
 						</div>
@@ -103,7 +110,7 @@ export default function Shops() {
 											<div className="total-products">
 												<p><span>186</span> products found</p>
 											</div>
-											<SortBy />
+											<SortBy onSelectedSortBy={handleSortBy} />
 										</div>
 									</div>
 								</div>

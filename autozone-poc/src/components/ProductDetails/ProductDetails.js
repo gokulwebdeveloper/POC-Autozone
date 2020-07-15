@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 import {getProductDetail} from '../../Redux/actions';
 
 const ProductDetails = (props) => {
-    var prodId = props.match.params.id;
+    const prodId = props.match.params.id;
 
     if(prodId){
         if(props.productDetail)

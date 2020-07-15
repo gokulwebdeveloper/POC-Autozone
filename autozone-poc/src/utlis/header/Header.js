@@ -7,12 +7,12 @@ import Bag from "../img/core-img/bag.svg";
 import CartContent from "./CartContent";
 
 function openNav() {
-  var cartOverlayContent = document.getElementById("cartOverlayContent");
+  let  cartOverlayContent = document.getElementById("cartOverlayContent");
   if(cartOverlayContent==null) 
     return;
   cartOverlayContent.className = cartOverlayContent.className+" cart-on";
 
-  var cartOverlay = document.getElementById("cartOverlay");
+  let  cartOverlay = document.getElementById("cartOverlay");
   if(cartOverlay==null) 
     return;
   cartOverlay.className = cartOverlay.className+" cart-bg-overlay-on";
@@ -20,12 +20,12 @@ function openNav() {
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 export function closeNav() {
-  var cartOverlayContent = document.getElementById("cartOverlayContent");
+  let  cartOverlayContent = document.getElementById("cartOverlayContent");
   if(cartOverlayContent==null) 
     return;
   cartOverlayContent.className = cartOverlayContent.className.replace(" cart-on","");
 
-  var cartOverlay = document.getElementById("cartOverlay");
+  let  cartOverlay = document.getElementById("cartOverlay");
   if(cartOverlay==null) 
     return;
   cartOverlay.className = cartOverlay.className.replace(" cart-bg-overlay-on","");
@@ -48,7 +48,7 @@ const Header = () => {
             </div>
 
             <div className="user-login-info">
-              <a href="#">
+              <a href="/signin">
                 <img src={User} alt="" />
               </a>
             </div>
