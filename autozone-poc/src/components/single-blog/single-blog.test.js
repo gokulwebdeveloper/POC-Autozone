@@ -4,6 +4,7 @@ import { unmountComponentAtNode } from "react-dom";
 import { shallow } from "enzyme";
 import { render } from "@testing-library/react";
 import renderer from "react-test-renderer";
+import { create } from "react-test-renderer";
 import Comments from "./Comments";
 
 let container = null;
@@ -18,9 +19,14 @@ describe("SingleBlog exists", () => {
   it("SingleBlog Exists", () => {
     expect(wrapper.exists()).toBeTruthy();
   });
-  const singleBlog = shallow(<Singleblog />);
+  const wr = shallow(<Singleblog />);
   it("renders an image", () => {
-    expect(singleBlog.find("img").at(1).prop("src")).toBeTruthy;
+    expect(wr.find("singleblogvideo")).toBeTruthy();
+  });
+  const sglblg = shallow(<Singleblog />);
+
+  it("renders an image", () => {
+    expect(sglblg.find("related-blog-post")).toBeTruthy();
   });
 
   test("SingleBlog renders a <Comments/>", () => {

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Blog/Blog.css";
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, NavLink, Link } from "react-router-dom";
 import UseInfiniteScroll from "../../utlis/infiniteScroll/UseInfiniteScroll";
 import background from "../../utlis/img/azo-blog-img/background_image.jpg";
 import RetrieveJson from "../../utlis/RetrieveAPI/RetrieveJson";
+import ScrollUpArrowBtn from "../../utlis/button/ScrollUpArrowBtn";
 
 const Blog = (props) => {
   const [list, setList] = RetrieveJson("data/blog.json");
@@ -36,28 +37,29 @@ const Blog = (props) => {
         <div key={item}>
           <div className="col-12 col-lg-6">
             <div className="single-blog-area mb-50">
-              <img src={regularBlogList[item].image} alt="" />
-              <div className="post-title">
-                <a href="#">{regularBlogList[item].title}</a>
-              </div>
-              <div className="hover-content">
-                <div className="hover-post-title">
+              <NavLink
+                to="/singleblog"
+                to={{
+                  pathname: "/singleblog",
+                  propsFor: {
+                    img_id: regularBlogList[item].id,
+                  },
+                }}
+              >
+                <img src={regularBlogList[item].image} alt="" />
+                <div className="post-title">
                   <a href="#">{regularBlogList[item].title}</a>
                 </div>
-                <p>{regularBlogList[item].content}</p>
-                <Router>
-                  <NavLink
-                    to={{
-                      pathname: "/singleblog",
-                      propsFor: {
-                        imgpath: regularBlogList[item].image,
-                      },
-                    }}
-                  >
+                <div className="hover-content">
+                  <div className="hover-post-title">
+                    <a href="#">{regularBlogList[item].title}</a>
+                  </div>
+                  <p>{regularBlogList[item].content}</p>
+                  <a href="#">
                     Continue reading <i className="fa fa-angle-right"></i>
-                  </NavLink>
-                </Router>
-              </div>
+                  </a>
+                </div>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -67,6 +69,7 @@ const Blog = (props) => {
 
   return (
     <div>
+      <ScrollUpArrowBtn />
       <div
         data-testid="background"
         className="blog-background-image"

@@ -1,0 +1,21 @@
+/* Signin page css */
+
+.signinhead{
+    padding: 1rem;
+}
+.link{
+    text-decoration: underline;
+    color:blue ;
+    text-align: left;
+    margin-left: 87%;
+    font-size: 1rem;
+}
+.signincontainer{
+    border: solid 1px #d0d0dc;
+    border-radius: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.btn{
+    border-radius: 10px;
+}

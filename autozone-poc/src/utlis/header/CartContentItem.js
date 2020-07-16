@@ -6,7 +6,7 @@ import {removeFromCart} from '../../Redux/actions';
 
 const CartContentItem = (props) =>{
     const detailsPath = "/single-product-details/"+props.data.id;
-    const imagePath = props.data.product_image[0].replace("../","../src/utlis/");
+    const imagePath = props.data.product_image[0];
 
 function removeProduct()
 {
