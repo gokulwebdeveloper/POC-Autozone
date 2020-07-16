@@ -1,0 +1,22 @@
+.blog-wrapper .single-blog-area .hover-content p{
+    height: 84px;
+    line-height: 2;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.blog-wrapper .single-blog-area{border:0px;width:500px;}
+
+.blog-background-image{
+    width: 100%;
+    height: 390px;
+    position: relative;
+    z-index: 1;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+
+
