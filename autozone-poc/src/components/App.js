@@ -14,6 +14,9 @@ import ProductDetails from './ProductDetails/ProductDetails';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Singleblog from "./single-blog/single-blog";
 import Home from "./HomePage/Home";
+import AboutAutoZone from "./AboutUs/AboutAutoZone/AboutAutoZone";
+import InvestorInformation from "./AboutUs/InvestorInformation/InvestorInformation";
+import AffliateProgram from "./AboutUs/AffliateProgram/AffliateProgram";
 import {connect} from 'react-redux';
 import {getProducts} from '../Redux/actions';
 import Signin from "./Signin/Signin";
@@ -38,6 +41,12 @@ const App = ({getProducts}) => {
         </Route>
         <Route path="/regularPage">
           <RegularPage />
+        </Route>
+        <Route path="/aboutAutozone" component={AboutAutoZone}></Route>
+        <Route path="/investorInformation" component={InvestorInformation}></Route>
+        <Route path="/affliateProgram" component={AffliateProgram}></Route>
+        <Route path="/single-product-details">
+          <ProductDetails />
         </Route>
         <Route path="/single-product-details/:id" component={ProductDetails} />
         <Route path="/shops"  component={Shops}/>
