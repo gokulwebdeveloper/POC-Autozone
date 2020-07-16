@@ -1,47 +1,29 @@
 import React from 'react';
-import BgImg from '../../utlis/img/bg-img/bg-1.jpg';
-import BgImgTopCatArea1 from '../../utlis/img/bg-img/bg-2.jpg';
-import BgImgTopCatArea2 from '../../utlis/img/bg-img/bg-3.jpg';
-import BgImgTopCatArea3 from '../../utlis/img/bg-img/bg-4.jpg';
-import BgImgCatArea from '../../utlis/img/bg-img/bg-5.jpg';
+import BgImg from '../../utlis/img/azo-product-img/homePageImages/autozone-banner2.jpg';
+import BgImgCatArea from '../../utlis/img/azo-product-img/homePageImages/step-brake.jpg';
 import PropTypes from 'prop-types';
 import Button from '../../utlis/button/Button';
 import TopCatagoryArea from '../../utlis/top_catagory_area/TopCatagoryArea';
 import SimpleSlider from '../../utlis/slick_slider/SimpleSlider';
 import ScrollUpArrowBtn from '../../utlis/button/ScrollUpArrowBtn';
 import BrandArea from './Brands/BrandArea';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 const Home = props => { 
+  let topCatagoryData = [];
+  props.catagoryData ? props.catagoryData.map((topCatagory, i) => {
+    if(topCatagory.offer_badge == "New") {
+      topCatagoryData.push(topCatagory);
+    }
+  }) : ''
   const bgImgStyle = {
     'backgroundImage': `url(${BgImg})`
   }
-  const bgImgTopCatArea1 = {
-    'backgroundImage': `url(${BgImgTopCatArea1})`
-  }
-  const bgImgTopCatArea2 = {
-    'backgroundImage': `url(${BgImgTopCatArea2})`
-  }
-  const bgImgTopCatArea3 = {
-    'backgroundImage': `url(${BgImgTopCatArea3})`
-  }
+  
   const bgImgCatArea = {
     'backgroundImage': `url(${BgImgCatArea})`
   }
-
-  const topCatagorys = [
-    {
-      topCatagoryAreaText: 'Clothing',
-      style: bgImgTopCatArea1
-    },
-    {
-      topCatagoryAreaText: 'Shoes',
-      style: bgImgTopCatArea2
-    },
-    {
-      topCatagoryAreaText: 'Accessories',
-      style: bgImgTopCatArea3
-    }
-  ];
 
   let customeSettings = {
     dots: true,
@@ -57,13 +39,11 @@ const Home = props => {
       <div>
         <ScrollUpArrowBtn/>
         <section className="welcome_area bg-img" style={bgImgStyle}>
-          <div className="container h-100">
+          <div className="container h-140">
             <div className="row h-100 align-items-center">
               <div className="col-12">
                 <div className="hero-content">
-                  <h6>asoss</h6>
-                  <h2>New Collection</h2>
-                  <Button btnText="view collection" />
+                  <Link to="/shops"><Button btnText="view collection" /></Link>
                 </div>
               </div>
             </div>
@@ -72,15 +52,15 @@ const Home = props => {
         <div className="top_catagory_area section-padding-80 clearfix">
           <div className="container">
             <div className="row justify-content-center">{
-               topCatagorys.map((topCatagory, i) => {
+               topCatagoryData ? topCatagoryData.map((catagoryValues, i) => {
                 return (
                   <TopCatagoryArea
                     key={i}
-                    topCatagoryAreaText={topCatagory.topCatagoryAreaText}
-                    style={topCatagory.style}
+                    topCatagoryAreaText={catagoryValues.category}
+                    style={catagoryValues.product_image[0]}
                   />
                 )
-              })
+              }) : ''
             }
             </div>
           </div>
@@ -90,10 +70,8 @@ const Home = props => {
             <div className="row">
               <div className="col-12">
                 <div className="cta-content background-overlay bg-img" style={bgImgCatArea}>
-                  <div className="h-100 d-flex align-items-center justify-content-end">
+                  <div className="h-140 d-flex align-items-center justify-content-end">
                     <div className="cta--text">
-                      <h6>-60%</h6>
-                      <h2>Global Sale</h2>
                       <Button btnText="Buy Now" />
                     </div>
                   </div>
@@ -128,6 +106,11 @@ const Home = props => {
       </div>
     );
 };
+const mapStateToProps = productData => {
+  return {
+    catagoryData: productData.productData.data
+  };
+}
 
 Home.propTypes = {
   topCatagoryAreaText: PropTypes.string
@@ -146,4 +129,4 @@ Home.defaultProps = {
   }
 };
 
-export default Home;
+export default connect(mapStateToProps, null)(Home);
