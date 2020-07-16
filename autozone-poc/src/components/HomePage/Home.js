@@ -57,7 +57,7 @@ const Home = props => {
                   <TopCatagoryArea
                     key={i}
                     topCatagoryAreaText={catagoryValues.category}
-                    style={catagoryValues.product_image[0]}
+                    bgStyleImg={catagoryValues.product_image[0]}
                   />
                 )
               }) : ''
@@ -72,7 +72,7 @@ const Home = props => {
                 <div className="cta-content background-overlay bg-img" style={bgImgCatArea}>
                   <div className="h-140 d-flex align-items-center justify-content-end">
                     <div className="cta--text">
-                      <Button btnText="Buy Now" />
+                    <Link to="/shops"><Button btnText="Buy Now" /></Link>
                     </div>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ Home.propTypes = {
 };
 
 Home.defaultProps = {
-  topCatagoryAreaText: 'Clothing',
+  topCatagoryAreaText: '',
   customeSettings: {
     dots: true,
     infinite: true,

@@ -11,3 +11,23 @@
     /* ---------------------------------------
     ##### - PLACE YOUR CUSTOM CSS HERE - #####
     --------------------------------------- */
+
+    .nav-brand {
+        width: 150px;
+    }
+    .h-140{
+        height: 140% !important;
+    }
+    .product-description h6{
+        white-space: nowrap;
+        width: 200px; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .hover-content .add-to-cart-btn{
+        margin-top: 200px;
+    }
+
+    .single-product-wrapper {
+        height: 450px;
+    }

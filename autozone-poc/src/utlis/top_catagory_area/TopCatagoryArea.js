@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function TopCatagoryArea(props) {
+    const bgImgCatImg = {
+        'backgroundImage': `url(${props.bgStyleImg})`
+      }
     return (
             <div className="col-12 col-sm-6 col-md-4">
-                <div className="single_catagory_area d-flex align-items-center justify-content-center bg-img" style={props.style}>
-
+                <div className="single_catagory_area d-flex align-items-center justify-content-center bg-img" style={bgImgCatImg}>
                     <div className="catagory-content">
-                        <a href="#">{props.topCatagoryAreaText}</a>
+                    <Link to="/shops">{props.topCatagoryAreaText}</Link>
                     </div>
                 </div>
             </div>
