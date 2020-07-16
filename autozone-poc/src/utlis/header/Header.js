@@ -4,14 +4,40 @@ import Search from "../search/Search";
 import Heart from "../img/core-img/heart.svg";
 import User from "../img/core-img/user.svg";
 import Bag from "../img/core-img/bag.svg";
+import CartContent from "./CartContent";
+
+function openNav() {
+  let  cartOverlayContent = document.getElementById("cartOverlayContent");
+  if(cartOverlayContent==null) 
+    return;
+  cartOverlayContent.className = cartOverlayContent.className+" cart-on";
+
+  let  cartOverlay = document.getElementById("cartOverlay");
+  if(cartOverlay==null) 
+    return;
+  cartOverlay.className = cartOverlay.className+" cart-bg-overlay-on";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+export function closeNav() {
+  let  cartOverlayContent = document.getElementById("cartOverlayContent");
+  if(cartOverlayContent==null) 
+    return;
+  cartOverlayContent.className = cartOverlayContent.className.replace(" cart-on","");
+
+  let  cartOverlay = document.getElementById("cartOverlay");
+  if(cartOverlay==null) 
+    return;
+  cartOverlay.className = cartOverlay.className.replace(" cart-bg-overlay-on","");
+}
 
 const Header = () => {
   return (
     <Fragment>
+      <div>
       <header className="header_area">
-        <div className="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+        <div className="classNamey-nav-container breakpoint-off d-flex align-items-center justify-content-between">
           <Navigation />
-
           <div className="header-meta d-flex clearfix justify-content-end">
             <Search />
 
@@ -26,14 +52,30 @@ const Header = () => {
                 <img src={User} alt="" />
               </a>
             </div>
-            <div className="cart-area">
+            <div className="cart-area" onClick={openNav}>
               <a href="#" id="essenceCartBtn">
                 <img src={Bag} alt="" /> <span>3</span>
               </a>
             </div>
           </div>
         </div>
-      </header>
+    </header>
+
+      {/* <!-- ##### Right Side Cart Area ##### --> */}
+    <div id="cartOverlay" className="cart-bg-overlay" onClick={closeNav}></div>
+
+    <div id="cartOverlayContent" className="right-side-cart-area" >
+
+        {/* <!-- Cart Button --> */}
+        <div className="cart-button" onClick={closeNav}>
+            <a href="#"><img src={Bag} alt=""/> <span>3</span></a>
+        </div>
+
+        <CartContent/>
+       
+    </div>
+    {/* <!-- ##### Right Side Cart End ##### --> */}
+    </div>
     </Fragment>
   );
 };

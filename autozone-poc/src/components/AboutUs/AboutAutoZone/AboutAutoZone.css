@@ -1,17 +1,8 @@
 .row-1 {
-  background: url(../Assets/LP-A1-BG-IMG-en-us-1546452533686.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 75vh;
-}
-
-.man-image {
-  content: url(../Assets/LP-SKU-D6-BANNER_1-en-us-1546455094813.png);
-}
-
-.car-man-image {
-  content: url(../Assets/LP-SKU-D4-1-BG-IMG-en-us-1546453312578.png);
 }
 
 .header-1 {

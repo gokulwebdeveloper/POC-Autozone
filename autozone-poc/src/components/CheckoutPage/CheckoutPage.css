@@ -1,3 +1,7 @@
 .order-details-confirmation .card-header h6 {
   display: flex;
 }
+
+.order-details-form span{
+  max-width: 80%;
+}

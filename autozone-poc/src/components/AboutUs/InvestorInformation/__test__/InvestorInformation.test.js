@@ -1,5 +1,4 @@
 import React from "react";
-import { unmountComponentAtNode } from "react-dom";
 import "@babel/polyfill";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
@@ -18,21 +17,6 @@ afterEach(() => {
 describe("tests for AboutAutoZone.js", () => {
   it("renders the comoponent", () => {
     expect(wrapper).toBeTruthy();
-  });
-
-  it("has a div containing investor relations image", () => {
-    const imageDiv = wrapper.find("div").at(1).children();
-    const imageDivTag = imageDiv.find("img");
-    const imageUrl =
-      "https://www.autozone.com/company/images/investor_relations/IR_logo.gif";
-    expect(imageDivTag.prop("src")).toBe(imageUrl);
-  });
-  it("has a div with background", () => {
-    const imageDiv = wrapper.find("div").at(3).children();
-    const imageDivTag = imageDiv.find("img");
-    const imageUrl =
-      "https://investors.autozone.com/sites/g/files/knoqqb12746/themes/site/nir_pid1182/client/images/AZO_12345.jpg";
-    expect(imageDivTag.prop("src")).toBe(imageUrl);
   });
 
   it("should have div with header and paragraph", () => {

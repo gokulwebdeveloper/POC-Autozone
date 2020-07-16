@@ -1,5 +1,4 @@
 import React from "react";
-import { unmountComponentAtNode } from "react-dom";
 import "@babel/polyfill";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
@@ -19,25 +18,14 @@ describe("tests for AboutAutoZone.js", () => {
   it("renders the comoponent", () => {
     expect(wrapper).toBeTruthy();
   });
-
-  it("has a div containing header image", () => {
-    const imageDiv = wrapper.find("div").at(1).children();
-    const imageUrl =
-      "https://www.autozone.com/images/MEDIA_ProductCatalog/m1120006_affiliate-header.jpg";
-    expect(imageDiv.prop("src")).toBe(imageUrl);
-  });
   it("has a div containing man's image, header and paragraphs", () => {
     const imageDiv = wrapper.find("div").at(2).children();
-    const imageTag = imageDiv.find("img");
-    const imageUrl =
-      "https://www.autozone.com/images/MEDIA_ProductCatalog/m1120007_autozoner.jpg";
     const hyperlink =
       "https://www.pepperjamnetwork.com/affiliate/registration.php?refid=143064";
     const aRefText = "Join the AutoZone.com Affiliate Program Now";
     const header = imageDiv.find("h2");
     const p = imageDiv.find("p");
     const aRef = imageDiv.find("a");
-    expect(imageTag.prop("src")).toBe(imageUrl);
     expect(header.text()).toBe(
       "Earn Commissions By Promoting The Top Brands In Auto Parts And Accessories"
     );
@@ -62,7 +50,7 @@ describe("tests for AboutAutoZone.js", () => {
       "Get Started Today - Sign Up as an AutoZone.com Affiliate!"
     );
     expect(p).toBeTruthy();
-    expect(li.length).toBe(4);
+    expect(li.length).toBe(3);
   });
 
   it("SnapShot Match", () => {

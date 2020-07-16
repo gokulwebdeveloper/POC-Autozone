@@ -58,9 +58,9 @@ const Menu = () => {
                 <li>
                   <NavLink to="/shops">Shop</NavLink>
                 </li>
-                <li>
+                {/* <li>
                   <NavLink to="/single-product-details">Product Details</NavLink>
-                </li>
+                </li> */}
                 <li>
                   <NavLink to="/checkout">Checkout</NavLink>
                 </li>
