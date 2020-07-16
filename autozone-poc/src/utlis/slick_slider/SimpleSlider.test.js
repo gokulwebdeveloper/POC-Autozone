@@ -46,11 +46,4 @@ describe('SimpleSlider testing', () => {
     const page = renderer.create(<Provider store={store}><SimpleSlider productList={productList} /></Provider>).toJSON();
     expect(page).toMatchSnapshot();
   });
-
-  it("displays brand title", () => {
-    expect(wrapper.find("p").first().text()).toBe("Brands");
-
-  });
-
-
 })

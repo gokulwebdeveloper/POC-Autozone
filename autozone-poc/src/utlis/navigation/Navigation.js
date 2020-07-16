@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Menu from "./menu/Menu";
-import Logo from "../img/core-img/logo.png";
+import Logo from "../img/azo-product-img/homePageImages/logo-autozone.png";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {

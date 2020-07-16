@@ -9,13 +9,20 @@ Catagory.propTypes = {
 }
 
 export default function Catagory(props) {
+    function handleClick(e) {
+        e.preventDefault();
+    }
+
     if (props != undefined && props.data != undefined) {
         return (
             <Fragment>
-                <li data-toggle="collapse" data-target={props.datatarget}>
-                    <a href="#">{props.data.title}</a>
-                    <ul className="sub-menu collapse hide" id={props.id}>
-                        <ListItem items={props.data.items} />
+                <li onClick={handleClick} >
+                    <a href="#" data-target={props.datatarget}
+                        data-toggle="collapse" data-target={"#" + props.id }>
+                        {props.data.title}
+                    </a>
+                    <ul id={props.id} className="sub-menu show">
+                        <ListItem items={props.data.items} title={props.data.title} />
                     </ul>
                 </li>
             </Fragment>

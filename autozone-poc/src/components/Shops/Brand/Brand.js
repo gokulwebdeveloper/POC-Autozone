@@ -1,10 +1,17 @@
 import React, { Fragment } from 'react'
+import { connect } from 'react-redux';
+import { filterProducts } from '../../../Redux/actions';
 
-export default function Brand(props) {
-
-    function BrandItem(props) {
+function Brand(props) {
+    function handleClick(e) {
+        e.preventDefault();
+        props.filterProducts(props.productData, e.currentTarget.dataset.id, e.currentTarget.dataset.title);
+    }
+    function BrandItem(childProps) {
         return (
-             <li><a href="#" >{props.value}</a></li>
+            <li onClick={handleClick} data-id={childProps.value} data-title='Brands'>
+                <a href="#" >{childProps.value} </a>
+            </li>
         );
     }
 
@@ -14,7 +21,7 @@ export default function Brand(props) {
             <div className="widget-desc">
                 <ul>
                     {props.brandList.map((item) => {
-                       return <BrandItem value={item} key={item.toString()} />
+                        return <BrandItem value={item} key={item.toString()} />
                     }
                     )}
                 </ul>
@@ -22,3 +29,9 @@ export default function Brand(props) {
         </div>
     );
 }
+
+const mapStateToProps = ({ productData }) => ({ 
+    productData 
+})
+export default connect(mapStateToProps, { filterProducts })(Brand);
+

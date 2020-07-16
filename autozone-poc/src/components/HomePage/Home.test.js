@@ -7,15 +7,14 @@ import '../../matchMedia.mock' // Must be imported before the tested file
 import Home from './Home';
 import { Provider } from 'react-redux';
 import store from '../../Redux/store';
+import { BrowserRouter } from 'react-router-dom';
 
-configure({ adapter: new Adapter() });
-let wrapper;
+configure({ adapter: new Adapter() }); 
 describe('Home page testing', () => {
-    //mount component for testing
     beforeEach(() => {
-        wrapper = mount(<Provider store={store}><Home /></Provider>);
-    })
-
+        
+    });
+    let wrapper = mount(<Provider store={store}><Home /></Provider>);
     //test if home component exists
     it("Home Exists", () => {
         expect(wrapper.exists()).toBeTruthy();
@@ -44,7 +43,7 @@ describe('Home page testing', () => {
 
     //SnapShot Match test
     it("SnapShot Match", () => {
-        const homePage = renderer.create(<Provider store={store}><Home /></Provider>).toJSON();
+        const homePage = renderer.create(<Provider store={store}><BrowserRouter><Home /></BrowserRouter></Provider>).toJSON();
         expect(homePage).toMatchSnapshot();
     });
 })

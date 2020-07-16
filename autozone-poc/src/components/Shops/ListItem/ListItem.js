@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { filterProducts } from '../../../Redux/actions';
 
 ListItem.propTypes = {
     items: PropTypes.string,
@@ -11,22 +13,29 @@ ListItem.defaultProps = {
     items: ['All']
 };
 
-export default function ListItem(props) {
-
+function ListItem(props) {
+    function handleClick(e) {
+        e.preventDefault();
+        props.filterProducts(props.productData, e.currentTarget.dataset.id, e.currentTarget.dataset.title);
+    }
 
     if (props != undefined && props.items != undefined) {
         return (
             <Fragment>
                 {
                     props.items.map((item, key) => {
-                        return <li key={item}><a href="#">{item}</a></li>
-                    }
-                    )}
+                        return <li key={item} onClick={handleClick} data-id={item}
+                            data-title={props.title}>
+                            <a href="#">{item}</a>
+                        </li>
+                    })
+                }
             </Fragment>
         );
     } else {
         return <p>no data</p>
     }
-
-
 }
+
+const mapStateToProps = ({ productData }) => ({ productData })
+export default connect(mapStateToProps, { filterProducts })(ListItem);

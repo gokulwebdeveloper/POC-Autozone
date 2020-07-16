@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { addToCart, getProductDetail } from '../../../Redux/actions';
 
 const SlickSlider = props => {
-    const detailsPath = "/single-product-details/"+props.currentProduct.id;
+    const detailsPath = "/single-product-details/"+props.currentProduct ? props.currentProduct.id : '';
 
     function addToCart()
     {
@@ -27,15 +27,16 @@ const SlickSlider = props => {
             <div className="single-product-wrapper">
                 <div className="product-img">
                     {
-                        props.currentProduct && props.currentProduct.product_image && props.currentProduct.product_image.length < 2 ? props.currentProduct.product_image.map((productImg) =>
-                            <div>
-                                <img src={productImg} alt="" />
-                                <img className="hover-img" src={productImg} alt="" />
-                            </div>
-                        ) : <div>
-                                <img src={props.currentProduct.product_image[0]} alt="" />
-                                <img className="hover-img" src={props.currentProduct.product_image[1]} alt="" />
-                            </div>
+                        props.currentProduct && props.currentProduct.product_image && props.currentProduct.product_image.length > 2 ? 
+                        <div>
+                           <img src={props.currentProduct.product_image[0]} alt="" />
+                           <img className="hover-img" src={props.currentProduct.product_image[1]} alt="" />
+                        </div>
+                         : 
+                        <div>
+                            <img src={props.currentProduct.product_image[0]} alt="" />
+                            <img className="hover-img" src={props.currentProduct.product_image[0]} alt="" />
+                         </div>
                     }
 
                     <div className="product-badge offer-badge">

@@ -3,35 +3,50 @@ import ReactPaginate from 'react-paginate';
 import './ProductList.css';
 import Product from './Product.js';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { sortProducts } from '../../../Redux/actions';
 
-const ProductList = () => {
+const ProductList = (props) => {
     const [offset, setOffset] = useState(0);
     const [currentPage, setCurrentPage] = useState(0);
     const [pageCount, setPageCount] = useState(0);
     const [postData, setPostData] = useState([]);
     const perPage = 6;
-
-    const fetchData = () => {
-        const data = require('../data/products.json');
-        const slice = data.slice(offset, offset + perPage);
-        const postData = slice.map(pd => <Product key={pd.id} {...pd} />)
-        setPageCount(Math.ceil(data.length / perPage));
-        setPostData(postData);
-        
-        
+    var data;
+    
+    const loadAllData = () => {
+        if (props.sortedProductData == undefined || props.sortedProductData.data == undefined ||
+            props.sortedProductData.data.length <= 1) return;
+        const slice = props.sortedProductData.data.slice(offset, offset + perPage);
+        data = slice.map(pd =>
+            <React.Fragment key={pd.id}>
+                <Product productData={pd} />
+            </React.Fragment>)
+        setPageCount(Math.ceil(props.sortedProductData.data.length / perPage));
+        setPostData(data);
     }
+
     const handlePageClick = (e) => {
         const selectedPage = e.selected;
         const offset = selectedPage * perPage;
-
         setCurrentPage(selectedPage);
         setOffset(offset);
-
     };
 
     useEffect(() => {
-        fetchData();
-    }, [currentPage]);
+        if (props.productFilterData == undefined ||
+            props.productFilterData.data == undefined ||
+            props.productFilterData.data.length == 0) {
+            props.sortProducts(props.productData, 'highest-rated');
+        } else {
+            props.sortProducts(props.productFilterData, props.sortedProductData.sortType);
+        }
+
+    }, [props.productFilterData, props.productData]);
+
+     useEffect(() => {
+         loadAllData();
+     }, [currentPage, props.sortedProductData]);
 
     return (
         <Fragment>
@@ -47,7 +62,7 @@ const ProductList = () => {
                 onPageChange={handlePageClick}
                 containerClassName={"pagination"}
                 subContainerClassName={"pages pagination"}
-                activeClassName={"active"}/>
+                activeClassName={"active"} />
         </Fragment>
 
     );
@@ -55,14 +70,18 @@ const ProductList = () => {
 
 ProductList.propTypes = {
     pageCount: PropTypes.number,
-    postData: PropTypes.array,
-    
+
 }
 
 ProductList.defaultProps = {
     pageCount: 0,
-    postData: [],
-    
+
 };
 
-export default ProductList;
+const mapStateToProps = ({ productFilterData, productData, sortedProductData }) => ({
+    productFilterData: productFilterData,
+    productData: productData,
+    sortedProductData: sortedProductData
+})
+
+export default connect(mapStateToProps, { sortProducts })(ProductList);

@@ -1,5 +1,7 @@
-import {getproducts, getproductdetail, setproducts, setproductdetail, addtocart, emptycart} from '../../constants';
-import {getProducts, setProducts, getProductDetail, setProductDetail, addToCart, emptyCartData} from '../actions';
+import {getproducts, getproductdetail, setproducts, setproductdetail, addtocart, emptycart, filterproducts, sortproducts} from '../../constants';
+import {getProducts, setProducts, getProductDetail, setProductDetail, addToCart, emptyCartData, filterProducts, sortProducts} from '../actions';
+import productFromJson from '../../../data/products.json';
+
 
 describe('actions',()=>{
 
@@ -53,5 +55,24 @@ describe('actions',()=>{
         }
 
         expect(emptyCartData()).toEqual(expectedEmptyCartAction);
+    })
+
+    it("filterProducts test", () => {
+        let param = { data: productFromJson }
+        let expected = {
+            payload: [],
+            type: filterproducts
+        }
+
+        expect(filterProducts(param, 'Brakeware123', 'Brands')).toEqual(expected);
+    });
+
+    it('should return the action for sort products', () => {
+        let param = { data: productFromJson }
+        const expectedSortProductAction = {
+            payload: {sortType: "sort", sortedProductData: undefined},
+            type: sortproducts
+        }
+        expect(sortProducts(param, 'sort')).toEqual(expectedSortProductAction);
     })
 })
