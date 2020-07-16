@@ -40,9 +40,7 @@ const App = ({getProducts}) => {
           <RegularPage />
         </Route>
         <Route path="/single-product-details/:id" component={ProductDetails} />
-        <Route path="/shops">
-            <Shops />
-        </Route>
+        <Route path="/shops"  component={Shops}/>
         <Route path="/signup">
           <Signup />
         </Route>

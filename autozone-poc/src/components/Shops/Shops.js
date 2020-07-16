@@ -1,13 +1,13 @@
 import React, { Fragment, useState } from "react";
 import Catagory from './Catagory/Catagory'
 import ShopsHeader from "./ShopsHeader/ShopsHeader";
-import ColorBox from "./ColorBox/ColorBox";
 import Brand from "./Brand/Brand";
 import Slider from "./Slider/Slider";
 import SortBy from "./SortBy/SortBy";
 import ProductList from "./product-list/ProductList";
+import { connect } from "react-redux";
 
-export default function Shops() {
+function Shops(props) {
 
 	var brandList = [
 		"Duralast",
@@ -95,7 +95,13 @@ export default function Shops() {
 									</div>
 								</div>
 
-								<Slider min="0" max="490" />
+								<Slider min={(props.productFilterByRangeData != undefined &&
+									props.productFilterByRangeData.min != undefined)
+									? props.productFilterByRangeData.min : '0'}
+									max={(props.productFilterByRangeData != undefined &&
+										props.productFilterByRangeData.max != undefined)
+										? props.productFilterByRangeData.max : '300'}
+								/>
 								<Brand brandList={brandList} />
 							</div>
 						</div>
@@ -108,17 +114,20 @@ export default function Shops() {
 									<div className="col-12">
 										<div className="product-topbar d-flex align-items-center justify-content-between">
 											<div className="total-products">
-												<p><span>186</span> products found</p>
+												<p>
+													<span>
+														{(props.sortedProductData == undefined ||
+															props.sortedProductData.data == undefined) ? 0 : props.sortedProductData.data.length}
+													</span>
+													&nbsp;products found
+												</p>
 											</div>
 											<SortBy onSelectedSortBy={handleSortBy} />
 										</div>
 									</div>
 								</div>
 							</div>
-							<div className="row">
-								<ProductList />
-							</div>
-
+							<ProductList filter={props.location.filter} />
 						</div>
 					</div>
 				</div>
@@ -126,3 +135,10 @@ export default function Shops() {
 		</Fragment>
 	);
 }
+
+const mapStateToProps = ({ sortedProductData, productFilterByRangeData }) => ({
+	sortedProductData: sortedProductData,
+	productFilterByRangeData: productFilterByRangeData
+})
+
+export default connect(mapStateToProps, null)(Shops);

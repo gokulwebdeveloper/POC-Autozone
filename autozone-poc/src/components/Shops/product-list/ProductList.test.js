@@ -46,7 +46,6 @@ describe('Product List page testing', () => {
         const component = mount(<Provider store={store}><ProductList mockData={mockData} /></Provider>);
         setImmediate(() => {
           component.update();
-          console.log(component.debug());
           done();
         });
       });

@@ -51,7 +51,6 @@ describe('Brand testing', () => {
 
   it("BrandItem click action", () => {
     wrapper.find("li").first().simulate('click');
-    console.log("store data : " + JSON.stringify(store.getState()) ) 
   });
 
 })
