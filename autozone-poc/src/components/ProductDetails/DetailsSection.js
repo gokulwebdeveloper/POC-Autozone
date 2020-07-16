@@ -8,13 +8,19 @@ import PropTypes from 'prop-types';
 import Rating from 'react-rating';
 import { connect } from 'react-redux';
 import {addToCart} from '../../Redux/actions';
+import moment from 'moment';
 
 const DetailsSection = (props) => {
     const currentProduct = props.currentProduct;
-    
+    const nextDay = new Date();
+    const today = new Date();
+    nextDay.setDate(nextDay.getDate() + 1);
+
+    const deliveryMessage = "Order Before 9:00 PM "+moment(today).format('MMM DD')+" for "+moment(nextDay).format('MMM DD')+" delivery";
+
     const maxAllowedQty = 5;
     useEffect( ()=>{
-
+        
         updateFavoriteIco();
         var txtcartquantity = document.getElementById("txtcartquantity");
 
@@ -216,9 +222,8 @@ const DetailsSection = (props) => {
                 responsiveRefreshRate={200}>
 
                 {currentProduct.product_image.map((image, index) => {
-                    var imagePath = image.replace("../","../src/utlis/");
                 return (
-                    <div key={index}><img src={imagePath} alt="" /></div>
+                    <div key={index}><img src={image} alt="" /></div>
                     )
                 })
                 }
@@ -229,7 +234,8 @@ const DetailsSection = (props) => {
             <div className="single_product_desc clearfix">
                 <span>{currentProduct.product_brand}</span>
                     <h2>{currentProduct.product_name}</h2>
-                    <Rating
+                    <p className="rating-row">
+                         <Rating
                     initialRating={currentProduct.rating}
                     readonly
                     className="rating"
@@ -237,7 +243,10 @@ const DetailsSection = (props) => {
                     fullSymbol="fa fa-star fa-2x"
                     fractions={2}
                     />
-                    
+                    <span className="rating-number">({currentProduct.rating})</span>
+                    <span className="warranty">{currentProduct.warranty}</span>
+                    </p>
+
                     <h6 id="outOfStock" className="outofstock">Out of stock</h6>
                    
                 <p className="product-desc">{currentProduct.product_desc}</p>
@@ -268,7 +277,8 @@ const DetailsSection = (props) => {
                 </div>
                 </div>
                 <div id="pricePerItem" className="priceperitem" ></div>
-
+                
+            <div className="orderByMessage">{deliveryMessage}</div>
                     {/* <!-- Cart & Favourite Box --> */}
                     <div className="cart-fav-box d-flex align-items-center">
                         <Button id="btnAddtoCart" btnText="Add to Cart" 
@@ -279,6 +289,7 @@ const DetailsSection = (props) => {
                             <a id="favme" className="favme fa fa-heart"></a>
                         </div>
                     </div>
+                    
             </div>
         </section>
     );

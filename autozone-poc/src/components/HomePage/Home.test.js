@@ -5,20 +5,17 @@ import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import '../../matchMedia.mock' // Must be imported before the tested file
 import Home from './Home';
-import ScrollUpArrowBtn from '../../utlis/button/ScrollUpArrowBtn';
+import { Provider } from 'react-redux';
+import store from '../../Redux/store';
 
 configure({ adapter: new Adapter() });
 let wrapper;
 describe('Home page testing', () => {
     //mount component for testing
     beforeEach(() => {
-        wrapper = mount(<Home />);
+        wrapper = mount(<Provider store={store}><Home /></Provider>);
     })
 
-    //Cleanup after test execution
-    afterEach(() => {
-        wrapper.unmount();
-    });
     //test if home component exists
     it("Home Exists", () => {
         expect(wrapper.exists()).toBeTruthy();
@@ -47,7 +44,7 @@ describe('Home page testing', () => {
 
     //SnapShot Match test
     it("SnapShot Match", () => {
-        const scrollUpArrowBtn = renderer.create(<ScrollUpArrowBtn />).toJSON();
-        expect(scrollUpArrowBtn).toMatchSnapshot();
+        const homePage = renderer.create(<Provider store={store}><Home /></Provider>).toJSON();
+        expect(homePage).toMatchSnapshot();
     });
 })

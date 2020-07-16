@@ -7,12 +7,10 @@ import TopCatagoryArea from '../../utlis/top_catagory_area/TopCatagoryArea';
 import SimpleSlider from '../../utlis/slick_slider/SimpleSlider';
 import ScrollUpArrowBtn from '../../utlis/button/ScrollUpArrowBtn';
 import BrandArea from './Brands/BrandArea';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const Home = props => { 
-  console.log(props.catagoryData);
-
   let topCatagoryData = [];
   props.catagoryData ? props.catagoryData.map((topCatagory, i) => {
     if(topCatagory.offer_badge == "New") {
@@ -45,7 +43,7 @@ const Home = props => {
             <div className="row h-100 align-items-center">
               <div className="col-12">
                 <div className="hero-content">
-                  <NavLink to="/shops"><Button btnText="view collection" /></NavLink>
+                  <Link to="/shops"><Button btnText="view collection" /></Link>
                 </div>
               </div>
             </div>
