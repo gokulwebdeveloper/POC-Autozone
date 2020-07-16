@@ -10,7 +10,7 @@ import Comments from "./Comments";
 
 //Component structure
 const Singleblog = (props) => {
-  
+ 
   return (
     <Fragment>
       <div className="single-blog-wrapper">
