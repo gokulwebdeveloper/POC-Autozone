@@ -45,10 +45,10 @@ const App = ({getProducts}) => {
         <Route path="/aboutAutozone" component={AboutAutoZone}></Route>
         <Route path="/investorInformation" component={InvestorInformation}></Route>
         <Route path="/affliateProgram" component={AffliateProgram}></Route>
+        <Route path="/single-product-details/:id" component={ProductDetails} />
         <Route path="/single-product-details">
           <ProductDetails />
         </Route>
-        <Route path="/single-product-details/:id" component={ProductDetails} />
         <Route path="/shops"  component={Shops}/>
         <Route path="/signup">
           <Signup />

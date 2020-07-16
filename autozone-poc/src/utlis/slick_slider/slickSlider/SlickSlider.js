@@ -7,7 +7,6 @@ import { addToCart, getProductDetail } from '../../../Redux/actions';
 
 const SlickSlider = props => {
     const detailsPath = "/single-product-details/"+props.currentProduct.id;
-
     function addToCart()
     {
         let qty = 1;
@@ -48,9 +47,8 @@ const SlickSlider = props => {
                 </div>
                 <div className="product-description">
                     <span>{props.currentProduct.product_brand}</span>
-                    <Link to={detailsPath}>
-                        <h6 data-tip={props.currentProduct.product_name} data-background-color="#989898"
-                         onClick={()=>props.getProductDetail(props.currentProduct.id)}>
+                    <Link to={detailsPath} onClick={()=>props.getProductDetail(props.currentProduct.id)}>
+                        <h6 data-tip={props.currentProduct.product_name} data-background-color="#989898">
                             {props.currentProduct.product_name}</h6>
                         <ReactTooltip />
                     </Link>

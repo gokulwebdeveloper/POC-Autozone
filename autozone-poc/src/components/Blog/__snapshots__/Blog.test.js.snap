@@ -2,6 +2,57 @@
 
 exports[`renders component with images SnapShot Match for blog screen 1`] = `
 <div>
+  <div>
+    <aside
+      aria-label="Scroll to top of page"
+      className="ScrollUpButton__Container "
+      data-testid="react-scroll-up-button"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      style={
+        Object {
+          "WebkitTransition": "all 0.5s ease-in-out",
+          "backgroundColor": "rgba(50, 50, 50, 0.5)",
+          "bottom": 20,
+          "cursor": "pointer",
+          "height": 50,
+          "opacity": 0,
+          "position": "fixed",
+          "right": -50,
+          "transition": "all 0.5s ease-in-out",
+          "transitionProperty": "opacity, right",
+          "width": 50,
+          "zIndex": 1000,
+        }
+      }
+      tabIndex={-1}
+    >
+      <svg
+        style={
+          Object {
+            "display": "inline-block",
+            "fill": "white",
+            "height": "100%",
+            "stroke": "white",
+            "strokeWidth": 0,
+            "width": "100%",
+          }
+        }
+        version="1.1"
+        viewBox="0 0 32 32"
+        x="0"
+        xmlSpace="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <path
+          d="M19.196 23.429q0 0.232-0.179 0.411l-0.893 0.893q-0.179 0.179-0.411 0.179t-0.411-0.179l-7.018-7.018-7.018 7.018q-0.179 0.179-0.411 0.179t-0.411-0.179l-0.893-0.893q-0.179-0.179-0.179-0.411t0.179-0.411l8.321-8.321q0.179-0.179 0.411-0.179t0.411 0.179l8.321 8.321q0.179 0.179 0.179 0.411zM19.196 16.571q0 0.232-0.179 0.411l-0.893 0.893q-0.179 0.179-0.411 0.179t-0.411-0.179l-7.018-7.018-7.018 7.018q-0.179 0.179-0.411 0.179t-0.411-0.179l-0.893-0.893q-0.179-0.179-0.179-0.411t0.179-0.411l8.321-8.321q0.179-0.179 0.411-0.179t0.411 0.179l8.321 8.321q0.179 0.179 0.179 0.411z"
+          transform="scale(1.4) translate(1,-5)"
+        />
+      </svg>
+    </aside>
+  </div>
   <div
     className="blog-background-image"
     data-testid="background"

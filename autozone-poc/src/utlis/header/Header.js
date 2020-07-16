@@ -54,7 +54,7 @@ const Header = () => {
             </div>
             <div className="cart-area" onClick={openNav}>
               <a href="#" id="essenceCartBtn">
-                <img src={Bag} alt="" /> <span>3</span>
+                <img src={Bag} alt="" /> <span></span>
               </a>
             </div>
           </div>
@@ -68,7 +68,7 @@ const Header = () => {
 
         {/* <!-- Cart Button --> */}
         <div className="cart-button" onClick={closeNav}>
-            <a href="#"><img src={Bag} alt=""/> <span>3</span></a>
+            <a href="#"><img src={Bag} alt=""/> <span></span></a>
         </div>
 
         <CartContent/>
