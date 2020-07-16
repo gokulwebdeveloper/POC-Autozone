@@ -2,8 +2,12 @@ import React, { Fragment } from "react";
 import Bgsix from "../../img/azo-product-img/background/bg4.jpg";
 import { BrowserRouter as Router, NavLink, Link } from "react-router-dom";
 import "./Menu.css";
+import { connect } from 'react-redux';
+import { shopMenuClicked } from '../../../Redux/actions/index';
 
-const Menu = () => {
+
+const Menu = (props) => {
+ 
   return (
     <Fragment>
       <div className="classy-menu">
@@ -16,7 +20,12 @@ const Menu = () => {
         <div className="classynav">
           <ul>
             <li className="megamenu-item">
-              <NavLink  to="/shops">Shop</NavLink >
+              <Link onClick={() => {
+                props.shopMenuClicked();
+              }
+            } 
+            to={{pathname:'/shops'}}>Shop</Link >
+
               <div className="megamenu">
               <ul className="single-mega cn-col-4">
                   <li><Link  to={{
@@ -191,4 +200,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default connect(null, { shopMenuClicked })(Menu);
