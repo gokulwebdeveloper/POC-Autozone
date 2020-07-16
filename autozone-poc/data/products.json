@@ -51,7 +51,7 @@
     "product_name": "Duralast Brake Rotor 3295",
     "product_brand": "Duralast",
     "original_price": "75.00",
-    "offer_price": "55.00",
+    "offer_price": "52.00",
     "offer_badge": "-5%",
 	"category": "Brakes and Traction Control",
 	"sub_category": "Brake Rotor",
@@ -60,7 +60,7 @@
 	"orderByMessage": "Order Before 9:00 PM Jul 01 for Jul 02 delivery",
 	"warrantyType": "AutoZone",
 	"warranty": "2 Year Warranty",
-	"rating": 4.5,
+	"rating": 4.9,
     "isFavourite": false
   }, {
     "id": 4,
@@ -82,7 +82,7 @@
 	"orderByMessage": "Order Before 9:00 PM Jul 01 for Jul 02 delivery",
 	"warrantyType": "AutoZone",
 	"warranty": "Limited-Lifetime Warranty",
-	"rating": 4.5,
+	"rating": 4.4,
     "isFavourite": false
   },
   {
@@ -134,7 +134,7 @@
     "product_name": "Duralast Brake Shoes 960",
     "product_brand": "Duralast",
     "original_price": "75.00",
-    "offer_price": "55.00",
+    "offer_price": "51.00",
     "offer_badge": "-12%",
 	"category": "Brakes and Traction Control",
 	"sub_category": "Brake Shoes Rear",
@@ -252,7 +252,7 @@
 	"orderByMessage": "Order Before 9:00 PM Jul 01 for Jul 02 delivery",
 	"warrantyType": "AutoZone",
 	"warranty": "3 Year Warranty",
-	"rating": 4.5,
+	"rating": 4.1,
     "isFavourite": false
   },
   {
@@ -461,7 +461,7 @@
 	"orderByMessage": "Order Before 9:00 PM Jul 01 for Jul 02 delivery",
 	"warrantyType": "AutoZone",
 	"warranty": "No Warranty",
-	"rating": 4.5,
+	"rating": 4.2,
     "isFavourite": false
   },
   {
@@ -481,7 +481,7 @@
 	"orderByMessage": "Order Before 9:00 PM Jul 01 for Jul 02 delivery",
 	"warrantyType": "AutoZone",
 	"warranty": "No Warranty",
-	"rating": 4.5,
+	"rating": 4.1,
     "isFavourite": false
   }
 ]

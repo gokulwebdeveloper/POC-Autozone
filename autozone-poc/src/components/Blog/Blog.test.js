@@ -35,7 +35,7 @@ describe("renders component with images", () => {
     expect(blogPage.getByTestId('background')).toBeInTheDocument();
   });
 
-  it('has backbground image with styles', () => {
+  it("has backbground image with styles", () => {
     const blogPage = render(<Blog />);
     expect(blogPage.getByTestId('background')).toHaveStyle("backgroundImage:"+InnerBgImg);
   });
