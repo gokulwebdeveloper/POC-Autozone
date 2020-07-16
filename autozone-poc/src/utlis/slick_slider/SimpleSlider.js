@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './SimpleSlider.css'
+import { connect } from "react-redux";
+import SlickSlider from "./slickSlider/SlickSlider";
 
 function SimpleSlider(props) { 
     let settings = props.settings;
@@ -25,5 +27,11 @@ function SimpleSlider(props) {
         </div>
     );
 } 
+
+const mapStateToProps = productData => {
+    return {
+        productData: productData.productData.data
+    };
+  }
 
 export default connect(mapStateToProps, null)(SimpleSlider);
