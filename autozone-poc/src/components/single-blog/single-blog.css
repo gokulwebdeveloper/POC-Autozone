@@ -75,7 +75,10 @@ color: white;
   }
   
  .bgimg{
-    width: 1519px;
+  
+     margin-left: 30px;
+     margin-right: 30px;
+    width: 1480px;
     height: 396px;
 }
 .sub-img{
