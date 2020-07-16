@@ -4,6 +4,7 @@ import "../single-blog/single-blog.css";
 import Comments from "./Comments";
 import ScrollUpArrowBtn from "../../utlis/button/ScrollUpArrowBtn";
 import RetrieveJson from "../../utlis/RetrieveAPI/RetrieveJson";
+import { NavLink } from "react-router-dom";
 
 //Component structure
 const Singleblog = (props) => {
@@ -13,12 +14,22 @@ const Singleblog = (props) => {
     if (!item.blogStatus) {
       return (
         <div key={item.id}>
+          <NavLink
+            to="/singleblog"
+            to={{
+              pathname: "/singleblog",
+              propsFor: {
+                img_id: item.id,
+              },
+            }}
+          >
           <div className="single-related-blog-post">
             <img src={item.image} alt=""></img>
             <a href="#">
               <h5>{item.title}</h5>
             </a>
           </div>
+          </NavLink>
         </div>
       );
     }
