@@ -8,7 +8,7 @@ import blog5 from "../../utlis/img/bg-img/blog5.jpg";
 import blog6 from "../../utlis/img/bg-img/blog6.jpg";
 import InnerBgImg from "../../utlis/img/bg-img/breadcumb2.jpg";
 import "../Blog/Blog.css";
-import { NavLink } from "react-router-dom";
+import { BrowserRouter as Router,NavLink } from 'react-router-dom';
 
 const Blog = props => {
   
@@ -52,6 +52,7 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
+                  <Router>
                   <NavLink 
                   to= {{
                     pathname:"/singleblog",
@@ -61,6 +62,7 @@ const Blog = props => {
                     }}>
                     Continue reading <i className="fa fa-angle-right"></i>
                     </NavLink>
+                    </Router>
                 </div>
               </div>
             </div>
@@ -86,6 +88,7 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
+                  <Router>
                   <NavLink to= {{
                     pathname:"/singleblog",
                     propsFor: {
@@ -94,6 +97,7 @@ const Blog = props => {
                     }}>
                     Continue reading <i className="fa fa-angle-right"></i>
                   </NavLink>
+                  </Router>
                 </div>
               </div>
             </div>
@@ -119,6 +123,7 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
+                  <Router>
                   <NavLink to= {{
                     pathname:"/singleblog",
                     propsFor: {
@@ -127,6 +132,7 @@ const Blog = props => {
                     }}>
                     Continue reading <i className="fa fa-angle-right"></i>
                   </NavLink>
+                  </Router>
                 </div>
               </div>
             </div>
@@ -152,6 +158,7 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
+                  <Router>
                   <NavLink to= {{
                     pathname:"/singleblog",
                     propsFor: {
@@ -160,6 +167,7 @@ const Blog = props => {
                     }}>
                     Continue reading <i className="fa fa-angle-right"></i>
                   </NavLink>
+                  </Router>
                 </div>
               </div>
             </div>
@@ -185,6 +193,7 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
+                  <Router>
                   <NavLink to= {{
                     pathname:"/singleblog",
                     propsFor: {
@@ -193,6 +202,7 @@ const Blog = props => {
                     }}>
                     Continue reading <i className="fa fa-angle-right"></i>
                   </NavLink>
+                  </Router>
                 </div>
               </div>
             </div>
@@ -218,6 +228,7 @@ const Blog = props => {
                     Fusce enim nulla, mollis eu metus in, sagittis fringilla
                     tortor. Phasellus purus dignissim convallis.
                   </p>
+                  <Router>
                   <NavLink to= {{
                     pathname:"/singleblog",
                     propsFor: {
@@ -226,6 +237,7 @@ const Blog = props => {
                     }}>
                     Continue reading <i className="fa fa-angle-right"></i>
                   </NavLink>
+                  </Router>
                 </div>
               </div>
             </div>

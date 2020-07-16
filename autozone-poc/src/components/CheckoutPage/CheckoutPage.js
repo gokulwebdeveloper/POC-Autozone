@@ -4,18 +4,29 @@ import InputWithLabel from "../../utlis/formComponents/InputWithLabel";
 import Button from "../../utlis/button/Button";
 import "./CheckoutPage.css";
 import $ from 'jquery';
+import { connect } from 'react-redux';
+import {emptyCartData} from '../../Redux/actions'
 
-export default function CheckoutPage() {
+function CheckoutPage({cartData, emptyCartData}) {
+  let totalCartValue=0;
   $(document).ready(function(){
-    $('#checkoutBtn').on('click', function(){
+    $('#checkoutBtn').on('click', function(e){
+      e.preventDefault();
+      let error=false;
       $('input[required]').each(function(element) {
         let val = $(this).val();
         if(val === ''){
           $('.checkout_area .formErrorMsg').text("please provide some input");
           $('.checkout_area .formErrorMsg:first').text("please fill all the fields");
           $('.checkout_area .formErrorMsg').show();
+          error = true
         }
       });
+      if(!error){
+        $('.checkout_area .formErrorMsg').hide();
+        alert("Order placed, Thank you for order");
+        emptyCartData();
+      }
     })
   });
   return (
@@ -157,21 +168,28 @@ export default function CheckoutPage() {
                   <p>The Details</p>
                 </div>
 
-                <ul className="order-details-form mb-4">
+                <ul className="order-details-form">
                   <li>
                     <span>Product</span> <span>Total</span>
                   </li>
+                </ul>
+                <ul className="order-details-form">
+                  {cartData.map(item=>{
+                    totalCartValue+=parseFloat(item.quantity*item.offer_price);
+                    return(
+                    <li key={item.id}>
+                      <span>{item.product_name}</span> <span>$ {item.quantity*item.offer_price}</span>
+                    </li>
+                    )}
+                  )
+                  }
+                </ul>
+                <ul className="order-details-form mb-4">
                   <li>
-                    <span>Cocktail Yellow dress</span> <span>$59.90</span>
-                  </li>
-                  <li>
-                    <span>Subtotal</span> <span>$59.90</span>
+                    <span>Total</span> <span>${totalCartValue}</span>
                   </li>
                   <li>
                     <span>Shipping</span> <span>Free</span>
-                  </li>
-                  <li>
-                    <span>Total</span> <span>$59.90</span>
                   </li>
                 </ul>
 
@@ -337,3 +355,8 @@ export default function CheckoutPage() {
     </>
   );
 }
+
+const mapStateToProps = ({cartData}) => ({cartData});
+const mapDispatchToProps = {emptyCartData}
+
+export default connect(mapStateToProps,mapDispatchToProps)(CheckoutPage); 

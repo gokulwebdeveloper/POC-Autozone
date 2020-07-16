@@ -37,6 +37,7 @@ const App = ({getProducts}) => {
         <Route path="/regularPage">
           <RegularPage />
         </Route>
+        <Route path="/single-product-details/:id" component={ProductDetails} />
         <Route path="/single-product-details">
           <ProductDetails />
         </Route>

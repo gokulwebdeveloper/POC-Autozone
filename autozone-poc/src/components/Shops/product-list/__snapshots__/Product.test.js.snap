@@ -12,19 +12,15 @@ exports[`Render Product Component SnapShot Match 1`] = `
     >
       <img
         alt=""
-        src="../../../../src/utlis/img/product-img/product-undefined.jpg"
       />
       <img
         alt=""
         className="hover-img"
-        src="../../../../src/utlis/img/product-img/product-undefined.jpg"
       />
       <div
         className="product-badge offer-badge"
       >
-        <span>
-          -30%
-        </span>
+        <span />
       </div>
       <div
         className="product-favourite"
@@ -38,9 +34,7 @@ exports[`Render Product Component SnapShot Match 1`] = `
     <div
       className="product-description"
     >
-      <span>
-        Topshop
-      </span>
+      <span />
       <a
         href="single-product-details.html"
       >
@@ -52,9 +46,9 @@ exports[`Render Product Component SnapShot Match 1`] = `
         <span
           className="old-price"
         >
-          $125
+          $
         </span>
-         $95.65
+         $
       </p>
       <div
         className="hover-content"
