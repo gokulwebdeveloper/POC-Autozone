@@ -6,7 +6,6 @@ import Button from '../../utlis/button/Button';
 import TopCatagoryArea from '../../utlis/top_catagory_area/TopCatagoryArea';
 import SimpleSlider from '../../utlis/slick_slider/SimpleSlider';
 import ScrollUpArrowBtn from '../../utlis/button/ScrollUpArrowBtn';
-import BrandArea from './Brands/BrandArea';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addToCart, getProductDetail } from '../../Redux/actions';
@@ -47,12 +46,23 @@ const Home = props => {
         addKeyValue(currentProduct,"quantity", qty);
         addKeyValue(currentProduct,"price", total);
         props.dispatchAddToCart(currentProduct);
+        openNav();
     }
 
     function addKeyValue(obj, key, data){
         obj[key] = data;
       }
-
+    function openNav() {
+        let  cartOverlayContent = document.getElementById("cartOverlayContent");
+        if(cartOverlayContent==null) 
+          return;
+        cartOverlayContent.className = cartOverlayContent.className+" cart-on";
+      
+        let  cartOverlay = document.getElementById("cartOverlay");
+        if(cartOverlay==null) 
+          return;
+        cartOverlay.className = cartOverlay.className+" cart-bg-overlay-on";
+      }
     return (
       <div>
         <ScrollUpArrowBtn/>
@@ -125,7 +135,6 @@ const Home = props => {
           </div>
         </section>
         <section>
-          <BrandArea />
         </section>
       </div>
     );
