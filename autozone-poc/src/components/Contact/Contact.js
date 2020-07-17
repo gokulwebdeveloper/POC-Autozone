@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleMap from "./Map/GoogleMap";
-import "./Contact.css";
+import Data from "./MockData/Mock.json";
 
 export default function Contact(props) {
   return (
@@ -13,20 +13,16 @@ export default function Contact(props) {
         </div>
         <div className="align-items-center justify-content-center d-flex col-sm-5 col-md-5 px-0 common-col common-col-2">
           <div className="justify-content-center m-5 p-0 common-col-1-contents">
-            <h2>How to Find Us</h2>
-            <p>
-              Mauris viverra cursus ante laoreet eleifend. Donec vel fringilla
-              ante. Aenean finibus velit id urna vehicula, nec maximus est
-              sollicitudin.
-            </p>
+            <h2>{Data.headerText}</h2>
+            <p>{Data.para1}</p>
             <div className="address">
               <p>
-                <span className="font-weight-bold">Address:</span> 10 Suffolk st
-                Soha, London, UK
+                <span className="font-weight-bold">{Data.spanBoldText1}</span>
+                {Data.para2}
               </p>
               <p>
-                <span className="font-weight-bold">Telephone:</span> +12 34 567
-                890
+                <span className="font-weight-bold">{Data.spanBoldText2}</span>
+                {Data.para3}
               </p>
             </div>
           </div>
