@@ -10,7 +10,7 @@
     "product_brand": "Duralast",
     "original_price": "75.00",
     "offer_price": "55.00",
-    "offer_badge": "New",
+    "offer_badge": "-35%",
 	"category": "Brakes and Traction Control",
 	"sub_category": "Brake Rotor",
 	"product_desc": "Rotor only, *Coated on hat and edge for rust prevention *Replace in pairs for best performance",
@@ -482,6 +482,47 @@
 	"warrantyType": "AutoZone",
 	"warranty": "No Warranty",
 	"rating": 4.1,
+    "isFavourite": false
+  },
+  {
+    "id": 24,
+    "product_image": [
+		"../src/utlis/img/azo-product-img/homePageImages/autozone-banner2.jpg"
+	],
+    "product_name": "Engine oils",
+    "product_brand": "STP",
+    "original_price": "62.00",
+    "offer_price": "46.00",
+    "offer_badge": "New",
+	"category": "Accessories",
+	"sub_category": "Oils",
+	"product_desc": "High-quality product and very less price",
+	"product_instock": true,
+	"orderByMessage": "Order Before 9:00 PM Jul 01 for Jul 02 delivery",
+	"warrantyType": "AutoZone",
+	"warranty": "No Warranty",
+	"rating": 4.1,
+    "isFavourite": false
+  },
+  
+  {
+    "id": 25,
+    "product_image": [
+		"../src/utlis/img/azo-product-img/homePageImages/step-brake.jpg"
+	],
+    "product_name": "Brake Cleaner",
+    "product_brand": "Auto Zone",
+    "original_price": "32.00",
+    "offer_price": "26.00",
+    "offer_badge": "-15%",
+	"category": "Accessories",
+	"sub_category": "Cleaning",
+	"product_desc": "High-quality product and very less price",
+	"product_instock": true,
+	"orderByMessage": "Order Before 9:00 PM Jul 01 for Jul 02 delivery",
+	"warrantyType": "AutoZone",
+	"warranty": "No Warranty",
+	"rating": 4.6,
     "isFavourite": false
   }
 ]

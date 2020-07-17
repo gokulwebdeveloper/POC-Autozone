@@ -10,7 +10,13 @@ export default function TopCatagoryArea(props) {
             <div className="col-12 col-sm-6 col-md-4">
                 <div className="single_catagory_area d-flex align-items-center justify-content-center bg-img" style={bgImgCatImg}>
                     <div className="catagory-content">
-                    <Link to="/shops">{props.topCatagoryAreaText}</Link>
+                    <Link  to={{
+                        pathname:'/shops',
+                        filter: {
+                        filterType: props.topCatagoryAreaText,
+                        filter: 'All'
+                        }
+                      }}>{props.topCatagoryAreaText}</Link >
                     </div>
                 </div>
             </div>
