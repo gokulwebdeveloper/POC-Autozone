@@ -26,6 +26,7 @@ function CheckoutPage({cartData, emptyCartData}) {
         $('.checkout_area .formErrorMsg').hide();
         alert("Order placed, Thank you for order your order id is 'OD0000123'");
         emptyCartData();
+        document.location.href="/";
       }
     })
   });
