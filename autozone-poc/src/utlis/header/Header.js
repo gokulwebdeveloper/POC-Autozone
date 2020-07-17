@@ -5,6 +5,7 @@ import Heart from "../img/core-img/heart.svg";
 import User from "../img/core-img/user.svg";
 import Bag from "../img/core-img/bag.svg";
 import CartContent from "./CartContent";
+import { BrowserRouter as Router, NavLink, Link } from "react-router-dom";
 
 function openNav() {
   let  cartOverlayContent = document.getElementById("cartOverlayContent");
@@ -48,9 +49,17 @@ const Header = () => {
             </div>
 
             <div className="user-login-info">
-              <a href="/signin">
-                <img src={User} alt="" />
-              </a>
+            <NavLink
+                to="/signin"
+                to={{
+                  pathname: "/signin",
+               
+                }}
+              ><img src={User} alt="" />
+
+              </NavLink>
+                
+             
             </div>
             <div className="cart-area" onClick={openNav}>
               <a href="#" id="essenceCartBtn">
