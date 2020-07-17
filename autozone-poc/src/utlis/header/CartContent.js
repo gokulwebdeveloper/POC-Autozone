@@ -15,8 +15,9 @@ const stylehideOverflow = {
 
     if(cartData)
     {
+        console.log(cartData);
         const total = cartData.reduce(function (sum, prc) {
-            return parseFloat(sum) + parseFloat(prc.price);
+            return parseFloat(sum) + (parseFloat(prc.price)*parseInt(prc.quantity));
         }, 0);
 
         return (
