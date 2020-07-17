@@ -1,6 +1,6 @@
 import {
     getproducts, setproducts, getproductdetail, setproductdetail, addtocart, removefromcart,
-    emptycart, filterproducts, sortproducts, filterByRange, searchproducts
+    emptycart, filterproducts, sortproducts, filterByRange, searchproducts, productMenuClick
 } from '../../constants';
 
 export const getProducts = () => {
@@ -41,7 +41,11 @@ export const filterProducts = (productData, filter, filterType) => {
             { type: filterproducts, payload: {} }
 
         )
-    } else {
+    } else if (filterType == 'All') {
+        return (
+            { type: filterproducts, payload: productData.data }
+        )
+     } else {
         const filterProductData = productData.data.filter((item) => {
             if (filterType == 'Brands') {
                 if (item.product_brand.toLowerCase().includes(filter.toLowerCase())) {
@@ -68,6 +72,17 @@ export const filterProducts = (productData, filter, filterType) => {
 }
 
 export const filterProductsByRange = (productData, minimum, maximum) => {
+    if(productData == undefined) {
+        return (
+            {
+                type: filterByRange, payload: {
+                    data: undefined,
+                    min: minimum,
+                    max: maximum
+                }
+            }
+        )
+    }
     const filterProductByRange = productData.data.filter((item) => {
         if (item.offer_price >= minimum && item.offer_price <= maximum)
             return item;
@@ -80,6 +95,12 @@ export const filterProductsByRange = (productData, minimum, maximum) => {
                 max: maximum
             }
         }
+    )
+}
+
+export const shopMenuClicked = () => {
+    return (
+        { type: productMenuClick, payload: true }
     )
 }
 

@@ -4,7 +4,8 @@ import './ProductList.css';
 import Product from './Product.js';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { sortProducts, filterProducts, setFilterProducts, filterProductsByRange, searchProduct } from '../../../Redux/actions';
+import { sortProducts, filterProducts, setFilterProducts, filterProductsByRange, 
+    searchProduct } from '../../../Redux/actions';
 
 const ProductList = (props) => {
     const [offset, setOffset] = useState(0);
@@ -52,6 +53,7 @@ const ProductList = (props) => {
         if (props.productData != undefined &&
             props.productData.data != undefined &&
             props.productData.data.length > 0) {
+                props.filterProductsByRange(undefined, 0, 300);
                 if(search != undefined && search != null){
                     props.searchProduct(props.productData, search);
                 } else {
@@ -59,7 +61,7 @@ const ProductList = (props) => {
                 }
             
         }
-    }, [props.productData]);
+    }, [props.productData, props.shopMenuClickStatus]);
 
     useEffect(() => {
         if (props.filter != undefined &&
@@ -112,14 +114,14 @@ const ProductList = (props) => {
     }, [currentPage, props.sortedProductData]);
 
     useEffect(() => {
+        
         if(props.searchResultsData != undefined &&
             props.searchResultsData.data != undefined &&
             props.searchResultsData.data.length > 0) {
-                if (props.sortedProductData.sortType == undefined)
-                    props.sortProducts(props.searchResultsData, 'highest-rated');
-                else 
-                    props.sortProducts(props.searchResultsData, props.sortedProductData.sortType);
-                
+                props.setFilterProducts(props.searchResultsData.data);
+                props.filterProductsByRange(props.searchResultsData, 0, 300);
+            } else {
+                props.sortProducts(undefined);
             }
     }, [props.searchResultsData]);
 
@@ -163,14 +165,17 @@ ProductList.defaultProps = {
 
 };
 
-const mapStateToProps = ({ productFilterData, productData, sortedProductData, productFilterByRangeData, searchResultsData, searchProduct }) => ({
+const mapStateToProps = ({ productFilterData, productData, sortedProductData, productFilterByRangeData, searchResultsData, 
+    searchProduct, shopMenuClickStatus }) => ({
     productFilterData: productFilterData,
     productData: productData,
     sortedProductData: sortedProductData,
     productFilterByRangeData: productFilterByRangeData,
     searchResultsData: searchResultsData,
-    searchProduct: searchProduct
+    searchProduct: searchProduct,
+    shopMenuClickStatus: shopMenuClickStatus
 
 });
 
-export default connect(mapStateToProps, { sortProducts, filterProducts, setFilterProducts, filterProductsByRange, searchProduct })(ProductList)
+export default connect(mapStateToProps, { sortProducts, filterProducts, setFilterProducts, filterProductsByRange, 
+    searchProduct })(ProductList)

@@ -9,6 +9,7 @@ export const filterproducts = "FILTER_PRODUCTS";
 export const filterByRange = "FILTER_BY_RANGE";
 export const sortproducts = "SORT_PRODUCTS";
 export const searchproducts = "SEARCH_PRODUCTS";
+export const productMenuClick = "PRODUCT_MENU_CLCIK";
 
 // localStorage
 export const CART_DATA = "CART_DATA";
