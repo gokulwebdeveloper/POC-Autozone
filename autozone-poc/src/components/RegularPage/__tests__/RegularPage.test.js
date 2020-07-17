@@ -21,11 +21,6 @@ describe("test RegularPage", () => {
     expect(wrapper.exists()).toBeTruthy();
   });
 
-  it("check for the header image", () => {
-    const imgTag = wrapper.find("img");
-    expect(imgTag.prop("src")).toEqual(HeaderImage);
-  });
-
   it("should check for the h2 tag", () => {
     const h2Tag = wrapper.find("h2");
     expect(h2Tag.text()).not.toBe("");

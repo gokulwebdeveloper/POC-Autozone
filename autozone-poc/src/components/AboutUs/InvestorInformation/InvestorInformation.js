@@ -14,7 +14,7 @@ export default function InvestorInformation() {
   const FilteredData = FilterData();
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid px-5">
       <div className="row">
         <div className="w-100">
           <img

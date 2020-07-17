@@ -9,7 +9,7 @@ exports[`test RegularPage SnapShot Match 1`] = `
   >
     <img
       className="img-fluid w-100 header-image"
-      src="bg-8.jpg"
+      src="./src/assets/img/bg-img/bg-8.jpg"
     />
   </div>
   <div
