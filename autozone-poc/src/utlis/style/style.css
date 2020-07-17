@@ -34,3 +34,7 @@
         position: relative;
 
     }
+    .cart-list .single-cart-item
+    .product-image .cart-thumb {
+        height: 190px;
+    }
