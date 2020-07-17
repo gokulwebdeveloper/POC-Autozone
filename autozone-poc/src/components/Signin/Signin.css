@@ -11,11 +11,25 @@
     font-size: 1rem;
 }
 .signincontainer{
+    color: aliceblue;
     border: solid 1px #d0d0dc;
-    border-radius: 20px;
+    border-radius: 7px;
     margin-top: 1%;
     margin-bottom: 1%;
+    margin-left: 19%;
+    background-color: #2986d6de;
 }
-.btn{
-    border-radius: 10px;
+.signinExplanation{
+    padding: 1rem;
+    color: aliceblue;
+}
+.btnpostion{
+    text-align: center;
+}
+.bgimage{
+    background-image: url( "../../assets/img/bg-img/loginbg.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
