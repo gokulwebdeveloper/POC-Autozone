@@ -41,7 +41,7 @@ export default function AffliateProgram() {
           </a>
         </div>
       </div>
-      <div className="row mx-0">
+      <div className="row mx-3">
         <h3 className="mt-5">{FilteredData[2].h3}</h3>
         <ul className="list-group list-group-flush">
           {FilteredData[2].list.map((item, i) => (
@@ -49,7 +49,7 @@ export default function AffliateProgram() {
           ))}
         </ul>
       </div>
-      <div className="row">
+      <div className="row mx-3">
         <h3 className="mt-5">{FilteredData[3].h3}</h3>
         <p>{FilteredData[3].para1}</p>
         <ul className="list-group list-group-flush ml-5">
