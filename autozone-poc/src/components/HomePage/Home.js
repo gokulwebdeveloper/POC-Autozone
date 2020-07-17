@@ -9,10 +9,14 @@ import ScrollUpArrowBtn from '../../utlis/button/ScrollUpArrowBtn';
 import BrandArea from './Brands/BrandArea';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { addToCart, getProductDetail } from '../../Redux/actions';
+
 
 const Home = props => { 
   let topCatagoryData = [];
+  let currentProduct;
   props.catagoryData ? props.catagoryData.map((topCatagory, i) => {
+    currentProduct = topCatagory;
     if(topCatagory.offer_badge == "New") {
       topCatagoryData.push(topCatagory);
     }
@@ -35,6 +39,20 @@ const Home = props => {
     autoplaySpeed: 2000
   };
 
+  function addToCart()
+    {
+        let qty = 1;
+        let price = parseFloat(currentProduct.offer_price);
+        let total = parseFloat(qty * price);
+        addKeyValue(currentProduct,"quantity", qty);
+        addKeyValue(currentProduct,"price", total);
+        props.dispatchAddToCart(currentProduct);
+    }
+
+    function addKeyValue(obj, key, data){
+        obj[key] = data;
+      }
+
     return (
       <div>
         <ScrollUpArrowBtn/>
@@ -43,7 +61,13 @@ const Home = props => {
             <div className="row h-100 align-items-center">
               <div className="col-12">
                 <div className="hero-content">
-                  <Link to="/shops"><Button btnText="view collection" /></Link>
+                <Link  to={{
+                        pathname:'/shops',
+                        filter: {
+                        filterType: "Accessories",
+                        filter: 'All'
+                        }
+                      }}><Button btnText="view collection" /></Link >
                 </div>
               </div>
             </div>
@@ -72,7 +96,7 @@ const Home = props => {
                 <div className="cta-content background-overlay bg-img" style={bgImgCatArea}>
                   <div className="h-140 d-flex align-items-center justify-content-end">
                     <div className="cta--text">
-                    <Link to="/shops"><Button btnText="Buy Now" /></Link>
+                    <Button btnText="Buy Now" onClick={()=>props.getProductDetail(currentProduct.id), addToCart}/>
                     </div>
                   </div>
                 </div>
@@ -112,6 +136,13 @@ const mapStateToProps = productData => {
   };
 }
 
+const mapDispatchToProps = (dispatch) =>{
+  return {
+      dispatchAddToCart: product => dispatch(addToCart(product)),
+      getProductDetail: id => dispatch(getProductDetail(id))
+  }
+} 
+
 Home.propTypes = {
   topCatagoryAreaText: PropTypes.string
 };
@@ -129,4 +160,4 @@ Home.defaultProps = {
   }
 };
 
-export default connect(mapStateToProps, null)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
