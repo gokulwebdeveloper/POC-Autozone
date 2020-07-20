@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addToCart, getProductDetail } from '../../Redux/actions';
 
-
 const Home = props => { 
   let topCatagoryData = [];
   let currentProduct;
