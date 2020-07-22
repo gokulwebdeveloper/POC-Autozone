@@ -6,13 +6,16 @@ import Button from '../../utlis/button/Button';
 import TopCatagoryArea from '../../utlis/top_catagory_area/TopCatagoryArea';
 import SimpleSlider from '../../utlis/slick_slider/SimpleSlider';
 import ScrollUpArrowBtn from '../../utlis/button/ScrollUpArrowBtn';
-import BrandArea from './Brands/BrandArea';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { addToCart, getProductDetail } from '../../Redux/actions';
+
 
 const Home = props => { 
   let topCatagoryData = [];
+  let currentProduct;
   props.catagoryData ? props.catagoryData.map((topCatagory, i) => {
+    currentProduct = topCatagory;
     if(topCatagory.offer_badge == "New") {
       topCatagoryData.push(topCatagory);
     }
@@ -35,6 +38,31 @@ const Home = props => {
     autoplaySpeed: 2000
   };
 
+  function addToCart()
+    {
+        let qty = 1;
+        let price = parseFloat(currentProduct.offer_price);
+        let total = parseFloat(qty * price);
+        addKeyValue(currentProduct,"quantity", qty);
+        addKeyValue(currentProduct,"price", total);
+        props.dispatchAddToCart(currentProduct);
+        openNav();
+    }
+
+    function addKeyValue(obj, key, data){
+        obj[key] = data;
+      }
+    function openNav() {
+        let  cartOverlayContent = document.getElementById("cartOverlayContent");
+        if(cartOverlayContent==null) 
+          return;
+        cartOverlayContent.className = cartOverlayContent.className+" cart-on";
+      
+        let  cartOverlay = document.getElementById("cartOverlay");
+        if(cartOverlay==null) 
+          return;
+        cartOverlay.className = cartOverlay.className+" cart-bg-overlay-on";
+      }
     return (
       <div>
         <ScrollUpArrowBtn/>
@@ -43,7 +71,13 @@ const Home = props => {
             <div className="row h-100 align-items-center">
               <div className="col-12">
                 <div className="hero-content">
-                  <Link to="/shops"><Button btnText="view collection" /></Link>
+                <Link  to={{
+                        pathname:'/shops',
+                        filter: {
+                        filterType: "Accessories",
+                        filter: 'All'
+                        }
+                      }}><Button btnText="view collection" /></Link >
                 </div>
               </div>
             </div>
@@ -72,7 +106,7 @@ const Home = props => {
                 <div className="cta-content background-overlay bg-img" style={bgImgCatArea}>
                   <div className="h-140 d-flex align-items-center justify-content-end">
                     <div className="cta--text">
-                    <Link to="/shops"><Button btnText="Buy Now" /></Link>
+                    <Button btnText="Buy Now" onClick={()=>props.getProductDetail(currentProduct.id), addToCart}/>
                     </div>
                   </div>
                 </div>
@@ -101,7 +135,6 @@ const Home = props => {
           </div>
         </section>
         <section>
-          <BrandArea />
         </section>
       </div>
     );
@@ -111,6 +144,13 @@ const mapStateToProps = productData => {
     catagoryData: productData.productData.data
   };
 }
+
+const mapDispatchToProps = (dispatch) =>{
+  return {
+      dispatchAddToCart: product => dispatch(addToCart(product)),
+      getProductDetail: id => dispatch(getProductDetail(id))
+  }
+} 
 
 Home.propTypes = {
   topCatagoryAreaText: PropTypes.string
@@ -129,4 +169,4 @@ Home.defaultProps = {
   }
 };
 
-export default connect(mapStateToProps, null)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

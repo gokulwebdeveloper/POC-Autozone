@@ -25,9 +25,16 @@
         text-overflow: ellipsis;
     }
     .hover-content .add-to-cart-btn{
-        margin-top: 200px;
+        top: 210px;
+        position: absolute;
     }
 
     .single-product-wrapper {
         height: 450px;
+        position: relative;
+
+    }
+    .cart-list .single-cart-item
+    .product-image .cart-thumb {
+        height: 190px;
     }

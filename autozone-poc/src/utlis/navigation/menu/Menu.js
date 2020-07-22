@@ -19,6 +19,22 @@ const Menu = (props) => {
         </div>
         <div className="classynav">
           <ul>
+          <li className="cn-dropdown-item has-down pr12">
+              <a href="#">About Us</a>
+              <ul className="dropdown aboutUs-dropdown">
+                <li>
+                  <NavLink to="/aboutAutozone">About AutoZone</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/investorInformation">Investor Information</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/affliateProgram">Affliate Program</NavLink>
+                </li>
+              </ul>
+              <span className="dd-trigger"></span>
+              <span className="dd-arrow"></span>
+            </li>
             <li className="megamenu-item">
               <Link onClick={() => {
                 props.shopMenuClicked();
@@ -146,52 +162,11 @@ const Menu = (props) => {
               <span className="dd-trigger"></span>
               <span className="dd-arrow"></span>
             </li>
-            <li className="cn-dropdown-item has-down pr12">
-              <a href="#">Pages</a>
-              <ul className="dropdown">
-                <li>
-                  <NavLink to="/">Home</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/shops">Shop</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/checkout">Checkout</NavLink>
-                </li>
-                <li>
-                <NavLink  to="/blog">Blog</NavLink >
-                </li>
-                <li>
-                  <NavLink to="/regularPage">Regular Page</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/contact">Contact</NavLink>
-                </li>
-              </ul>
-              <span className="dd-trigger"></span>
-              <span className="dd-arrow"></span>
-            </li>
             <li>
             <NavLink  to="/blog">Blog</NavLink >
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>
-            </li>
-            <li className="cn-dropdown-item has-down pr12">
-              <a href="#">About Us</a>
-              <ul className="dropdown aboutUs-dropdown">
-                <li>
-                  <NavLink to="/aboutAutozone">About AutoZone</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/investorInformation">Investor Information</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/affliateProgram">Affliate Program</NavLink>
-                </li>
-              </ul>
-              <span className="dd-trigger"></span>
-              <span className="dd-arrow"></span>
             </li>
           </ul>
         </div>

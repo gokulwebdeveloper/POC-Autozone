@@ -755,7 +755,8 @@ img {
     .single-product-wrapper .product-img img {
       width: 100%;
       -webkit-transition-duration: 500ms;
-      transition-duration: 500ms; }
+      transition-duration: 500ms;
+      height: 200px; }
     .single-product-wrapper .product-img .hover-img {
       -webkit-transition-duration: 500ms;
       transition-duration: 500ms;
@@ -810,7 +811,6 @@ img {
       font-size: 10px;
       text-transform: uppercase;
       color: #787878;
-      margin-bottom: 15px;
       letter-spacing: 0.75px;
       font-weight: 600; }
     .single-product-wrapper .product-description h6 {

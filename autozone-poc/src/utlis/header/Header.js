@@ -5,6 +5,8 @@ import Heart from "../img/core-img/heart.svg";
 import User from "../img/core-img/user.svg";
 import Bag from "../img/core-img/bag.svg";
 import CartContent from "./CartContent";
+import { NavLink } from "react-router-dom";
+import { connect } from 'react-redux';
 
 function openNav() {
   let  cartOverlayContent = document.getElementById("cartOverlayContent");
@@ -31,7 +33,7 @@ export function closeNav() {
   cartOverlay.className = cartOverlay.className.replace(" cart-bg-overlay-on","");
 }
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Fragment>
       <div>
@@ -48,13 +50,21 @@ const Header = () => {
             </div>
 
             <div className="user-login-info">
-              <a href="/signin">
-                <img src={User} alt="" />
-              </a>
+            <NavLink
+                to="/signin"
+                to={{
+                  pathname: "/signin",
+               
+                }}
+              ><img src={User} alt="" />
+
+              </NavLink>
+                
+             
             </div>
             <div className="cart-area" onClick={openNav}>
               <a href="#" id="essenceCartBtn">
-                <img src={Bag} alt="" /> <span></span>
+                <img src={Bag} alt="" /> <span>{props.cartData.length}</span>
               </a>
             </div>
           </div>
@@ -68,7 +78,7 @@ const Header = () => {
 
         {/* <!-- Cart Button --> */}
         <div className="cart-button" onClick={closeNav}>
-            <a href="#"><img src={Bag} alt=""/> <span></span></a>
+            <a href="#"><img src={Bag} alt=""/> <span>{props.cartData.length}</span></a>
         </div>
 
         <CartContent/>
@@ -80,4 +90,9 @@ const Header = () => {
   );
 };
 
-export default Header;
+
+const mapStateToProps = cartData => {
+  return cartData;
+}
+
+export default connect(mapStateToProps,null)(Header);
