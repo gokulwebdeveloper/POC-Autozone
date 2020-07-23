@@ -19,9 +19,9 @@ const Menu = (props) => {
         </div>
         <div className="classynav">
           <ul>
-          <li className="cn-dropdown-item has-down pr12">
+          <li className="cn-dropdown-item">
               <a href="#">About Us</a>
-              <ul className="dropdown aboutUs-dropdown">
+              <ul className="dropdown">
                 <li>
                   <NavLink to="/aboutAutozone">About AutoZone</NavLink>
                 </li>
@@ -32,8 +32,6 @@ const Menu = (props) => {
                   <NavLink to="/affliateProgram">Affliate Program</NavLink>
                 </li>
               </ul>
-              <span className="dd-trigger"></span>
-              <span className="dd-arrow"></span>
             </li>
             <li className="megamenu-item">
               <Link onClick={() => {
@@ -159,8 +157,6 @@ const Menu = (props) => {
                   <img src={Bgsix} alt="" />
                 </div>
               </div>
-              <span className="dd-trigger"></span>
-              <span className="dd-arrow"></span>
             </li>
             <li>
             <NavLink  to="/blog">Blog</NavLink >

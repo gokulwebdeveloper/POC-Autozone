@@ -38,7 +38,7 @@ const Header = (props) => {
     <Fragment>
       <div>
       <header className="header_area">
-        <div className="classNamey-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+        <div className="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
           <Navigation />
           <div className="header-meta d-flex clearfix justify-content-end">
             <Search />
