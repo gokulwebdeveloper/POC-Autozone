@@ -10,18 +10,16 @@ import { connect } from 'react-redux';
 import {addToCart} from '../../Redux/actions';
 import moment from 'moment';
 
-const DetailsSection = (props) => {
-    const currentProduct = props.currentProduct;
+const DetailsSection = ({currentProduct, dispatchAddToCart}) => {
     const nextDay = new Date();
     const today = new Date();
     nextDay.setDate(nextDay.getDate() + 1);
 
     const deliveryMessage = "Order Before 9:00 PM "+moment(today).format('MMM DD')+" for "+moment(nextDay).format('MMM DD')+" delivery";
 
-    const maxAllowedQty = 5;
     useEffect( ()=>{
         
-        updateFavoriteIco();
+        updateFavoriteIco(currentProduct);
         let txtcartquantity = document.getElementById("txtcartquantity");
 
         if(txtcartquantity!=null)
@@ -42,171 +40,7 @@ const DetailsSection = (props) => {
         }
      }, [currentProduct]);
 
-     function updateFavoriteIco()
-     {
-        let currentCntrl = document.getElementById("favme");
-
-        if(currentCntrl!=null)
-        {
-            if(currentProduct.isFavourite)
-                currentCntrl.className = "favme fa fa-heart active";
-            else
-                currentCntrl.className = "favme fa fa-heart";
-        }
-     }
-
-     function changeFavStatus() {
-        let currentCntrl = document.getElementById("favme");
-
-        if(currentCntrl==null)
-            return;
-
-        if(!currentCntrl.className.includes("active"))
-            currentCntrl.className = "favme fa fa-heart active";
-        else
-            currentCntrl.className = "favme fa fa-heart";
-    }
-
-    function onQtyChange()
-    {
-        let currentCntrl = document.getElementById("txtcartquantity");
-
-        if(currentCntrl==null)
-            return;
-        
-        let qty = parseInt(currentCntrl.value);
-
-        if(currentCntrl.value == null)
-        {
-            currentCntrl.value = 1;
-            updateEach(qty);
-        }
-        else if(qty > maxAllowedQty)
-        {
-            currentCntrl.value = 1;
-            updateEach(qty);
-        }
-        else if(qty > 1 && qty <= maxAllowedQty)
-        {
-            updateCartPrice();
-            updateEach(qty);
-        }
-        else
-            return;
-    }
-
-    function onQtyLostFocus()
-    {
-        let currentCntrl = document.getElementById("txtcartquantity");
-
-        if(currentCntrl==null)
-            return;
-
-        if(currentCntrl.value == null || currentCntrl.value == "")
-        {
-            currentCntrl.value = 1;
-            updateCartPrice();  
-        }
-    }
-
-    function onIncreaseQty()
-    {
-        let currentCntrl = document.getElementById("txtcartquantity");
-
-        if(currentCntrl==null)
-            return;
-        
-        if(currentCntrl.value == null || currentCntrl.value == "")
-            currentCntrl.value = 1;
-        else
-        {
-            let val = parseInt(currentCntrl.value);
-            
-            if(val < maxAllowedQty)
-            {
-                currentCntrl.value = val + 1;
-                updateCartPrice();
-            }
-            else
-                return;
-        }
-    }
-
-    function onDecreaseQty()
-    {
-        let currentCntrl = document.getElementById("txtcartquantity");
-
-        if(currentCntrl==null)
-            return;
-        
-        if(currentCntrl.value == null || currentCntrl.value == "")
-            currentCntrl.value = 1;
-        else
-        {
-            let val = currentCntrl.value;
-            if(val > 1)
-            {
-                currentCntrl.value = val - 1;
-                updateCartPrice();
-            }
-            else
-                return;
-        }
-    }
-
-    function updateCartPrice()
-    {
-        let currentCntrl = document.getElementById("txtcartquantity");
-
-        if(currentCntrl==null)
-            return;
-
-        let cartCntrl = document.getElementById("cartprice");
-
-        if(cartCntrl==null)
-            return;
-
-        let qty = parseInt(currentCntrl.value);
-        let price = parseFloat(currentProduct.offer_price);
-        let total = qty * price;
-        cartCntrl.innerHTML = total;
-        updateEach(qty);
-    }
-
-    function updateEach(qty)
-    {
-        let pricePerItem = document.getElementById("pricePerItem");
-    
-        if(pricePerItem==null)
-            return;
-                
-        if(qty == 1)
-            pricePerItem.innerHTML = "";
-        else
-            pricePerItem.innerHTML = "Each $ "+currentProduct.offer_price;
-    }
-
-    function addToCart()
-    {
-        let txtcartquantity = document.getElementById("txtcartquantity");
-
-        let qty= parseInt(txtcartquantity.value);
-
-        let price = parseFloat(currentProduct.offer_price);
-        let total = parseFloat(qty * price);
-
-        addKeyValue(props.currentProduct,"quantity", qty);
-        addKeyValue(props.currentProduct,"price", total);
-
-        props.dispatchAddToCart(props.currentProduct);
-    }
-
-    function addKeyValue(obj, key, data){
-        obj[key] = data;
-      }
-
     return (
-        
         <section className="single_product_details_area d-flex align-items-center">
             <div className="single_product_thumb clearfix">
             <OwlCarousel
@@ -222,9 +56,7 @@ const DetailsSection = (props) => {
                 responsiveRefreshRate={200}>
 
                 {currentProduct.product_image.map((image, index) => {
-                return (
-                    <div key={index}><img src={image} alt={currentProduct.product_name} /></div>
-                    )
+                return <img key={index} src={image} alt={currentProduct.product_name} />
                 })
                 }
             </OwlCarousel>
@@ -258,19 +90,19 @@ const DetailsSection = (props) => {
                 <div id="divQty" className="d-flex">
                 <div className="d-flex">
                     <button id="btnDecreaseQty" className="quantitybutton"
-                            onClick={onDecreaseQty} 
+                            onClick={()=>onDecreaseQty(currentProduct)} 
                             disabled={currentProduct.product_instock === true ? false : true}>
                         <img src="../src/assets/img/core-img/minus.svg" alt="decrease button"/>
                     </button>
                 </div>
                 <div className="d-flex">
                     <input id="txtcartquantity" className="form-control quantitybox"
-                    onChange={onQtyChange} onBlur={onQtyLostFocus} maxLength="1"
+                    onChange={()=>onQtyChange(currentProduct)} onBlur={()=>onQtyLostFocus(currentProduct)} maxLength="1"
                     disabled={currentProduct.product_instock === true ? false : true}/>
                 </div>
                 <div className="d-flex">
                     <button className="quantitybutton"
-                    onClick={onIncreaseQty}
+                    onClick={()=>onIncreaseQty(currentProduct)}
                     disabled={currentProduct.product_instock === true ? false : true}>
                         <img src="../src/assets/img/core-img/add.svg" alt="increase button"/>
                     </button>
@@ -283,7 +115,7 @@ const DetailsSection = (props) => {
                     <div className="cart-fav-box d-flex align-items-center">
                         <Button id="btnAddtoCart" btnText="Add to Cart" 
                         disabled={currentProduct.product_instock === true ? false : true}
-                        onClick={addToCart}/>
+                        onClick={()=>addToCartFn(currentProduct, dispatchAddToCart)}/>
                         {/* <!-- Favourite --> */}
                         <div className="product-favourite ml-4" onClick={changeFavStatus}>
                             <a id="favme" className="favme fa fa-heart"></a>
@@ -295,8 +127,173 @@ const DetailsSection = (props) => {
     );
 };
 
+const maxAllowedQty = 5;
+
+function addToCartFn(currentProduct, dispatchAddToCart)
+{
+    let txtcartquantity = document.getElementById("txtcartquantity");
+
+    let qty= parseInt(txtcartquantity.value);
+
+    let price = parseFloat(currentProduct.offer_price);
+    let total = parseFloat(qty * price);
+
+    addKeyValue(currentProduct,"quantity", qty);
+    addKeyValue(currentProduct,"price", total);
+
+    dispatchAddToCart(currentProduct);
+}
+
+function updateFavoriteIco(currentProduct){
+let currentCntrl = document.getElementById("favme");
+
+if(currentCntrl!=null)
+{
+    if(currentProduct.isFavourite)
+        currentCntrl.className = "favme fa fa-heart active";
+    else
+        currentCntrl.className = "favme fa fa-heart";
+}
+}
+
+function changeFavStatus() {
+let currentCntrl = document.getElementById("favme");
+
+if(currentCntrl==null)
+    return;
+
+if(!currentCntrl.className.includes("active"))
+    currentCntrl.className = "favme fa fa-heart active";
+else
+    currentCntrl.className = "favme fa fa-heart";
+}
+
+function onQtyChange(currentProduct)
+{
+let currentCntrl = document.getElementById("txtcartquantity");
+
+if(currentCntrl==null)
+    return;
+
+let qty = parseInt(currentCntrl.value);
+
+if(currentCntrl.value == null)
+{
+    currentCntrl.value = 1;
+    updateEach(qty, currentProduct);
+}
+else if(qty > maxAllowedQty)
+{
+    currentCntrl.value = 1;
+    updateEach(qty, currentProduct);
+}
+else if(qty > 1 && qty <= maxAllowedQty)
+{
+    updateCartPrice(currentProduct);
+    updateEach(qty, currentProduct);
+}
+else
+    return;
+}
+
+function onQtyLostFocus(currentProduct)
+{
+let currentCntrl = document.getElementById("txtcartquantity");
+
+if(currentCntrl==null)
+    return;
+
+if(currentCntrl.value == null || currentCntrl.value == "")
+{
+    currentCntrl.value = 1;
+    updateCartPrice(currentProduct);  
+}
+}
+
+function onIncreaseQty(currentProduct)
+{
+let currentCntrl = document.getElementById("txtcartquantity");
+
+if(currentCntrl==null)
+    return;
+
+if(currentCntrl.value == null || currentCntrl.value == "")
+    currentCntrl.value = 1;
+else
+{
+    let val = parseInt(currentCntrl.value);
+    
+    if(val < maxAllowedQty)
+    {
+        currentCntrl.value = val + 1;
+        updateCartPrice(currentProduct);
+    }
+    else
+        return;
+}
+}
+
+function onDecreaseQty(currentProduct)
+{
+let currentCntrl = document.getElementById("txtcartquantity");
+
+if(currentCntrl==null)
+    return;
+
+if(currentCntrl.value == null || currentCntrl.value == "")
+    currentCntrl.value = 1;
+else
+{
+    let val = currentCntrl.value;
+    if(val > 1)
+    {
+        currentCntrl.value = val - 1;
+        updateCartPrice(currentProduct);
+    }
+    else
+        return;
+}
+}
+
+function updateCartPrice(currentProduct)
+{
+let currentCntrl = document.getElementById("txtcartquantity");
+
+if(currentCntrl==null)
+    return;
+
+let cartCntrl = document.getElementById("cartprice");
+
+if(cartCntrl==null)
+    return;
+
+let qty = parseInt(currentCntrl.value);
+let price = parseFloat(currentProduct.offer_price);
+let total = qty * price;
+cartCntrl.innerHTML = total;
+updateEach(qty, currentProduct);
+}
+
+function updateEach(qty, currentProduct)
+{
+let pricePerItem = document.getElementById("pricePerItem");
+
+if(pricePerItem==null)
+    return;
+        
+if(qty == 1)
+    pricePerItem.innerHTML = "";
+else
+    pricePerItem.innerHTML = "Each $ "+currentProduct.offer_price;
+}
+
+function addKeyValue(obj, key, data){
+obj[key] = data;
+}
+
 DetailsSection.propTypes = {
-    props: PropTypes.object,
+    currentProduct: PropTypes.object,
+    dispatchAddToCart: PropTypes.func
 }
 
 const mapStateToProps = productDetail =>{

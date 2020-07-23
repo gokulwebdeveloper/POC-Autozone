@@ -36,7 +36,10 @@ const stylehideOverflow = {
                         <li><span>total:</span> <span>$ {total}</span></li>
                     </ul>
                     <div className="checkout-btn mt-100">
-                        <Link to="/checkout" className="btn essence-btn" onClick={closeNav}>check out</Link>
+                        {
+                            (cartData.length>0)?<Link to="/checkout" className="btn essence-btn" onClick={closeNav}>check out</Link>:null
+                        }
+                        
                     </div>
                 </div>
             </div>
