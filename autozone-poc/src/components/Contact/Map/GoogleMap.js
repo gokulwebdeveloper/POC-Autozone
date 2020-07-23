@@ -21,12 +21,12 @@ function GoogleMap(props) {
 GoogleMap.propTypes = {
   initialCenter: PropTypes.object,
   zoom: PropTypes.number,
-}
+};
 
 GoogleMap.defaultProps = {
   initialCenter: {
-    lat: 28.527582,
-    lng: 77.0688991,
+    lat: 35.1207024,
+    lng: -90.0729671,
   },
   zoom: 14,
 };

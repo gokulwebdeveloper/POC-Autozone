@@ -28,7 +28,7 @@ describe("tests for AboutAutoZone.js", () => {
   });
 
   it("should have a div with table", () => {
-    const rowDiv = wrapper.find("div").at(6);
+    const rowDiv = wrapper.find("div").at(8);
     const hText = rowDiv.find("h3");
     const table = rowDiv.find("table");
     expect(hText.text()).toBe("Recent News");

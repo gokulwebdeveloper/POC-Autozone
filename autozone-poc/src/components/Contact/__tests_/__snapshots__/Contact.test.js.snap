@@ -39,8 +39,7 @@ exports[`tests for Contact.js SnapShot Match 1`] = `
             >
               Address:
             </span>
-             
-            10 Suffolk st Soha, New Delhi, India
+             4394 Summer Ave Memphis, TN 38122
           </p>
           <p>
             <span
@@ -48,8 +47,7 @@ exports[`tests for Contact.js SnapShot Match 1`] = `
             >
               Telephone:
             </span>
-             
-            +12 34 567 890
+             +12 34 567 890
           </p>
         </div>
       </div>
