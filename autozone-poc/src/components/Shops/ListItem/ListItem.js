@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {changeStyle} from '../ShopHelper.js'
+import { changeStyle } from '../ShopHelper.js'
 import { filterProducts } from '../../../Redux/actions';
 
 ListItem.propTypes = {
@@ -19,17 +19,18 @@ function ListItem(props) {
         e.preventDefault();
         changeStyle(e);
         props.filterProducts(props.productData, e.currentTarget.dataset.id, e.currentTarget.dataset.title);
-       
+
     }
 
     if (props != undefined && props.items != undefined) {
         return (
             <Fragment>
                 {
+
                     props.items.map((item, key) => {
-                        return <li key={item}  >
-                            <a href="#" data-id={item}
-                            data-title={props.title} onClick={handleClick}>{item}</a>
+                        return <li key={item} data-id={item}
+                            data-title={props.title} onClick={handleClick}>
+                            {item}
                         </li>
                     })
                 }

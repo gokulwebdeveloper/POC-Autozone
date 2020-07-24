@@ -29,11 +29,11 @@ describe('Brand testing', () => {
   });
 
   it("displays brand list", () => {
-    expect(wrapper.find("BrandItem").first().text()).toBe("Asos ");
-    expect(wrapper.find("BrandItem").at(1).text()).toBe("Mango ");
-    expect(wrapper.find("BrandItem").at(2).text()).toBe("River Island ");
-    expect(wrapper.find("BrandItem").at(3).text()).toBe("Topshop ");
-    expect(wrapper.find("BrandItem").at(4).text()).toBe("Zara ");
+    expect(wrapper.find("BrandItem").first().text()).toBe("Asos");
+    expect(wrapper.find("BrandItem").at(1).text()).toBe("Mango");
+    expect(wrapper.find("BrandItem").at(2).text()).toBe("River Island");
+    expect(wrapper.find("BrandItem").at(3).text()).toBe("Topshop");
+    expect(wrapper.find("BrandItem").at(4).text()).toBe("Zara");
   });
 
   it("displays brand title", () => {
@@ -42,11 +42,11 @@ describe('Brand testing', () => {
   });
 
   it("li value in BrandItem", () => {
-    expect(wrapper.find("li").first().text()).toBe("Asos ");
-    expect(wrapper.find("li").at(1).text()).toBe("Mango ");
-    expect(wrapper.find("li").at(2).text()).toBe("River Island ");
-    expect(wrapper.find("li").at(3).text()).toBe("Topshop ");
-    expect(wrapper.find("li").at(4).text()).toBe("Zara ");
+    expect(wrapper.find("li").first().text()).toBe("Asos");
+    expect(wrapper.find("li").at(1).text()).toBe("Mango");
+    expect(wrapper.find("li").at(2).text()).toBe("River Island");
+    expect(wrapper.find("li").at(3).text()).toBe("Topshop");
+    expect(wrapper.find("li").at(4).text()).toBe("Zara");
   });
 
   it("BrandItem click action", () => {

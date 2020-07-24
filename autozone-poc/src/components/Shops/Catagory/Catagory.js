@@ -16,14 +16,18 @@ export default function Catagory(props) {
     if (props != undefined && props.data != undefined) {
         return (
             <Fragment>
-                <li onClick={handleClick} >
-                    <a href="#" data-target={props.datatarget}
+
+                <li>
+
+                    <p  data-target={props.datatarget}
                         data-toggle="collapse" data-target={"#" + props.id }>
                         {props.data.title}
-                    </a>
+                    </p> 
+
                     <ul id={props.id} className="sub-menu show">
                         <ListItem items={props.data.items} title={props.data.title} />
                     </ul>
+
                 </li>
             </Fragment>
         );
