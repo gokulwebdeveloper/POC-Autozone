@@ -11,9 +11,9 @@ function Brand(props) {
     }
     function BrandItem(childProps) {
         return (
-            <li >
-                <a onClick={handleClick} data-id={childProps.value} data-title='Brands'
-                    href="#" >{childProps.value} </a>
+
+            <li onClick={handleClick} data-id={childProps.value} data-title='Brands'
+                >{childProps.value}
             </li>
         );
     }

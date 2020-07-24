@@ -10,7 +10,7 @@ function SortBy(props) {
     }
 
     return (
-        <div className="product-topbar d-flex align-items-center justify-content-between product-sorting d-flex">
+        <div className="product-sorting d-flex">
             <p>Sort by:</p>
 
             <form action="#" method="get">

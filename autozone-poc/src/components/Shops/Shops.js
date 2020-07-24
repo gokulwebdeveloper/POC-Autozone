@@ -111,8 +111,10 @@ function Shops(props) {
 							<div className="shop_grid_product_area">
 
 								<div className="row">
-									<div className="col-12">
+									<div className="col-md-8 col-sm-12 col-lg-8">
+
 										<div className="product-topbar d-flex align-items-center justify-content-between">
+											
 											<div className="total-products">
 												<p>
 													<span>
@@ -122,10 +124,21 @@ function Shops(props) {
 													&nbsp;products found
 												</p>
 											</div>
-											<SortBy onSelectedSortBy={handleSortBy} />
+
+											{/* <div className="col-md-4 col-sm-12 col-lg-3">
+												<SortBy onSelectedSortBy={handleSortBy} />
+											</div> */}
+
 										</div>
+										
 									</div>
+									<div className="col-md-4 col-sm-12 col-lg-4 product-topbar">
+												<SortBy onSelectedSortBy={handleSortBy} />
+											</div>
 								</div>
+								
+
+
 							</div>
 							<ProductList filter={props.location.filter} />
 						</div>
