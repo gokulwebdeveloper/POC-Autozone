@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,7 +15,7 @@ function SimpleSlider(props) {
         }
       }) : ''
     return (
-        <div>
+        <Fragment>
             <Slider {...settings}>
                 {
                     filterProductData ? filterProductData.map((slideData, i) => 
@@ -24,7 +24,7 @@ function SimpleSlider(props) {
                 }
             
             </Slider>
-        </div>
+        </Fragment>
     );
 } 
 

@@ -487,15 +487,15 @@
   {
     "id": 24,
     "product_image": [
-		"../src/utlis/img/azo-product-img/homePageImages/autozone-banner2.jpg"
+		"../src/utlis/img/azo-product-img/homePageImages/whealcleaner.jpeg"
 	],
-    "product_name": "Engine oils",
+    "product_name": "Brake Cleaner",
     "product_brand": "STP",
     "original_price": "62.00",
     "offer_price": "46.00",
     "offer_badge": "New",
 	"category": "Accessories",
-	"sub_category": "Oils",
+	"sub_category": "Cleaning",
 	"product_desc": "High-quality product and very less price",
 	"product_instock": true,
 	"orderByMessage": "Order Before 9:00 PM Jul 01 for Jul 02 delivery",

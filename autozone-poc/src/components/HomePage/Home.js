@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import BgImg from '../../utlis/img/azo-product-img/homePageImages/autozone-banner2.jpg';
 import BgImgCatArea from '../../utlis/img/azo-product-img/homePageImages/step-brake.jpg';
 import PropTypes from 'prop-types';
@@ -20,14 +20,7 @@ const Home = props => {
       topCatagoryData.push(topCatagory);
     }
   }) : ''
-  const bgImgStyle = {
-    'backgroundImage': `url(${BgImg})`
-  }
   
-  const bgImgCatArea = {
-    'backgroundImage': `url(${BgImgCatArea})`
-  }
-
   let customeSettings = {
     dots: true,
     infinite: true,
@@ -35,7 +28,32 @@ const Home = props => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   function addToCart()
@@ -64,9 +82,9 @@ const Home = props => {
         cartOverlay.className = cartOverlay.className+" cart-bg-overlay-on";
       }
     return (
-      <div>
+      <Fragment>
         <ScrollUpArrowBtn/>
-        <section className="welcome_area bg-img" style={bgImgStyle}>
+        <section className="welcome_area bg-img" style={{backgroundImage: `url(${BgImg})`}}>
           <div className="container h-140">
             <div className="row h-100 align-items-center">
               <div className="col-12">
@@ -103,7 +121,7 @@ const Home = props => {
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <div className="cta-content background-overlay bg-img" style={bgImgCatArea}>
+                <div className="cta-content background-overlay bg-img" style={{backgroundImage: `url(${BgImgCatArea})`}}>
                   <div className="h-140 d-flex align-items-center justify-content-end">
                     <div className="cta--text">
                     <Button btnText="Buy Now" onClick={()=>props.getProductDetail(currentProduct.id), addToCart}/>
@@ -136,7 +154,7 @@ const Home = props => {
         </section>
         <section>
         </section>
-      </div>
+      </Fragment>
     );
 };
 const mapStateToProps = productData => {
