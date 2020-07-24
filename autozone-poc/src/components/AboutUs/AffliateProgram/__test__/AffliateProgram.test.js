@@ -19,7 +19,7 @@ describe("tests for AboutAutoZone.js", () => {
     expect(wrapper).toBeTruthy();
   });
   it("has a div containing man's image, header and paragraphs", () => {
-    const imageDiv = wrapper.find("div").at(2).children();
+    const imageDiv = wrapper.find("div").at(5).children();
     const hyperlink =
       "https://www.pepperjamnetwork.com/affiliate/registration.php?refid=143064";
     const aRefText = "Join the AutoZone.com Affiliate Program Now";
@@ -34,7 +34,7 @@ describe("tests for AboutAutoZone.js", () => {
     expect(aRef.find("h4").text()).toBe(aRefText);
   });
   it("has a div with header and ul", () => {
-    const imageDiv = wrapper.find("div").at(5).children();
+    const imageDiv = wrapper.find("div").at(6).children();
     const h3 = imageDiv.find("h3");
     const ul = imageDiv.find("li");
     expect(h3.text()).toBe("Why Join the AutoZone.com Affiliate Program?");
@@ -42,7 +42,7 @@ describe("tests for AboutAutoZone.js", () => {
   });
 
   it("should have div with header, paragraph and ul", () => {
-    const imageDiv = wrapper.find("div").at(6).children();
+    const imageDiv = wrapper.find("div").at(8).children();
     const h3 = imageDiv.find("h3");
     const p = imageDiv.find("p");
     const li = imageDiv.find("li");

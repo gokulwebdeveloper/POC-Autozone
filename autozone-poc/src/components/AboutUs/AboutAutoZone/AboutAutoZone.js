@@ -11,33 +11,41 @@ export default function About(props) {
     return data;
   };
 
-  const FilteredData =FilterData();
+  const FilteredData = FilterData();
 
   return (
     <div className="container-fluid">
       <div
-        className="row row-1"
+        className="row row-top-background-header"
         style={{ backgroundImage: `url(${FilteredData[0].backgroundImage})` }}
       >
-        <h1 className="align-self-center mx-auto text-white shadow-lg header-1">
-          {FilteredData[0].title}
-        </h1>
+        <div className="align-self-center col-sm-12 col-md-12">
+          <h1 className="text-white text-center shadow-lg first-header-text">
+            {FilteredData[0].title}
+          </h1>
+        </div>
       </div>
-      <div className="row row-2 m-5">
-        <p>{FilteredData[1].para1}</p>
-        <p>{FilteredData[1].para2}</p>
+      <div className="row m-5 row-para-1">
+        <div className="col-sm-12 col-md-12">
+          <p>{FilteredData[1].para1}</p>
+          <p>{FilteredData[1].para2}</p>
+        </div>
       </div>
-      <div className="row row-3 bg-danger">
+      <div className="row bg-danger">
         <div className="col-sm-6 col-md-6">
           <div>
-            <img className="about-man-image" src={FilteredData[2].image} />
+            <img
+              alt={FilteredData[2].imageAlt}
+              className="about-man-image"
+              src={FilteredData[2].image}
+            />
           </div>
         </div>
         <div className="col-sm-6 col-md-6 align-self-center">
           <p className="text-white">{FilteredData[2].para1}</p>
         </div>
       </div>
-      <div className="row row-4">
+      <div className="row row-para-2">
         <div className="col-sm-6 col-md-6 align-self-center">
           <p>{FilteredData[3].para1}</p>
           <p>{FilteredData[3].para2}</p>
@@ -45,6 +53,7 @@ export default function About(props) {
         </div>
         <div className="col-sm-6 col-md-6">
           <img
+            alt={FilteredData[3].imageAlt}
             className="w-100 min-vh-100 car-man-image"
             src={FilteredData[3].image}
           />
