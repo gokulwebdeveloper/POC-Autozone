@@ -36,3 +36,12 @@
     .product-image .cart-thumb {
         height: 190px;
     }
+
+    @media only screen and (max-width: 600px) {
+        .single_catagory_area {
+            height: 300px;
+        }
+        .single-product-wrapper{
+            height: auto;
+        }
+    }
