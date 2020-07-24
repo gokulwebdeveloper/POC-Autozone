@@ -19,13 +19,13 @@ describe("tests for AboutAutoZone.js", () => {
     expect(wrapper).toBeTruthy();
   });
   it("should have a header tag", () => {
-    const header = wrapper.find(".header-1");
+    const header = wrapper.find(".first-header-text");
     const headerText = header.text();
     expect(headerText).toHaveLength(14);
     expect(headerText).toBe("About AutoZone");
   });
   it("should have 2 paragraphs inside row-2 div", () => {
-    const findRow2Div = wrapper.find(".row-2");
+    const findRow2Div = wrapper.find(".row-para-1");
     const p = findRow2Div.find("p");
     expect(p).toHaveLength(2);
   });
@@ -37,7 +37,7 @@ describe("tests for AboutAutoZone.js", () => {
   });
 
   it("should have a div tag with a paragraph", () => {
-    const rowDiv = wrapper.find(".row-4");
+    const rowDiv = wrapper.find(".row-para-2");
     const rowDivFirstChild = rowDiv.find("div").at(1).children();
     expect(rowDivFirstChild).toHaveLength(3);
   });
