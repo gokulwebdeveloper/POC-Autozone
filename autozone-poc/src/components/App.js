@@ -58,7 +58,7 @@ const App = ({getProducts}) => {
         </Route>
          <Route exact path="/singleblog" component={Singleblog} >
          </Route>
-         <Route path="/">
+         <Route exact path="/">
           <Home />
         </Route>
     </Switch>

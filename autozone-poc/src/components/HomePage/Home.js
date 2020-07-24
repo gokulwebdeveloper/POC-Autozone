@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import BgImg from '../../utlis/img/azo-product-img/homePageImages/autozone-banner2.jpg';
 import BgImgCatArea from '../../utlis/img/azo-product-img/homePageImages/step-brake.jpg';
 import PropTypes from 'prop-types';
@@ -63,7 +63,7 @@ const Home = props => {
         cartOverlay.className = cartOverlay.className+" cart-bg-overlay-on";
       }
     return (
-      <div>
+        <Fragment>
         <ScrollUpArrowBtn/>
         <section className="welcome_area bg-img" style={bgImgStyle}>
           <div className="container h-140">
@@ -135,7 +135,7 @@ const Home = props => {
         </section>
         <section>
         </section>
-      </div>
+      </Fragment>
     );
 };
 const mapStateToProps = productData => {
