@@ -1,5 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Render Product Component SnapShot Match 1`] = `
+<div
+  className="col-12 col-sm-6 col-md-4"
+>
+  <div
+    className="single_catagory_area d-flex align-items-center justify-content-center bg-img"
+    style={
+      Object {
+        "backgroundImage": "url(undefined)",
+      }
+    }
+  >
+    <div
+      className="catagory-content"
+    >
+      <a
+        href="/shops"
+        onClick={[Function]}
+      >
+        topCatagoryAreaText
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Render topcatagoryArea Component SnapShot Match 1`] = `
+<div
+  className="col-12 col-sm-6 col-md-4"
+>
+  <div
+    className="single_catagory_area d-flex align-items-center justify-content-center bg-img"
+    style={
+      Object {
+        "backgroundImage": "url(undefined)",
+      }
+    }
+  >
+    <div
+      className="catagory-content"
+    >
+      <a
+        href="/shops"
+        onClick={[Function]}
+      >
+        topCatagoryAreaText
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`TopCatagoryArea page testing SnapShot Match 1`] = `
 <div
   className="col-12 col-sm-6 col-md-4"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactTooltip from "react-tooltip";
 import { Link } from 'react-router-dom';
 import Button from '../../button/Button';
@@ -22,19 +22,19 @@ const SlickSlider = props => {
       }
     
     return (
-        <div>
+        <Fragment>
             <div className="single-product-wrapper">
                 <div className="product-img">
                     {
                         props.currentProduct && props.currentProduct.product_image && props.currentProduct.product_image.length > 2 ? 
                         <div>
-                           <img src={props.currentProduct.product_image[0]} alt="" />
-                           <img className="hover-img" src={props.currentProduct.product_image[1]} alt="" />
+                           <img src={props.currentProduct.product_image[0]} alt={props.currentProduct.product_name} />
+                           <img className="hover-img" src={props.currentProduct.product_image[1]} alt={props.currentProduct.product_name} />
                         </div>
                          : 
                         <div>
-                            <img src={props.currentProduct.product_image[0]} alt="" />
-                            <img className="hover-img" src={props.currentProduct.product_image[0]} alt="" />
+                            <img src={props.currentProduct.product_image[0]} alt={props.currentProduct.product_name} />
+                            <img className="hover-img" src={props.currentProduct.product_image[0]} alt={props.currentProduct.product_name} />
                          </div>
                     }
 
@@ -60,7 +60,7 @@ const SlickSlider = props => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Fragment>
     );
 };
 

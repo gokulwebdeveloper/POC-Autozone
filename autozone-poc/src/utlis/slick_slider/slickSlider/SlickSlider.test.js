@@ -2,10 +2,10 @@ import React from 'react';
 import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 import { Provider } from 'react-redux';
-import store from '../../Redux/store';
+import store from '../../../Redux/store';
 import { BrowserRouter as  Route} from "react-router-dom";
-import ProductDetails from '../../components/ProductDetails/ProductDetails';
-import TopCatagoryArea from './TopCatagoryArea';
+import ProductDetails from '../../../components/ProductDetails/ProductDetails';
+import SlickSlider from './SlickSlider';
 
 let container = null;
 beforeEach(() => {
@@ -37,30 +37,53 @@ const mockData = {
     "isFavourite": false
   };
 
-describe("Render topcatagoryArea Component", () => {
+describe("Render Slick Slider Component", () => {
     const wrapper = mount(
     <Provider store={store}>
         <Route path="/single-product-details/:id" component={ProductDetails}>
-        <TopCatagoryArea productData={mockData} />
+        <SlickSlider currentProduct={mockData} />
         </Route>
     </Provider>);
     it("Renders without crashing", ()=> {
         mount(<Provider store={store}>
             <Route path="/single-product-details/:id" component={ProductDetails}>
-            <TopCatagoryArea productData={mockData} />
+            <SlickSlider currentProduct={mockData} />
             </Route>
         </Provider>);
+    });
+
+    it("set slick slider image with source", () => {
+        expect(wrapper.find("img").at(0)).toBeTruthy();
     });
 
     it("SnapShot Match", () => {
         const page = renderer.create(<Provider store={store}>
         <Route path="/single-product-details/:id" component={ProductDetails}>
-            <TopCatagoryArea productData={mockData} />
+            <SlickSlider currentProduct={mockData} />
         </Route>
     </Provider>).toJSON();
         expect(page).toMatchSnapshot();
     });
- 
+
+    it("check offer badge", () => {
+        expect(wrapper.find("span").first().text()).toBe("-30%");
+    });
+
+    it("check favorite product", () => {
+        expect(wrapper.find("a").at(0)).toBeTruthy();
+        
+    });
+
+    it("check product description", () => {
+        expect(wrapper.find("span").at(1).text()).toBe("Duralast");
+        
+    });
+
+    it("Add to cart click action", () => {
+        wrapper.find("Button").first().simulate('click');
+    });
+
+    
 });
 
 afterEach(() => {
