@@ -48,16 +48,18 @@ const Blog = (props) => {
               >
                 <img src={regularBlogList[item].image} alt="" />
                 <div className="post-title">
-                  <a href="#">{regularBlogList[item].title}</a>
+                  <p>{regularBlogList[item].title}</p>
                 </div>
                 <div className="hover-content">
                   <div className="hover-post-title">
-                    <a href="#">{regularBlogList[item].title}</a>
+                    <p>{regularBlogList[item].title}</p>
                   </div>
                   <p>{regularBlogList[item].content}</p>
-                  <a href="#">
+                  <div className="reading">
+                  <p>
                     Continue reading <i className="fa fa-angle-right"></i>
-                  </a>
+                  </p>
+                  </div>
                 </div>
               </NavLink>
             </div>
@@ -73,11 +75,11 @@ const Blog = (props) => {
       <div
         data-testid="background"
         className="blog-background-image"
-        style={{ backgroundImage: "url(" + background + ")" }}
+        style={{ backgroundImage: "url(" + background + ")"}}
       ></div>
       <div className="blog-wrapper section-padding-80">
-        <div className="container">
-          <div className="row">{bloglist}</div>
+        <div className="container-blog">
+          <div className="row-blog">{bloglist}</div>
           {isFetching && "Loading..."}
         </div>
       </div>
