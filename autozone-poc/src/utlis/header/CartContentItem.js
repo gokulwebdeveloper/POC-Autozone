@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+import {closeNav} from '../../utlis/header/Header';
 import {connect} from "react-redux";
 import {removeFromCart, getProductDetail} from '../../Redux/actions';
 
@@ -24,7 +25,7 @@ function removeProduct()
                               <i className="fa fa-close" aria-hidden="true"></i>
                             </span>
                             <span className="badge">{props.data.product_brand}</span>
-                            <Link to={detailsPath}><h6>{props.data.product_name}</h6>
+                            <Link to={detailsPath} onClick={closeNav}><h6>{props.data.product_name}</h6>
                             <p className="price">Product Price: $ {props.data.original_price}</p>
                             <p className="quantity">Quantity: {props.data.quantity}</p>
                             {(props.data.offer_badge!='New')?<p className="quantity">Discount: {props.data.offer_badge}</p>:<p className="quantity">New Item</p>}
