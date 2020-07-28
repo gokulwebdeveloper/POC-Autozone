@@ -8,21 +8,16 @@ import { NavLink } from "react-router-dom";
 
 //Component structure
 const Singleblog = (props) => {
-  const [list, setList] = RetrieveJson("data/blog.json");
+  const [list, setList] = RetrieveJson("http://localhost:8080/data/blog.json");
 
+  const blogId = props.match.params.bId;
+  
   const bloglist = list.map((item) => {
     if (!item.blogStatus) {
+      const path = "/singleblog/"+item.id
       return (
         <div key={item.id}>
-          <NavLink
-            to="/singleblog"
-            to={{
-              pathname: "/singleblog",
-              propsFor: {
-                img_id: item.id,
-              },
-            }}
-          >
+          <NavLink to={path}>
           <div className="single-related-blog-post">
             <img src={item.image} alt=""></img>
             <a href="#">
@@ -35,27 +30,28 @@ const Singleblog = (props) => {
     }
   });
   const videoPlayer = list.map((item) => {
-    if (props != undefined && props.location != undefined) {
-      if (props.location.propsFor.img_id == item.id) {
+      if (blogId == item.id) {
         if (item.video) {
           return (
+            <div key={item.id}>
             <iframe
-              style={{ width: "700px", height: "350px" }}
+             className = "iframestyle"
               src={item.video}
             ></iframe>
+            </div>
           );
         }
       }
-    }
+  
   });
 
   const sblist = list.map((item) => {
-    if (props != undefined && props.location != undefined) {
-      if (props.location.propsFor.img_id == item.id) {
+      if (blogId == item.id) {
         return (
           <div key={item.id}>
             <div className="single-blog-post-thumb">
-              <img className="bgimg" src={item.image} alt=""></img>
+              
+              <img className="bgimg" src={item.image} alt="blog-image"></img>
             </div>
             <div className="single-blog-content-wrapper d-flex">
               <div className="single-blog--text">
@@ -68,7 +64,7 @@ const Singleblog = (props) => {
           </div>
         );
       }
-    }
+   
   });
 
   return (

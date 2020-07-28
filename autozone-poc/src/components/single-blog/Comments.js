@@ -24,12 +24,9 @@ const Comments = () => {
   if (!list.length) {
     return (
       <div>
-        <div id="respond" className="comment-respond">
-          <h3>Leave A Comment</h3>
-        </div>
-        <form className="comment-form" onSubmit={handleSubmit}>
-          <div className="comment-input">
-            <div className="form-group-name">
+       <form className="comment-form" onSubmit={handleSubmit}>
+        <h3>Leave A Comment</h3>
+          <div className="col-25">
               <InputWithLabel
                 inputId="Name"
                 inputType="inputWithoutLabel"
@@ -39,7 +36,7 @@ const Comments = () => {
                 className="form-control"
               />
             </div>
-            <div className="form-group-email">
+            <div className="col-25">
               <InputWithLabel
                 inputId="Email"
                 inputType="inputWithoutLabel"
@@ -49,14 +46,13 @@ const Comments = () => {
                 className="form-control"
               />
             </div>
-          </div>
-          <div className="form-group-textarea">
-            <textarea
-              value={state.comments}
+            
+           <div className="col-75">
+            <textarea className = "form-control" rows = "3"
+             value={state.comments}
               onChange={(e) => setState({ ...state, comments: e.target.value })}
               placeholder="Comment..."
-              cols="98"
-              rows="8"
+             
             ></textarea>
           </div>
 
@@ -67,7 +63,7 @@ const Comments = () => {
   } else {
     return (
       <div>
-        <h4 className="comment-count">{list.length} Comment</h4>
+        <h4 >{list.length} Comment</h4>
         <ul>
           {list.map((item) => (
             <div className="comments-list">
@@ -75,41 +71,37 @@ const Comments = () => {
             </div>
           ))}
         </ul>
-
-        <div id="respond" className="comment-respond">
-          <h3>Leave A Comment</h3>
-        </div>
         <form className="comment-form" onSubmit={handleSubmit}>
-          <div className="comment-input">
-            <div className="form-group-name">
-              <InputWithLabel
-                type="inputWithoutLabel"
-                placeholder="Name..."
-                value={state.name}
-                onChange={(e) => setState({ ...state, name: e.target.value })}
-                className="form-control"
-              />
-            </div>
-
-            <div className="form-group-email">
-              <InputWithLabel
-                type="inputWithoutLabel"
-                placeholder="Email..."
-                value={state.email}
-                onChange={(e) => setState({ ...state, email: e.target.value })}
-                className="form-control"
-              />
-            </div>
-          </div>
-          <div className="form-group-textarea">
-            <textarea
+        <h3>Leave A Comment</h3>
+           <div className="col-25">
+               <InputWithLabel
+                 inputId="Name"
+                 inputType="inputWithoutLabel"
+                 placeholder="Name..."
+                 value={state.name}
+                 onChange={(e) => setState({ ...state, name: e.target.value })}
+                 className="form-control"
+               />
+             </div>
+             <div className="col-25">
+               <InputWithLabel
+                 inputId="Email"
+                 inputType="inputWithoutLabel"
+                 placeholder="Email..."
+                 value={state.email}
+                 onChange={(e) => setState({ ...state, email: e.target.value })}
+                 className="form-control"
+               />
+             </div>
+            
+            <div className="col-75">
+             <textarea className = "form-control" rows = "3"
               value={state.comments}
-              onChange={(e) => setState({ ...state, comments: e.target.value })}
-              placeholder="Comment..."
-              cols="98"
-              rows="8"
-            ></textarea>
-          </div>
+               onChange={(e) => setState({ ...state, comments: e.target.value })}
+               placeholder="Comment..."
+              
+             ></textarea>
+           </div>
 
           <Button btnText="Submit Comment" />
         </form>
