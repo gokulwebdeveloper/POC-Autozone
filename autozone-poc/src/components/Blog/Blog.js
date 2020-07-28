@@ -33,19 +33,12 @@ const Blog = (props) => {
 
   const bloglist = listItems.map((item) => {
     if (regularBlogList.length > item) {
+        const pathwithId = "/singleblog/"+regularBlogList[item].id;
       return (
         <div key={item}>
           <div className="col-12 col-lg-6">
             <div className="single-blog-area mb-50">
-              <NavLink
-                to="/singleblog"
-                to={{
-                  pathname: "/singleblog",
-                  propsFor: {
-                    img_id: regularBlogList[item].id,
-                  },
-                }}
-              >
+              <NavLink to={pathwithId} >
                 <img src={regularBlogList[item].image} alt="" />
                 <div className="post-title">
                   <p>{regularBlogList[item].title}</p>
