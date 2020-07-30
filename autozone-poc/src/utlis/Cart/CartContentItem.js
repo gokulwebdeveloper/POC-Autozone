@@ -29,7 +29,7 @@ function removeProduct()
                             <p className="price">Product Price: $ {props.data.original_price}</p>
                             <p className="quantity">Quantity: {props.data.quantity}</p>
                             {(props.data.offer_badge!='New')?<p className="quantity">Discount: {props.data.offer_badge}</p>:<p className="quantity">New Item</p>}
-                            <p className="price">Product Price: $ {props.data.offer_price}</p>
+                            <p className="price">Offer Price: $ {props.data.offer_price}</p>
                             <p className="cartprice">$ {props.data.price}</p>
                             </Link>
                         </div>
