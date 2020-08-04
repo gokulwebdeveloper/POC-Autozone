@@ -17,6 +17,18 @@ const ProductList = (props) => {
     var data;
 
     let search = (new URLSearchParams(window.location.search)).get("search")
+
+    const handlePageClick = (e) => {
+        const selectedPage = e.selected;
+        const offset = selectedPage * perPage;
+        setCurrentPage(selectedPage);
+        setOffset(offset);
+    };
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    useEffect(() => {
+        loadAllData();
+    }, [currentPage, props.sortedProductData]);
     
     const loadAllData = () => {
         if (props.sortedProductData == undefined || props.sortedProductData.data == undefined ||
@@ -32,6 +44,7 @@ const ProductList = (props) => {
                 return;
             }
         }
+
         const slice = props.sortedProductData.data.slice(offset, offset + perPage);
         data = slice.map(pd =>
             <React.Fragment key={pd.id}>
@@ -41,13 +54,6 @@ const ProductList = (props) => {
         setPostData(data);
         setNoProduct(false)
     }
-
-    const handlePageClick = (e) => {
-        const selectedPage = e.selected;
-        const offset = selectedPage * perPage;
-        setCurrentPage(selectedPage);
-        setOffset(offset);
-    };
 
     useEffect(() => {
         if (props.productData != undefined &&
@@ -59,16 +65,22 @@ const ProductList = (props) => {
                 } else {
                     props.setFilterProducts(props.productData.data);
                 }
-            
         }
     }, [props.productData, props.shopMenuClickStatus]);
 
     useEffect(() => {
-        if (props.filter != undefined &&
-            props.filterProducts != undefined) {
-            props.filterProducts(props.productData, props.filter.filter, props.filter.filterType);
-        }
-    }, [props.filter])
+        
+        if(props.searchResultsData != undefined &&
+            props.searchResultsData.data != undefined &&
+            props.searchResultsData.data.length > 0) {
+                props.setFilterProducts(props.searchResultsData.data);
+                props.filterProductsByRange(props.searchResultsData, 0, 300);
+            } else {
+                props.sortProducts(undefined);
+            }
+    }, [props.searchResultsData]);
+
+/////////////////////////////////////////////////////////////////////////////////////////
 
     useEffect(() => {
         if (props.productFilterData == undefined ||
@@ -92,7 +104,7 @@ const ProductList = (props) => {
 
     }, [props.productFilterData]);
 
-
+    
     useEffect(() => {
         if (props.productFilterByRangeData == undefined ||
             props.productFilterByRangeData.data == undefined ||
@@ -109,21 +121,16 @@ const ProductList = (props) => {
 
     }, [props.productFilterByRangeData]);
 
-    useEffect(() => {
-        loadAllData();
-    }, [currentPage, props.sortedProductData]);
+    ///////////////////////////////////////////////////////////////////////////////////////////////
 
     useEffect(() => {
-        
-        if(props.searchResultsData != undefined &&
-            props.searchResultsData.data != undefined &&
-            props.searchResultsData.data.length > 0) {
-                props.setFilterProducts(props.searchResultsData.data);
-                props.filterProductsByRange(props.searchResultsData, 0, 300);
-            } else {
-                props.sortProducts(undefined);
-            }
-    }, [props.searchResultsData]);
+        if (props.filter != undefined &&
+            props.filterProducts != undefined) {
+            props.filterProducts(props.productData, props.filter.filter, props.filter.filterType);
+        }
+    }, [props.filter])
+
+
 
     if (noProduct) {
         return <p>No Product Found</p>

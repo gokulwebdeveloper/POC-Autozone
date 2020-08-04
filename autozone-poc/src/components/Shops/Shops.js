@@ -125,10 +125,6 @@ function Shops(props) {
 												</p>
 											</div>
 
-											{/* <div className="col-md-4 col-sm-12 col-lg-3">
-												<SortBy onSelectedSortBy={handleSortBy} />
-											</div> */}
-
 										</div>
 										
 									</div>
