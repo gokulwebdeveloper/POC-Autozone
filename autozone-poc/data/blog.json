@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "HOW TO REPLACE YOUR CABIN AIR FILTER",
-    "image": "../src/utlis/img/azo-blog-img/blog1.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog1.jpg",
     "content": "Changing your vehicle’s cabin air filter only takes a few minutes and helps protect your lungs by keeping the air inside your vehicle clean.",
     "recent_date":"09/02/2020",
     "blogStatus":true,
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "title": "HOW TO REPLACE YOUR CAR'S AIR FILTER",
-    "image": "../src/utlis/img/azo-blog-img/blog2.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog2.jpg",
     "content": "The engine air filter, or air filter, cleans the air entering your engine and protects its sensitive parts from debris and dust.Your engine air filter is located under the hood.",
     "recent_date":"09/04/2020",
     "blogStatus":false,
@@ -23,7 +23,7 @@
   {
     "id": 3,
     "title": "HOW DO I REPLACE SPARK PLUGS?",
-    "image": "../src/utlis/img/azo-blog-img/blog3.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog3.jpg",
     "content": "Replacing worn spark plugs can greatly improve your engine’s performance and efficiency.",
     "recent_date":"22/02/2020",
     "blogStatus":true,
@@ -33,7 +33,7 @@
   {
     "id": 4,
     "title": "WHICH DURALAST BATTERY IS RIGHT FOR YOUR VEHICLE?",
-    "image": "../src/utlis/img/azo-blog-img/blog4.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog4.jpg",
     "content": "Which battery is right for you? AutoZone is the number one battery destination for safe starts and long battery life and carries several warranty-backed options.",
     "recent_date":"09/05/2020",
     "blogStatus":false,
@@ -43,7 +43,7 @@
   {
     "id": 5,
     "title": "HOW TO TEST A CAR BATTERY WITH A MULTIMETER",
-    "image": "../src/utlis/img/azo-blog-img/blog5.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog5.jpg",
     "content": "Using a multimeter, you can determine if your battery is healthy enough to keep around. If it is, you can often recharge it to make sure it runs well in the future.",
     "recent_date":"19/06/2020",
     "blogStatus":true,
@@ -53,7 +53,7 @@
   {
     "id": 6,
     "title": "HOW TO JUMP START A CAR BATTERY",
-    "image": "../src/utlis/img/azo-blog-img/blog6.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog6.jpg",
     "content": "A jump start will help bring your car back to life for a short time if the battery has failed or there’s a charging component failure. If your engine won’t spin over, the battery may be the problem.",
     "recent_date":"22/03/2020",
     "blogStatus":false,
@@ -63,7 +63,7 @@
   {
     "id": 7,
     "title": "HOW TO CHANGE HEADLIGHTS",
-    "image": "../src/utlis/img/azo-blog-img/blog7.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog7.jpg",
     "content": "Got a headlight bulb out or you just want to see better at night? AutoZone has got you covered.",
     "recent_date":"09/01/2020",
     "blogStatus":true,
@@ -73,7 +73,7 @@
   {
     "id": 8,
     "title": "CHECK AND CHANGE YOUR WINDSHIELD WIPERS",
-    "image": "../src/utlis/img/azo-blog-img/blog8.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog8.jpg",
     "content": "Having trouble seeing in the rain? Might be old or dirty wiper blades.Check for obvious dirt or obstructions that could cause the noise or cleaning miss.",
     "recent_date":"09/06/2020",
     "blogStatus":false,
@@ -83,7 +83,7 @@
   {
     "id": 9,
     "title": "HOW TO REPLACE BRAKES",
-    "image": "../src/utlis/img/azo-blog-img/blog9.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog9.jpg",
     "content": "Your brake pads and rotors help your vehicle make safe stops, so it’s important to replace them when necessary.",
     "recent_date":"15/02/2020",
     "blogStatus":false,
@@ -93,7 +93,7 @@
   {
     "id": 10,
     "title": "HOW TO CHANGE YOUR OIL",
-    "image": "../src/utlis/img/azo-blog-img/blog10.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog10.jpg",
     "content": "Changing your oil is an essential part of vehicle maintenance that most people can do at home. If you’re using conventional oil, changes are recommended every 3,000 to 5,000 miles.",
     "recent_date":"20/02/2020",
     "blogStatus":true,
@@ -103,7 +103,7 @@
   {
     "id": 11,
     "title": "HOW TO FIX SMALL CRACKS & CHIPS IN YOUR WINDSHIELD",
-    "image": "../src/utlis/img/azo-blog-img/blog11.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog11.jpg",
     "content": "our car’s windshield is subjected to a number of impacts, scratches and other incidents that can cause damage. A minor crack is easily caused by a flying stone, accidental impact.",
     "recent_date":"28/03/2020",
     "blogStatus":true,
@@ -113,7 +113,7 @@
   {
     "id": 12,
     "title": "HOW TO PROPERLY WAX YOUR CAR",
-    "image": "../src/utlis/img/azo-blog-img/blog12.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog12.jpg",
     "content": "A proper wax process can restore your car’s exterior and protect it from elements like bird droppings and road grime, UV damage, and fading.",
     "recent_date":"08/06/2020",
     "blogStatus":true,
@@ -123,7 +123,7 @@
   {
     "id": 13,
     "title": "HOW AND WHEN TO CHECK YOUR OIL",
-    "image": "../src/utlis/img/azo-blog-img/blog13.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog13.jpg",
     "content": "Your car's engine is filled with moving parts, and moving parts require adequate lubrication if they're to work properly and smoothly.",
     "recent_date":"09/07/2020",
     "blogStatus":true,
@@ -133,7 +133,7 @@
   {
     "id": 14,
     "title": "HOW TO BLEED BRAKE FLUID BY YOURSELF",
-    "image": "../src/utlis/img/azo-blog-img/blog14.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog14.jpg",
     "content": "Every vehicle’s brakes need to have the fluid bled and replaced from time to time. Schedules vary, so check your owner’s manual for exact timelines.",
     "recent_date":"09/01/2020",
     "blogStatus":true,
@@ -143,7 +143,7 @@
   {
     "id": 15,
     "title": "WET WEATHER DRIVING TIPS",
-    "image": "../src/utlis/img/azo-blog-img/blog15.jpg",
+    "image": "http://localhost:8080/img/azo-blog-img/blog15.jpg",
     "content": "When it’s wet and raining, your best practices for safety are slower speeds, better visibility, and firm control.",
     "recent_date":"18/03/2020",
     "blogStatus":true,

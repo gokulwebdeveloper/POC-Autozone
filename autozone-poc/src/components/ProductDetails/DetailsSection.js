@@ -10,6 +10,8 @@ import Rating from 'react-rating';
 import { connect } from 'react-redux';
 import {addToCart} from '../../Redux/actions';
 import moment from 'moment';
+import add from "../../assets/img/core-img/add.svg"
+import minus from "../../assets/img/core-img/minus.svg"
 
 const DetailsSection = ({currentProduct, dispatchAddToCart}) => {
     const nextDay = new Date();
@@ -101,7 +103,7 @@ const DetailsSection = ({currentProduct, dispatchAddToCart}) => {
                     <button id="btnDecreaseQty" className="quantitybutton"
                             onClick={()=>onDecreaseQty(currentProduct)} 
                             disabled={currentProduct.product_instock === true ? false : true}>
-                        <img src="../src/assets/img/core-img/minus.svg" alt="decrease button"/>
+                        <img src={minus} alt="decrease button"/>
                     </button>
                 </div>
                 <div className="d-flex">
@@ -113,7 +115,7 @@ const DetailsSection = ({currentProduct, dispatchAddToCart}) => {
                     <button className="quantitybutton"
                     onClick={()=>onIncreaseQty(currentProduct)}
                     disabled={currentProduct.product_instock === true ? false : true}>
-                        <img src="../src/assets/img/core-img/add.svg" alt="increase button"/>
+                        <img src={add} alt="increase button"/>
                     </button>
                 </div>
                 </div>
