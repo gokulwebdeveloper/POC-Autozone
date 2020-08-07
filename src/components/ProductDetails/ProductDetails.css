@@ -1,0 +1,104 @@
+
+  .form-control.quantitybox {
+    width: 40px;
+    height: 35px;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .single_product_desc .quantitybutton{
+    min-width: 30px;
+    padding: 0px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .single_product_desc .quantitybutton:focus{
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .single_product_details_area .single_product_desc .product-price .new-price{
+    display: inline-block;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 24px;
+    color: #dc0345;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 0px;
+  }
+
+  .single_product_desc .priceperitem{
+  font-size: 10px;
+  height: 10px;
+  margin: 10px;
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: normal;
+  color: #484848;
+  }
+
+  .single_product_desc .outofstock{
+    color: #dc0345;
+    height: 10px;
+  }
+
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
+
+.single_product_desc .rating-row{
+    display: inline-flex;
+    margin-bottom: -50px;
+}
+
+.single_product_desc .rating-row.warranty{
+  color: #484848;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.single_product_desc .rating-row .rating-number{
+  color: #484848;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.orderByMessage{
+  color: #484848;
+  margin-bottom: 10px;
+}
+
+.single_product_thumb .slick-slider button.slick-arrow.slick-prev,
+.single_product_thumb .slick-slider button.slick-arrow.slick-next{
+  margin-left: 10px;
+  margin-right: 10px;
+  z-index: 100;
+  background-color: lightgray;
+}
+
+.single_product_thumb .slick-slider button.slick-arrow.slick-prev:hover, 
+.single_product_thumb .slick-slider button.slick-arrow.slick-prev:focus,
+.single_product_thumb .slick-slider button.slick-arrow.slick-next:hover, 
+.single_product_thumb .slick-slider button.slick-arrow.slick-next:focus {
+  outline: none;
+  background-color: lightgray;
+}
+
+.single_product_details_area .single_product_thumb, .single_product_details_area .single_product_desc{
+  padding: 10px;
+}
+
+.single_product_details_area {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.single_product_details_area .single_product_thumb .slick-list{
+  margin-bottom: 15px;
+}

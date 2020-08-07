@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for AboutAutoZone.js SnapShot Match 1`] = `
+<div
+  className="container-fluid px-5"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-12 col-md-12 my-4"
+    >
+      <img
+        alt="Investor Relations"
+        className="float-right investor-logo"
+        src="./src/utlis/img/azo-aboutus/IR_logo.gif"
+      />
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-12 col-md-12 mb-4 text-center"
+    >
+      <img
+        alt="Investor Information"
+        className="img-fluid investor-information-image"
+        src="./src/utlis/img/azo-aboutus/AZO_12345.jpg"
+      />
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-12 col-md-12"
+    >
+      <h3>
+        AutoZone, Inc.
+      </h3>
+      <p>
+        AutoZone is the nation's leading retailer and a leading distributor of automotive replacement parts and accessories with more than 6,000 stores in US, Puerto Rico, Mexico, and Brazil. Each store carries an extensive line for cars, sport utility vehicles, vans and light trucks, including new and remanufactured hard parts, maintenance items and accessories. Since opening its first store in Forrest City, Ark. on July 4, 1979, the company has joined the New York Stock Exchange (NYSE: AZO) and earned a spot in the Fortune 500.
+      </p>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-12 col-md-12"
+    >
+      <h3>
+        Recent News
+      </h3>
+      <table
+        className="table table-striped"
+      >
+        <thead>
+          <tr>
+            <th>
+              Date
+            </th>
+            <th>
+              Title and Summary
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              05/26/20
+            </td>
+            <td>
+              AutoZone 3rd Quarter Same Store Sales Decrease 1.0%; EPS Decreases 10.0% to $14.39; Announces Actions in Response to COVID-19
+            </td>
+          </tr>
+          <tr>
+            <td>
+              04/28/20
+            </td>
+            <td>
+              AutoZone to Release Third Quarter Earnings May 26, 2020
+            </td>
+          </tr>
+          <tr>
+            <td>
+              04/07/20
+            </td>
+            <td>
+              AutoZone Announces Actions In Response To COVID-19
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

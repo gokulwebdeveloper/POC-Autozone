@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brand testing SnapShot Match for Brand component 1`] = `
+<div
+  className="widget brands mb-50"
+>
+  <p
+    className="widget-title2 mb-30"
+  >
+    Brands
+  </p>
+  <div
+    className="widget-desc"
+  >
+    <ul>
+      <li
+        data-id="Asos"
+        data-title="Brands"
+        onClick={[Function]}
+      >
+        Asos
+      </li>
+      <li
+        data-id="Mango"
+        data-title="Brands"
+        onClick={[Function]}
+      >
+        Mango
+      </li>
+      <li
+        data-id="River Island"
+        data-title="Brands"
+        onClick={[Function]}
+      >
+        River Island
+      </li>
+      <li
+        data-id="Topshop"
+        data-title="Brands"
+        onClick={[Function]}
+      >
+        Topshop
+      </li>
+      <li
+        data-id="Zara"
+        data-title="Brands"
+        onClick={[Function]}
+      >
+        Zara
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Catagory testing SnapShot Match for Catagory component 1`] = `
+<li>
+  <p
+    data-target="#clothing"
+    data-toggle="collapse"
+  >
+    clothing
+  </p>
+  <ul
+    className="sub-menu show"
+    id="clothing"
+  >
+    <li
+      data-id="All"
+      data-title="clothing"
+      onClick={[Function]}
+    >
+      All
+    </li>
+    <li
+      data-id="Bodysuits"
+      data-title="clothing"
+      onClick={[Function]}
+    >
+      Bodysuits
+    </li>
+    <li
+      data-id="Dresses"
+      data-title="clothing"
+      onClick={[Function]}
+    >
+      Dresses
+    </li>
+    <li
+      data-id="Hoodies Sweats"
+      data-title="clothing"
+      onClick={[Function]}
+    >
+      Hoodies Sweats
+    </li>
+    <li
+      data-id="Jackets Coats"
+      data-title="clothing"
+      onClick={[Function]}
+    >
+      Jackets Coats
+    </li>
+    <li
+      data-id="Jeans"
+      data-title="clothing"
+      onClick={[Function]}
+    >
+      Jeans
+    </li>
+    <li
+      data-id="Pants Leggings"
+      data-title="clothing"
+      onClick={[Function]}
+    >
+      Pants Leggings
+    </li>
+    <li
+      data-id="Rompers Jumpsuits"
+      data-title="clothing"
+      onClick={[Function]}
+    >
+      Rompers Jumpsuits
+    </li>
+    <li
+      data-id="Shirts Blouses"
+      data-title="clothing"
+      onClick={[Function]}
+    >
+      Shirts Blouses
+    </li>
+    <li
+      data-id="Shirts"
+      data-title="clothing"
+      onClick={[Function]}
+    >
+      Shirts
+    </li>
+    <li
+      data-id="Sweaters &amp; Knits"
+      data-title="clothing"
+      onClick={[Function]}
+    >
+      Sweaters &amp; Knits
+    </li>
+  </ul>
+</li>
+`;

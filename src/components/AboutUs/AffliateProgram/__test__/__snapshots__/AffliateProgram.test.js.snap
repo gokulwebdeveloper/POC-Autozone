@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for AboutAutoZone.js SnapShot Match 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-12 col-md-12 px-0"
+    >
+      <img
+        alt="Join AutoXone Affiliate Program Banner"
+        className="img-fluid min-vw-100 affiliate-logo"
+        src="./src/utlis/img/azo-aboutus/m1120006_affiliate-header.jpg"
+      />
+    </div>
+  </div>
+  <div
+    className="row mt-5"
+  >
+    <div
+      className="col-md-3 col-sm-3"
+    >
+      <img
+        alt="An AutoZoner"
+        className="img-fluid w-100 man-image"
+        src="./src/utlis/img/azo-aboutus/m1120007_autozoner.jpg"
+      />
+    </div>
+    <div
+      className="col-md-9 col-sm-9"
+    >
+      <h2>
+        Earn Commissions By Promoting The Top Brands In Auto Parts And Accessories
+      </h2>
+      <p>
+        <b>
+          Join the AutoZone Affiliate Program and get the nation's leading distributor of automotive parts and accessories working for you.
+        </b>
+         AutoZone has teamed up with Pepperjam to help publishers grow with AutoZone.com, one of the top online retail websites. When folks think car parts, they think AutoZone - so get in on the action.
+      </p>
+      <p>
+        As an AutoZone affiliate, publishers can 
+        <u>
+          leverage our unmatched brand recognition
+        </u>
+         to drive sales and earn commissions. Plus, affiliates have access to powerful resources to help drive success. Join today and start earning commission on every sale referred to AutoZone.com.
+      </p>
+      <a
+        className="text-center"
+        href="https://www.pepperjamnetwork.com/affiliate/registration.php?refid=143064"
+        title="https://www.pepperjamnetwork.com"
+      >
+        <h4
+          className="text-warning"
+        >
+          Join the AutoZone.com Affiliate Program Now
+        </h4>
+      </a>
+    </div>
+  </div>
+  <div
+    className="row mx-3"
+  >
+    <div
+      className="col-sm-12 col-md-12"
+    >
+      <h3
+        className="mt-5"
+      >
+        Why Join the AutoZone.com Affiliate Program?
+      </h3>
+      <ul
+        className="list-group list-group-flush"
+      >
+        <li
+          className="list-group-item"
+        >
+          <b>
+            Competitive Base Commission
+          </b>
+           plus performance incentives for high-volume affiliates
+        </li>
+        <li
+          className="list-group-item"
+        >
+          <b>
+            Trusted 3rd Party Tracking with Pepperjam
+          </b>
+           - you can rest assure that you'll receive your commissions
+        </li>
+        <li
+          className="list-group-item"
+        >
+          <b>
+            Powerful Affiliate Resources
+          </b>
+           - includes text/html links, banners, fresh promotional offers, monthly newsletters, and much more
+        </li>
+        <li
+          className="list-group-item"
+        >
+          <b>
+            A Top Notch, dedicated Affiliate Support Team
+          </b>
+           helps you make more sales, feel free to e-mail us at autozone.affiliate@ecselis.com
+        </li>
+        <li
+          className="list-group-item"
+        >
+          <b>
+            Plus
+          </b>
+           - we are constantly working to boost conversion rates on our site, so more of your leads will turn into sales
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="row mx-3"
+  >
+    <div
+      className="col-sm-12 col-md-12"
+    >
+      <h3
+        className="mt-5"
+      >
+        Get Started Today - Sign Up as an AutoZone.com Affiliate!
+      </h3>
+      <p>
+        Joining the AutoZone.com affiliate program is simple and free. We've teamed up with Pepperjam - a leading affiliate network - to give our affiliates the best experience possible. Here's how you can start earning commissions with AutoZone.com:
+      </p>
+      <ul
+        className="list-group list-group-flush ml-5"
+      >
+        <li
+          className="list-group-item"
+        >
+          Apply to the AutoZone affiliate program
+        </li>
+        <li
+          className="list-group-item"
+        >
+          Grab links, banners, and more from our affiliate tools
+        </li>
+        <li
+          className="list-group-item"
+        >
+          <b>
+            Start earning commissions from your web traffic!
+          </b>
+        </li>
+      </ul>
+      <p
+        className="text-center w-100"
+      >
+        <a
+          className="text-warning"
+          href="https://www.pepperjamnetwork.com/affiliate/registration.php?refid=143064"
+          title="Click Here To Sign Up"
+        >
+          Click Here To Sign Up
+          <br />
+          <img
+            alt="Commission Junction"
+            className="papperjam-logo"
+            src="./src/utlis/img/azo-aboutus/m9820002_pepperjam-logo.png"
+          />
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+`;

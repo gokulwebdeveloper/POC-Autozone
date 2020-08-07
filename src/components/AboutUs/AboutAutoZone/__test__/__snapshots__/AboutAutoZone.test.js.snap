@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for AboutAutoZone.js SnapShot Match 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="row row-top-background-header"
+    style={
+      Object {
+        "backgroundImage": "url(./src/utlis/img/azo-aboutus/LP-A1-BG-IMG-en-us-1546452533686.png)",
+      }
+    }
+  >
+    <div
+      className="align-self-center col-sm-12 col-md-12"
+    >
+      <h1
+        className="text-white text-center shadow-lg first-header-text"
+      >
+        About AutoZone
+      </h1>
+    </div>
+  </div>
+  <div
+    className="row m-5 row-para-1"
+  >
+    <div
+      className="col-sm-12 col-md-12"
+    >
+      <p>
+        For more than 39 years, AutoZone has been committed to providing the best parts, prices and customer service in the automotive aftermarket industry. We have a rich culture and history of Going the Extra Mile for our customers and our community.
+      </p>
+      <p>
+        The foundation of AutoZone's success is our culture, which defines how our employees (called "AutoZoners") take care of customers. Each AutoZoner works hard to LIVE the Pledge, share their passion for WOW! Customer Service and Go the Extra Mile every day to continue building and growing AutoZone for our customers.
+      </p>
+    </div>
+  </div>
+  <div
+    className="row bg-danger"
+  >
+    <div
+      className="col-sm-6 col-md-6"
+    >
+      <div>
+        <img
+          alt="J.R. \\"Pitt\\" Hyde III"
+          className="about-man-image"
+          src="./src/utlis/img/azo-aboutus/LP-SKU-D6-BANNER_1-en-us-1546455094813.png"
+        />
+      </div>
+    </div>
+    <div
+      className="col-sm-6 col-md-6 align-self-center"
+    >
+      <p
+        className="text-white"
+      >
+        AutoZone's history started with the vision of one man: J.R. "Pitt" Hyde III. After receiving his bachelor's degree in Economics, Pitt joined Malone & Hyde, Inc., a wholesale food company founded by his grandfather. He launched and developed Malone & Hyde's specialty retailing division, beginning with drug stores and expanding into sporting goods stores and supermarkets. During his research into new, potential markets, Pitt recognized the need for a retail automotive parts store that could help ordinary people take care of their vehicles by providing quality parts and Trustworthy Advice. Pitt believed that the characteristics found in supermarkets - clean, well-organized stores, accessible products, and great customer service - could be applied to the automotive parts business. In 1979, his vision became a reality.
+      </p>
+    </div>
+  </div>
+  <div
+    className="row row-para-2"
+  >
+    <div
+      className="col-sm-6 col-md-6 align-self-center"
+    >
+      <p>
+        Originally named "Auto Shack", the company first started as a division of Malone & Hyde. On July 4, 1979, we opened our first store in Forrest City, Arkansas. In its first year, Auto Shack opened eight stores in two states: Arkansas and Tennessee, and shipped merchandise out of a 12,000 square foot distribution center.
+      </p>
+      <p>
+        In 1987, Auto Shack became AutoZone, a freestanding company with Pitt serving as Chairperson and CEO. In 1991, AutoZone became a publically traded company on the New York Stock Exchange (ticker symbol: AZO). 1996, AutoZone launched a Commercial program offering credit and delivery to professional technicians. Later, with the purchase of ALLDATA, AutoZone acquired the nation 2019s leading provider of electronic automotive diagnostic and repair software. In 1998, AutoZone expanded its presence outside the U.S. borders to Mexico, opening our first AutoZone de Mexico store, and in 2012, AutoZone opened our first store in Brazil.
+      </p>
+      <p>
+        Today, AutoZone is the leading retailer and a leading distributor of automotive replacement parts and accessories in the U.S. with more than 6,000 stores across the fifty United States, the District of Columbia, Puerto Rico, Mexico and Brazil and more than 85,000 AutoZoners supporting operations on four continents.
+      </p>
+    </div>
+    <div
+      className="col-sm-6 col-md-6"
+    >
+      <img
+        alt="AutoZone Shop"
+        className="w-100 min-vh-100 car-man-image"
+        src="./src/utlis/img/azo-aboutus/LP-SKU-D4-1-BG-IMG-en-us-1546453312578.png"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Product Component SnapShot Match 1`] = `
+<div
+  className="col-12 col-sm-6 col-lg-4"
+>
+  <div
+    className="single-product-wrapper"
+  >
+    <div
+      className="product-img"
+    >
+      <img
+        alt="Duralast Brake Rotor 42251DL"
+        src="../../../utlis/img/azo-product-img/product-1/1.jpg"
+      />
+      <img
+        alt=""
+        className="hover-img"
+        src="../../../utlis/img/azo-product-img/product-1/2.jpg"
+      />
+      <div
+        className="product-badge offer-badge"
+      >
+        <span>
+          -30%
+        </span>
+      </div>
+      <div
+        className="product-favourite"
+      >
+        <a
+          className="favme fa fa-heart"
+          href="#"
+        />
+      </div>
+    </div>
+    <div
+      className="product-description"
+    >
+      <span>
+        Duralast
+      </span>
+      <a
+        href="/single-product-details/1"
+        onClick={[Function]}
+      >
+        <h6>
+          Duralast Brake Rotor 42251DL
+        </h6>
+      </a>
+      <span
+        className="rating"
+        style={
+          Object {
+            "direction": "ltr",
+            "display": "inline-block",
+          }
+        }
+      >
+        <span
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          style={
+            Object {
+              "cursor": "inherit",
+              "display": "inline-block",
+              "position": "relative",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "visibility": "hidden",
+              }
+            }
+          >
+            <span
+              className="fa fa-star-o fa-2x"
+            />
+          </span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+                "left": 0,
+                "overflow": "hidden",
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          >
+            <span
+              className="fa fa-star fa-2x"
+            />
+          </span>
+        </span>
+        <span
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          style={
+            Object {
+              "cursor": "inherit",
+              "display": "inline-block",
+              "position": "relative",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "visibility": "hidden",
+              }
+            }
+          >
+            <span
+              className="fa fa-star-o fa-2x"
+            />
+          </span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+                "left": 0,
+                "overflow": "hidden",
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          >
+            <span
+              className="fa fa-star fa-2x"
+            />
+          </span>
+        </span>
+        <span
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          style={
+            Object {
+              "cursor": "inherit",
+              "display": "inline-block",
+              "position": "relative",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "visibility": "hidden",
+              }
+            }
+          >
+            <span
+              className="fa fa-star-o fa-2x"
+            />
+          </span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+                "left": 0,
+                "overflow": "hidden",
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          >
+            <span
+              className="fa fa-star fa-2x"
+            />
+          </span>
+        </span>
+        <span
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          style={
+            Object {
+              "cursor": "inherit",
+              "display": "inline-block",
+              "position": "relative",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "visibility": "hidden",
+              }
+            }
+          >
+            <span
+              className="fa fa-star-o fa-2x"
+            />
+          </span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+                "left": 0,
+                "overflow": "hidden",
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          >
+            <span
+              className="fa fa-star fa-2x"
+            />
+          </span>
+        </span>
+        <span
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          style={
+            Object {
+              "cursor": "inherit",
+              "display": "inline-block",
+              "position": "relative",
+            }
+          }
+        >
+          <span
+            style={Object {}}
+          >
+            <span
+              className="fa fa-star-o fa-2x"
+            />
+          </span>
+          <span
+            style={
+              Object {
+                "display": "inline-block",
+                "left": 0,
+                "overflow": "hidden",
+                "position": "absolute",
+                "top": 0,
+                "width": "50%",
+              }
+            }
+          >
+            <span
+              className="fa fa-star fa-2x"
+            />
+          </span>
+        </span>
+      </span>
+      <p
+        className="product-price"
+      >
+        <span
+          className="old-price"
+        >
+          $
+          75.00
+        </span>
+         $
+        55.00
+      </p>
+      <div
+        className="hover-content"
+      >
+        <div
+          className="add-to-cart-btn"
+        >
+          <button
+            className="btn essence-btn"
+            id="btnAddtoCart"
+            onClick={[Function]}
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

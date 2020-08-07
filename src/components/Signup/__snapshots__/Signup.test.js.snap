@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Signup Page SnapShot Match 1`] = `
+<div>
+  <div
+    className="container-fluid h-100 bgimage"
+  >
+    <div
+      className="row h-100 align-items-center"
+    >
+      <div
+        className="col-md-5"
+      >
+        <h1
+          className="signupExplanation"
+        >
+          AutoZone has over 5,500 locations across the United States where we provide great customer service at every store every day! Become a member and get even more great benefits
+        </h1>
+      </div>
+      <div
+        className="col-md-4 signupcontainer"
+      >
+        <div
+          className="page-title"
+        >
+          <h2
+            className="signuphead"
+          >
+            Sign Up
+          </h2>
+          <form
+            onSubmit={[Function]}
+          >
+            <div
+              className="row namefeild"
+            >
+              <div
+                className="col-md-6"
+              >
+                <label
+                  htmlFor="first_Name"
+                >
+                  First Name
+                   
+                  <span>
+                    *
+                  </span>
+                </label>
+                <input
+                  className="form-control"
+                  defaultValue=""
+                  id="first_Name"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  required={true}
+                  type="text"
+                />
+                <p
+                  className="formErrorMsg"
+                />
+              </div>
+              <div
+                className="col-md-6"
+              >
+                 
+                <label
+                  htmlFor="last_Name"
+                >
+                  Last Name
+                   
+                  <span>
+                    *
+                  </span>
+                </label>
+                <input
+                  className="form-control"
+                  defaultValue=""
+                  id="last_Name"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  required={true}
+                  type="text"
+                />
+                <p
+                  className="formErrorMsg"
+                />
+              </div>
+            </div>
+            <div
+              className="col-md-12 mb-4"
+            >
+              <label
+                htmlFor="email_Address"
+              >
+                Email Address
+                 
+                <span>
+                  *
+                </span>
+              </label>
+              <input
+                className="form-control"
+                defaultValue=""
+                id="email_Address"
+                onBlur={[Function]}
+                onChange={[Function]}
+                required={true}
+                type="email"
+              />
+              <p
+                className="formErrorMsg"
+              />
+            </div>
+            <div
+              className="col-md-12 mb-4"
+            >
+              <label
+                htmlFor="passwords"
+              >
+                Password
+                 
+                <span>
+                  *
+                </span>
+              </label>
+              <input
+                className="form-control"
+                defaultValue=""
+                id="passwords"
+                onBlur={[Function]}
+                onChange={[Function]}
+                required={true}
+                type="password"
+              />
+              <p
+                className="formErrorMsg"
+              />
+            </div>
+            <div
+              className="col-md-12 mb-4 confirm_password_test"
+            >
+              <label
+                htmlFor="confirm_password"
+              >
+                Confirm Password
+                 
+                <span>
+                  *
+                </span>
+              </label>
+              <input
+                className="form-control"
+                defaultValue=""
+                id="confirm_password"
+                onBlur={[Function]}
+                onChange={[Function]}
+                required={true}
+                type="password"
+              />
+              <p
+                className="formErrorMsg"
+              />
+            </div>
+            <br />
+            <div
+              className="btnpostion"
+            >
+               
+              <button
+                className="btn essence-btn"
+                type="submit"
+              >
+                Signup
+              </button>
+            </div>
+            <br />
+          </form>
+          <br />
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

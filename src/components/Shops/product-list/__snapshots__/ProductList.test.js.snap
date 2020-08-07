@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product List page testing SnapShot Match 1`] = `
+<p>
+  No Product Found
+</p>
+`;

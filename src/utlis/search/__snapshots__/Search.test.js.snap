@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search testing SnapShot Match for Search component 1`] = `
+<div
+  className="search-area"
+>
+  <input
+    id="headerSearch"
+    name="search"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="Type for search"
+    type="search"
+  />
+  <button>
+    <i
+      aria-hidden="true"
+      className="fa fa-search"
+    />
+  </button>
+</div>
+`;

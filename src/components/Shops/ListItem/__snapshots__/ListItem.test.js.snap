@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brand testing SnapShot Match for ListItem component 1`] = `
+Array [
+  <li
+    data-id="All"
+    data-title="Brakes and Traction Control"
+    onClick={[Function]}
+  >
+    All
+  </li>,
+  <li
+    data-id="Brake Rotor"
+    data-title="Brakes and Traction Control"
+    onClick={[Function]}
+  >
+    Brake Rotor
+  </li>,
+  <li
+    data-id="Brake Power Booster"
+    data-title="Brakes and Traction Control"
+    onClick={[Function]}
+  >
+    Brake Power Booster
+  </li>,
+  <li
+    data-id="Hoodies Sweats"
+    data-title="Brakes and Traction Control"
+    onClick={[Function]}
+  >
+    Hoodies Sweats
+  </li>,
+  <li
+    data-id="Brake Shoes Rear"
+    data-title="Brakes and Traction Control"
+    onClick={[Function]}
+  >
+    Brake Shoes Rear
+  </li>,
+  <li
+    data-id="Wheel Cylinder Rear"
+    data-title="Brakes and Traction Control"
+    onClick={[Function]}
+  >
+    Wheel Cylinder Rear
+  </li>,
+]
+`;
