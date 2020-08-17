@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import parse from "html-react-parser";
 import Data from "../MockData/Mock.json";
+import { Helmet } from "react-helmet";
 
 export default function AffliateProgram() {
   const FilterData = () => {
@@ -18,7 +19,13 @@ export default function AffliateProgram() {
   };
 
   return (
-    <div className="container-fluid">
+    <Fragment>
+      <Helmet>
+        <meta charset="utf-8"/>
+        <title>Autozone Affliate Program</title>
+        <meta name="description" content="This is Autozone affliate program page information"/>
+      </Helmet>
+      <div className="container-fluid">
       <div className="row">
         <div className="col-sm-12 col-md-12 px-0">
           <img
@@ -90,5 +97,6 @@ export default function AffliateProgram() {
         </div>
       </div>
     </div>
+    </Fragment>
   );
 }

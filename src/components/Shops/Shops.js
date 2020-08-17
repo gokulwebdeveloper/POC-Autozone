@@ -6,6 +6,7 @@ import Slider from "./Slider/Slider";
 import SortBy from "./SortBy/SortBy";
 import ProductList from "./product-list/ProductList";
 import { connect } from "react-redux";
+import { Helmet } from "react-helmet";
 
 function Shops(props) {
 
@@ -74,6 +75,11 @@ function Shops(props) {
 
 	return (
 		<Fragment>
+		<Helmet>
+			<meta charset="utf-8"/>
+            <title>Autozone Shops</title>
+            <meta name="description" content="This is Autozone shops page information with products"/>
+        </Helmet>
 			<ShopsHeader heading="Auto Spares" />
 			<section className="shop_grid_area section-padding-80">
 				<div className="container">

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./AboutAutoZone.css";
 import Data from "../MockData/Mock.json";
+import { Helmet } from "react-helmet";
 
 export default function About(props) {
   const FilterData = () => {
@@ -14,7 +15,13 @@ export default function About(props) {
   const FilteredData = FilterData();
 
   return (
-    <div className="container-fluid">
+    <Fragment>
+      <Helmet>
+        <meta charset="utf-8"/>
+        <title>Autozone About</title>
+        <meta name="description" content="This is Autozone About us page information"/>
+      </Helmet>
+      <div className="container-fluid">
       <div
         className="row row-top-background-header"
         style={{ backgroundImage: `url(${FilteredData[0].backgroundImage})` }}
@@ -60,5 +67,6 @@ export default function About(props) {
         </div>
       </div>
     </div>
+    </Fragment>
   );
 }

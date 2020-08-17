@@ -7,6 +7,7 @@ import ScrollUpArrowBtn from '../../utlis/button/ScrollUpArrowBtn';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addToCart, getProductDetail } from '../../Redux/actions';
+import {Helmet} from 'react-helmet';
 
 
 const Home = props => { 
@@ -85,6 +86,11 @@ const Home = props => {
       }
     return (
       <Fragment>
+        <Helmet>
+          <meta charset="utf-8"/>
+          <title>Autozone Home</title>
+          <meta name="description" content="This is Autozone Home page information with products"/>
+        </Helmet>
         <ScrollUpArrowBtn/>
         <section className="welcome_area bg-img" style={{backgroundImage: `url('img/azo-product-img/homePageImages/autozone-banner2.jpg')`}}>
           <div className="container h-140">

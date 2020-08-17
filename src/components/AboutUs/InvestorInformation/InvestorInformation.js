@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Data from "../MockData/Mock.json";
+import { Helmet } from "react-helmet";
 
 export default function InvestorInformation() {
   const FilterData = () => {
@@ -14,7 +15,13 @@ export default function InvestorInformation() {
   const FilteredData = FilterData();
 
   return (
-    <div className="container-fluid px-5">
+    <Fragment>
+      <Helmet>
+        <meta charset="utf-8"/>
+        <title>Autozone Investor Information</title>
+        <meta name="description" content="This is Autozone Investor page information"/>
+      </Helmet>
+      <div className="container-fluid px-5">
       <div className="row">
         <div className="col-sm-12 col-md-12 my-4">
           <img
@@ -62,5 +69,6 @@ export default function InvestorInformation() {
         </div>
       </div>
     </div>
+    </Fragment>
   );
 }

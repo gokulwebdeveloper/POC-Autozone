@@ -1,10 +1,17 @@
-import React from "react";
+import React, { Fragment } from "react";
 import GoogleMap from "./Map/GoogleMap";
 import Data from "./MockData/Mock.json";
+import { Helmet } from "react-helmet";
 
 export default function Contact(props) {
   return (
-    <div className="container-fluid">
+    <Fragment>
+      <Helmet>
+        <meta charset="utf-8"/>
+        <title>Autozone Contact</title>
+        <meta name="description" content="This is Autozone contact page information"/>
+      </Helmet>
+      <div className="container-fluid">
       <div className="row">
         <div className="col-sm-7 col-md-7 px-0 common-col common-col-1">
           <div className="min-vh-100 common-col-1-contents">
@@ -29,5 +36,6 @@ export default function Contact(props) {
         </div>
       </div>
     </div>
+    </Fragment>
   );
 }

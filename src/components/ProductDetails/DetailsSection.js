@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, Fragment} from 'react';
 import '../../matchMedia.mock';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -10,6 +10,7 @@ import Rating from 'react-rating';
 import { connect } from 'react-redux';
 import {addToCart} from '../../Redux/actions';
 import moment from 'moment';
+import { Helmet } from 'react-helmet';
 
 const DetailsSection = ({currentProduct, dispatchAddToCart}) => {
     const nextDay = new Date();
@@ -42,6 +43,12 @@ const DetailsSection = ({currentProduct, dispatchAddToCart}) => {
      });
 
     return (
+        <Fragment>
+        <Helmet>
+          <meta charset="utf-8"/>
+          <title>Autozone Product details</title>
+          <meta name="description" content="This is Autozone product details with all information"/>
+        </Helmet>
         <section className="single_product_details_area d-flex align-items-center">
             <div className="single_product_thumb clearfix">
             <Slider 
@@ -133,6 +140,7 @@ const DetailsSection = ({currentProduct, dispatchAddToCart}) => {
                     
             </div>
         </section>
+        </Fragment>
     );
 };
 

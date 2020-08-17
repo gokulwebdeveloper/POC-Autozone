@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import "../Blog/Blog.css";
 import { BrowserRouter as Router, NavLink, Link } from "react-router-dom";
 import UseInfiniteScroll from "../../utlis/infiniteScroll/UseInfiniteScroll";
 import RetrieveJson from "../../utlis/RetrieveAPI/RetrieveJson";
 import ScrollUpArrowBtn from "../../utlis/button/ScrollUpArrowBtn";
+import { Helmet } from "react-helmet";
 
 const Blog = (props) => {
   const [list, setList] = RetrieveJson("data/blog.json");
@@ -62,12 +63,17 @@ const Blog = (props) => {
   });
 
   return (
-    <div>
+    <Fragment>
+      <Helmet>
+        <meta charset="utf-8"/>
+        <title>Autozone Blog</title>
+        <meta name="description" content="This is Autozone blog page information"/>
+      </Helmet>
       <ScrollUpArrowBtn />
       <div
         data-testid="background"
         className="blog-background-image"
-        style={{ backgroundImage: "url(img/azo-blog-img/background_image.jpg)"}}
+        style={{ backgroundImage: "url(img/azo-blog-img/background_image.jpg)" }}
       ></div>
       <div className="blog-wrapper section-padding-80">
         <div className="container-blog">
@@ -75,7 +81,7 @@ const Blog = (props) => {
           {isFetching && "Loading..."}
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 
